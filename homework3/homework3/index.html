@@ -1,0 +1,95 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        window.onload = function () {
+            /*720代表设计师给的设计稿的宽度，你的设计稿是多少，就写多少;100代表换算比例，这里写100是
+              为了以后好算,比如，你测量的一个宽度是100px,就可以写为1rem,以及1px=0.01rem等等*/
+            getRem(720, 100)
+        };
+        window.onresize = function () {
+            getRem(720, 100)
+        };
+        function getRem(pwidth, prem) {
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth / pwidth * prem + "px";
+        }
+    </script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <script src="mui.min.js" type="text/javascript" charset="utf-8"></script> -->
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="mui.min.css">
+    <style type="text/css">
+        body {
+            width: 100%;
+        }
+        div {
+            width: 100%;
+            background-color: bisque;
+            border: 1px solid orangered !important;
+        }
+        ul {
+            width: 100%;
+        }
+        li {
+            text-align: center;
+            padding-bottom: 0.3rem;
+        }
+    </style>
+    <title>列表</title>
+
+</head>
+
+<body>
+   <div>
+       <ul></ul>
+   </div>
+    <script>
+        $.ajax({
+            type: "get",
+            url: "http://www.duans.top/freeApi/broadcasting.php?act=musicBroadcasting",
+            dataType: "json",
+            success: function (data) {
+                console.log(data)
+                    for(var i=0;i<data.result[0].channellist.length;i++){
+                        $("ul").append(
+                            '<li  class="to_ifo" style="display:none;">' + data.result[0].channellist[i].thumb + '</li>'
+                            + '<li class="ch_name" style="display:none;">' + data.result[0].channellist[i].ch_name + '</li>'
+                            + '<li  style="color:red">'
+                            + '<a href="info.html?ch_name=' + data.result[0].channellist[i].ch_name + '">' + data.result[0].channellist[i].name
+                            + "</a>"
+                            + '</li>'
+                            + '<li>' + data.result[0].channellist[i].cate_name + '</li>'
+                            + '<li>' + data.result[0].channellist[i].cate_sname + '</li>'
+                            + '<li style="display:none">' + data.result[0].channellist[i].cid + '</li>'
+                            + '<li style="display:none">' + data.result[0].channellist[i].value + '</li>'
+                            + '<li  style="display:none">' + data.result[0].channellist[i].channelid + '</li>'
+                        )
+                    };
+                    for(var i=0;i<data.result[1].channellist.length;i++){
+                        $("ul").append(
+                            '<li  style="display:none;">' + data.result[1].channellist[i].avatar + '</li>'
+                            + '<li class="to_ifo" style="display:none;">' + data.result[1].channellist[i].artistid + '</li>'
+                            + '<li  style="color:red">'
+                            + '<a href="info.html?ch_name=' + data.result[1].channellist[i].name + '">' + data.result[1].channellist[i].name
+                            + "</a>"
+                            + '</li>'
+                        )
+                    };
+                $(".to_ifo").on('click', function () {
+                    var t1 = $(this).next().html()
+                    console.log(t1)
+                    location.href = 'info.html?ch_name=' + t1
+                });
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>

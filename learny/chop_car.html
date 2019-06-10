@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/chop_car.css">
+</head>
+
+<body>
+    <div>
+        <div class="div1_1">
+            <img src="img/back_jt.png" class="img1_1" />
+            <span class="span1_1">购物车</span>
+        </div>
+        <div class="div2_1">
+            <div class="div2_2">颜文明体育用品</div>
+            <div class="div4">
+                <div class="cirle">
+                </div>
+                <div class="div2_32">
+                    <i>
+                        <img src="img/pic01.jpg" class="img2_1" />
+                    </i>
+                </div>
+                <dl>
+                    <dt>
+                        <span class="span2_1" onclick="javascript:location.href='car_info2.html'">
+                            2018年春颜文明旗舰店新款户外运动鞋男防滑耐磨网球鞋女官方正品
+                        </span>
+                    </dt>
+                    <dd>
+                        <span class="price">￥645.00</span>
+                        <span class="q_price">￥659.00</span>
+                    </dd>
+                </dl>
+                <div class="div3_1">
+                    <input type="hidden" value="645" class="girl">
+                    <div class="jian">-</div>
+                    <input type="text" name="" value="1" class="input3_1" />
+                    <div class="jia">+</div>
+                </div>
+            </div>
+
+
+            <div class="div4_1">
+                <div class="cirle">
+                </div>
+                <div class="div2_32">
+                    <i>
+                        <img src="img/pic02.jpg" class="img2_1" />
+                    </i>
+                </div>
+                <dl>
+                    <dt>
+                        <span class="span2_1">
+                            2018年春颜文明旗舰店新款户外运动鞋男防滑耐磨网球鞋女官方正品
+                        </span>
+                    </dt>
+                    <dd>
+                        <span class="price">￥645.00</span>
+                        <span class="q_price">￥659.00</span>
+                    </dd>
+                </dl>
+                <div class="div3_1">
+                    <input type="hidden" value="645" class="girl">
+                    <div class="jian">-</div>
+                    <input type="text" name="" value="1" class="input3_1" />
+                    <div class="jia">+</div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+        </div>
+        <div class="div2_2">商家：耐克体育用品旗舰店</div>
+        <div class="div4">
+            <div class="cirle" class="bla">
+            </div>
+            <div class="div2_32">
+                <i>
+                    <img src="img/pic01.jpg" class="img2_1" />
+                </i>
+            </div>
+            <dl>
+                <dt>
+                    <span class="span2_1">
+                        2018年春颜文明旗舰店新款户外运动鞋男防滑耐磨网球鞋女官方正品
+                    </span>
+                </dt>
+                <dd>
+                    <span class="price">￥645.00</span>
+                    <span class="q_price">￥659.00</span>
+                </dd>
+            </dl>
+            <div class="div3_1">
+                <input type="hidden" value="645" class="girl">
+                <div class="jian">-</div>
+                <input type="text" name="" value="1" class="input3_1" />
+                <div class="jia">+</div>
+            </div>
+        </div>
+
+        <div class="line">
+
+
+        </div>
+
+        <div class="flow_foot">
+            <div class="cirle2">
+            </div><span class="all_black">全选</span>
+            <div class="gong">
+                <p class="all">1935</p>
+                <p>不含运费</p>
+
+            </div>
+            <input type="button" value="去结算">
+
+        </div>
+</body>
+
+<script src="js/rem.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+
+    $(".jia").click(function () {
+        var n = $(this).prev().val();
+        var hid = $(this).siblings(".girl").val();
+        var num = parseInt(n) + 1;
+        var q1 = Number(num * hid);
+        $(this).parent().prev().children("dd").children(".price").html(q1);
+        $(this).prev().val(num);
+
+
+        var sums1 = $(".all").text();
+
+        $(".all").text(Number(sums1) + Number(hid));
+    });
+
+    $(".jian").click(function () {
+        var n1 = $(this).next().val();
+        var hid1 = $(this).siblings(".girl").val();
+        var num1 = parseInt(n1) - 1;
+        var q1 = Number(num1 * hid1);
+        if (num1 == 0) {
+            alert("你还没加商品嘞")
+            return;
+        }
+        $(this).parent().prev().children("dd").children(".price").html(q1);
+        $(this).next().val(num1);
+
+
+
+        var sums1 = $(".all").text();
+        alert(sums1)
+
+        $(".all").text(Number(sums1) - Number(hid1));
+
+    });
+
+    $(".cirle").click(function () {
+        $(this).css("background", "black");
+
+    },function(){
+        $(this).css("background", "#ddd");
+    });
+    // $(".cirle").click(function () {
+
+    //     $(this).css("background", "#ddd");
+
+    // });
+
+
+    // $(".cirle2").click(function () {
+    //     $(".cirle2").css("background", "black");
+    //     $(".cirle").css("background", "black");
+    // });
+
+    // $(".cirle2").click(function () {
+    //     $(".cirle2").css("background", "#ddd");
+    //     $(".cirle").css("background", "#ddd");
+    // });
+
+
+      
+   
+
+
+</script>
+
+</html>

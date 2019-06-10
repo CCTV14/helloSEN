@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+
+    body {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+    }
+
+    video {
+        position: fixed;
+        right: 0px;
+        bottom: 0px;
+        min-width: 100%;
+        min-height: 100%;
+        height: auto;
+        width: auto;
+        /*加滤镜*/
+        /*-webkit-filter: grayscale(100%);*/
+        /*filter:grayscale(100%);*/
+        z-index: -11;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .ewm_hidden {
+        display: none;
+    }
+
+    source {
+        min-width: 100%;
+        min-height: 100%;
+        height: auto;
+        width: auto;
+    }
+
+    .foot {
+        text-align: center;
+        color: white;
+        text-decoration: none;
+    }
+
+
+
+    .foot nav a {
+        color: white;
+    }
+
+
+    .main {
+        z-index: 999;
+
+    }
+
+    .main_head {
+        margin-top: 3%;
+        margin-left: 6%;
+        width: 100%;
+    }
+
+    .head_ul li {
+        list-style-type: none;
+        display: inline-block;
+        color: white;
+        font-size: 16px;
+        margin-left: 25px;
+
+
+    }
+
+    .main_body {
+        position: absolute;
+        top: 35%;
+        right: 150px;
+    }
+
+    .head {
+
+        margin-top: 2%;
+    }
+
+    .cont {
+        height: 455px;
+    }
+
+    .main_phone div {
+        display: inline-block;
+    }
+
+    .main_phone {
+        position: absolute;
+        top: 60%;
+        right: 150px;
+
+    }
+
+    .video_div {
+        width: 100%;
+        height: 100%;
+    }
+
+    .main_phone img {
+        margin-left: 10px;
+        box-shadow: 1px 1px 7px 2px rgba(0, 0, 0, .54);
+    }
+
+   
+</style>
+
+<body>
+    <div class="video_div">
+        <video autoplay muted loop width="100%;" height="100%;" style="z-index:-11;" id="voo">
+            <source src="video/tvc-v2_30097df.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="cont">
+
+
+        <div class="main_head row">
+            <div class="logo col-md-4">
+                <img src="video/logo.png" width="120px;" height="70px;">
+
+            </div>
+
+            <div class="head col-md-7">
+                <ul class="head_ul">
+                    <li>
+                        开放平台
+                    </li>
+                    <li>
+                        视频上传
+                    </li>
+                    <li>
+                        抖音特效师
+                    </li>
+
+                    <li>
+                        抖音音乐人
+                    </li>
+
+                    <li>
+
+                        机构认证
+                    </li>
+
+                    <li>
+                        企业认证
+                    </li>
+
+                    <li>
+                        <img src="video/jy.png" class="close_sy">
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="main_body">
+                <img src="video/good_sh.png">
+
+            </div>
+   
+            <div class="main_phone">
+                <div class="iphone">
+                    <img src="video/iphone.png" width="160px;" height="60px;" class="iphone">
+
+
+                </div>
+
+                <div class="android">
+                    <img src="video/android.png" width="160px;" height="60px;" class="android">
+
+
+                </div>
+
+                <div class="er_ma">
+                    <img src="video/ewm1.png" width="60px;" height="60px;" class="ewm1">
+                    <img src="video/ewm.png" class="ewm_hidden">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer class="foot">
+        <nav style="color:white;"><span>|</span> <a>音乐</a>
+            <span>|</span><a>用户服务协议</a>
+            <span>|</span> <a>隐私政策</a>
+            <span>|</span> <a>账号找回</a> <span>|</span> <a>联系我们</a>
+            <span>|</span> <a>广告投放</a> <span>|</span></nav>
+
+
+        <div>
+            <p></p>
+            <p><span
+                    id="copyYear">2019</span>&nbsp;©&nbsp;抖音&nbsp;&nbsp;|&nbsp;京ICP备16016397号-3&nbsp;|&nbsp;北京微播视界科技有限公司
+                |&nbsp; 京B2-20170846</p>
+            <p><a
+                    style="color:white;">中国互联网举报中心</a>&nbsp;|&nbsp;网络文化许可证-京网文-（2016）2282-264号&nbsp;|&nbsp;违法和不良信息举报：010-83434212&nbsp;|&nbsp;举报邮箱：jubao@douyin.com
+            </p>
+            <div class="gongan-box"><img src="video/hz.png">
+                <a style="color:white;">京公网安备
+                    11010802023605号</a> <span>&nbsp; | &nbsp;地址&nbsp;:&nbsp;北京市海淀区知春路51号4层408&nbsp;</span></div>
+        </div>
+    </footer>
+
+
+
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+    // $(".ewm1").hover(function(){
+    //     $(".android").hide();
+    //     $(".iphone").hide();
+    //     $(".ewm1").hide();
+    //     $(".ewm_hidden").slideDown();
+    // },function(){
+    //     $(".ewm_hidden").slideUp();
+    // })
+
+
+    $(".ewm1").mouseover(function () {
+        $(".android").hide();
+        $(".iphone").hide();
+        $(".ewm1").hide();
+        $(".ewm_hidden").slideDown();
+    });
+
+    $(".ewm_hidden").mouseout(function () {
+        $(".android").show();
+        $(".iphone").show();
+        $(".ewm1").show();
+        $(".ewm_hidden").slideUp();
+
+
+
+
+
+    })
+
+
+
+    var ii = document.getElementById("voo");
+
+    $(".close_sy").click(function () {
+
+        $(this).toggleClass("close_sy2");
+       
+        if ($(this).hasClass("close_sy2")) {
+            ii.muted = false
+            $(".close_sy").css("opacity", "0.0");
+
+           
+        } else {
+            ii.muted = true
+            $(".close_sy").css("opacity", "1.0");
+            
+        }
+      
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/mui.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/rest5.css">
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="head">
+            <div class="search">
+                <img src="img/serch.png">
+                <input type="search" class="sea" placeholder="请输入商户名">
+            </div>
+
+        </div>
+
+        <div class="list_nav">
+            <ul class="nav_ul">
+                <li class="dj">附近</li>
+
+                <li>美食</li>
+                <li>智能排序</li>
+                <li>全部活动</li>
+
+            </ul>
+            <ul class="one_ul">
+                <li class="fuj">附近</li>
+                <ul class="text-1">
+                    <li>附近</li>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                </ul>
+                <li class="one">第1个选项</li>
+                <ul class="text-1">
+                    <li>第1个选项-1</li>
+                    <li>第1个选项-2</li>
+                </ul>
+                <li class="two">第2个选项</li>
+                <ul class="text-1">
+                    <li>第2个选项-2</li>
+                </ul>
+                <li class="three">第3个选项</li>
+                <ul class="text-1">
+                    <li>第3个选项-3</li>
+                </ul>
+            </ul>
+
+        </div>
+
+
+    </div>
+</body>
+
+<script type="text/javascript" src="js/mui.min.js"></script>
+<script src="js/rem.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/scroll.js"></script>
+
+<script>
+
+
+$(".one_ul").css("display","none");
+$(".text-1").css("display","none");
+
+
+$(".dj").click(function(){
+    $(".one_ul").show();
+},function(){
+    $(".one_ul").hide();
+})
+ 
+    $(".fuj").click(function () {
+        $(this).siblings("ul").hide();
+        $(this).next().show();
+    })
+
+    $(".one").click(function () {
+        $(this).siblings("ul").hide();
+        $(this).next().show();
+       
+
+    })
+    $(".two").click(function () {
+        $(this).siblings("ul").hide();
+        $(this).next().show();
+      
+
+    })
+    $(".three").click(function () {
+        $(this).siblings("ul").hide();
+        $(this).next().show();
+      
+
+    })
+</script>
+
+</html>

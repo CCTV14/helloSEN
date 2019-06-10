@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Hello MUI</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	<link rel="stylesheet" href="../css/mui.min.css">
+	<style type="text/css">
+		.mui-content>.mui-table-view:first-child {
+			margin-top: -1px;
+		}
+
+		a {
+			margin-top: 0.1rem;
+		}
+	</style>
+</head>
+
+<body>
+	<!--下拉刷新容器-->
+	<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+		<div class="mui-scroll">
+			<!--数据列表-->
+			<ul class="mui-table-view mui-table-view-chevron"></ul>
+		</div>
+	</div>
+	<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+
+
+		var jj = {
+			"list": [
+				{
+					"id": 1,
+					"number": 7,
+					"name": "Joseph Taylor",
+					"color": "#e5f279",
+					"title": "Osq Yeooi Ygdtir Vbpkmisvp Xrxjlsbgf Nkrw",
+					"url": "http://dolj.vu/rje",
+					"email": "e.ulsrtwgtj@yhitnfi.lk",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "2006-02-01 08:30:55",
+					"date2": "1998-12-25 02:55:18",
+					"ctitle": "属今且四技选列全",
+					"canme": "余芳",
+					"cadd": "湖南省昆明市郊区",
+					"phone": "18767477441"
+				},
+				{
+					"id": 2,
+					"number": 3,
+					"name": "Michael Anderson",
+					"color": "#db79f2",
+					"title": "Ecusal Latxtyrc Lrkjunhej Gsnoabipc",
+					"url": "http://iblmbwsfe.cc/pbsgam",
+					"email": "m.eplgyem@jxbfduuev.ee",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "1986-04-04 22:48:45",
+					"date2": "2004-11-26 16:10:03",
+					"ctitle": "东住活张发过次百",
+					"canme": "袁军",
+					"cadd": "江苏省海外乐安县",
+					"phone": "15778878514"
+				},
+				{
+					"id": 3,
+					"number": 6,
+					"name": "Sarah Jackson",
+					"color": "#79f2b8",
+					"title": "Sudiyt Nmvxh Actou Rqj Eyiwr Bxhxwbto",
+					"url": "http://iwamezcyl.lt/fed",
+					"email": "u.xfftbfuwqb@yqotvjyty.dm",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "2014-07-31 19:21:20",
+					"date2": "1989-03-31 03:33:24",
+					"ctitle": "改组接查花并斯必",
+					"canme": "徐丽",
+					"cadd": "重庆抚州市清涧县",
+					"phone": "13787614583"
+				},
+				{
+					"id": 4,
+					"number": 5,
+					"name": "David Young",
+					"color": "#f29579",
+					"title": "Minzltfgtb Izhntkkh Pqzvaqofl Wgpmgqvmhj Zvlkhruyq",
+					"url": "http://jfpucb.sc/jwtpay",
+					"email": "n.wnbq@rizjvcivn.pr",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "1971-04-09 06:40:37",
+					"date2": "1989-11-04 22:49:32",
+					"ctitle": "革里管省反消连据",
+					"canme": "邵伟",
+					"cadd": "内蒙古自治区萍乡市其它区",
+					"phone": "13728115610"
+				},
+				{
+					"id": 5,
+					"number": 3,
+					"name": "Michelle Young",
+					"color": "#7980f2",
+					"title": "Rqymgs Pdczush Udspedrfr Pjygjutsp Xzqsk",
+					"url": "http://xrray.cz/mqo",
+					"email": "t.jkvnhnxrf@vqyi.md",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "2010-08-24 03:23:42",
+					"date2": "1982-07-28 22:30:20",
+					"ctitle": "更一越西运金民员",
+					"canme": "宋敏",
+					"cadd": "安徽省钦州市其它区",
+					"phone": "18515990747"
+				},
+				{
+					"id": 6,
+					"number": 4,
+					"name": "Timothy Miller",
+					"color": "#a3f279",
+					"title": "Ogyjednky Ecy Wtputockwe",
+					"url": "http://iphgugq.ki/kuo",
+					"email": "m.eqfejwtui@xyxybjwvb.jp",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "2005-06-18 14:03:46",
+					"date2": "2018-05-02 07:41:34",
+					"ctitle": "车边收引规上海省",
+					"canme": "何磊",
+					"cadd": "吉林省本溪市相山区",
+					"phone": "15821483241"
+				},
+				{
+					"id": 7,
+					"number": 7,
+					"name": "Thomas Thomas",
+					"color": "#f279c7",
+					"title": "Rtuhyu Uctb Aupwmem",
+					"url": "http://fgepdl.tj/cnonkzpo",
+					"email": "d.rgll@jhpkkyufq.cg",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "2018-09-25 00:08:09",
+					"date2": "1971-09-24 15:43:54",
+					"ctitle": "意日装技划土出却",
+					"canme": "蒋超",
+					"cadd": "西藏自治区陇南市青浦区",
+					"phone": "18112014453"
+				},
+				{
+					"id": 8,
+					"number": 3,
+					"name": "Sarah Rodriguez",
+					"color": "#79eaf2",
+					"title": "Yiojfgfe Iwukm Ryvoi",
+					"url": "http://wdvt.sy/wqhhu",
+					"email": "n.bxlvblcg@xklquepci.bf",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "2010-10-28 01:00:54",
+					"date2": "1990-10-27 22:14:11",
+					"ctitle": "写装消和根价选关",
+					"canme": "杨敏",
+					"cadd": "湖北省离岛北碚区",
+					"phone": "13330370752"
+				},
+				{
+					"id": 9,
+					"number": 4,
+					"name": "Nancy Jackson",
+					"color": "#f2d679",
+					"title": "Yufpiccr Bntx Rbjvibqv Ylnco Wqtv Qspmnz Prkdjletj",
+					"url": "http://bjreuqc.lt/stour",
+					"email": "u.dntorjnsg@okuv.tz",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "1977-06-27 08:29:23",
+					"date2": "2004-01-27 22:02:44",
+					"ctitle": "酸办交你单局争造",
+					"canme": "龙刚",
+					"cadd": "湖南省开封市黄大仙区",
+					"phone": "18243511585"
+				},
+				{
+					"id": 10,
+					"number": 5,
+					"name": "Larry Perez",
+					"color": "#b379f2",
+					"title": "Bjrqwq Fbgwbujjh Isaeuu Gqtivf",
+					"url": "http://rruqgoxpqr.us/tysujryng",
+					"email": "h.xxgps@usqcmk.sd",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "1998-10-23 02:52:17",
+					"date2": "2010-04-30 23:33:48",
+					"ctitle": "共切院几格始何上",
+					"canme": "万霞",
+					"cadd": "四川省内江市中江县",
+					"phone": "15768672141"
+				},
+				{
+					"id": 11,
+					"number": 6,
+					"name": "Jason Robinson",
+					"color": "#79f290",
+					"title": "Qfesldx Uwltcjn Ljqfr Jgv Gokse Cofwodt Aghsc",
+					"url": "http://dgobsucc.nr/ykccyose",
+					"email": "n.hmms@rxtsiltect.ad",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "1985-08-25 13:50:03",
+					"date2": "2000-08-01 08:28:06",
+					"ctitle": "多作物变及织已级",
+					"canme": "陆秀兰",
+					"cadd": "辽宁省绥化市杨浦区",
+					"phone": "18862710326"
+				},
+				{
+					"id": 12,
+					"number": 9,
+					"name": "Brian Williams",
+					"color": "#f27985",
+					"title": "Cjkzuuvkce Nfjxky Ubd Wqjh Psshixdh Vqluc",
+					"url": "http://fdtxre.cq/jxcwn",
+					"email": "n.jgxqo@vbvckqma.bs",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "2016-08-13 15:09:57",
+					"date2": "2012-05-11 12:16:38",
+					"ctitle": "号当参质但部什中",
+					"canme": "丁强",
+					"cadd": "澳门特别行政区重庆市-",
+					"phone": "13723082495"
+				},
+				{
+					"id": 13,
+					"number": 9,
+					"name": "Scott Jackson",
+					"color": "#79a8f2",
+					"title": "Daxgiayf Dxpqgffo Ejbkoi Vzehfn Qkthke",
+					"url": "http://qzengkyyd.iq/vxxehsk",
+					"email": "h.rgivirp@uqw.af",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "1975-02-09 09:02:20",
+					"date2": "2013-06-22 12:38:54",
+					"ctitle": "本产车听省加布特",
+					"canme": "邹静",
+					"cadd": "贵州省兴安盟海陵区",
+					"phone": "15843452732"
+				},
+				{
+					"id": 14,
+					"number": 8,
+					"name": "Daniel Davis",
+					"color": "#ccf279",
+					"title": "Iagbqk Kadphv Tiiyn Hmlfbuig Wbtyfyj",
+					"url": "http://xvdpnvsjo.is/puej",
+					"email": "z.cgdhvofi@hjx.mm",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "1973-09-28 10:45:15",
+					"date2": "1981-06-11 17:11:21",
+					"ctitle": "几战能严各达小万",
+					"canme": "邓洋",
+					"cadd": "江苏省河源市麻章区",
+					"phone": "18337526045"
+				},
+				{
+					"id": 15,
+					"number": 5,
+					"name": "Richard Gonzalez",
+					"color": "#f279ef",
+					"title": "Kjjoft Uuipnvqqiq Rbijz Iohfej Nogpdfnp Lawj",
+					"url": "http://mluqolw.pe/kgjt",
+					"email": "t.gdwqfpig@smyiiw.by",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "1990-08-06 15:27:51",
+					"date2": "2012-04-27 15:00:30",
+					"ctitle": "他样被指极统往度",
+					"canme": "毛明",
+					"cadd": "山西省三明市甲仙区",
+					"phone": "18147856094"
+				},
+				{
+					"id": 16,
+					"number": 8,
+					"name": "Helen Jones",
+					"color": "#79f2d1",
+					"title": "Bbj Gudcpz Nykqnnkdgj Pgfx Hbu Dess",
+					"url": "http://gdwxt.net/kdzujvtz",
+					"email": "t.xurce@vutumhtj.su",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "1982-01-15 19:24:01",
+					"date2": "2005-08-19 00:55:09",
+					"ctitle": "如它按万林领转如",
+					"canme": "彭秀英",
+					"cadd": "宁夏回族自治区遂宁市西安区",
+					"phone": "18634297741"
+				},
+				{
+					"id": 17,
+					"number": 6,
+					"name": "William Martin",
+					"color": "#f2ae79",
+					"title": "Beot Fvo Sukim Ios Jtjhens Prxprhbxxu",
+					"url": "http://tek.mo/fjfbs",
+					"email": "m.ceg@gdmjwsl.tt",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "1985-12-14 03:35:10",
+					"date2": "1991-12-08 12:29:18",
+					"ctitle": "选圆才商王反组速",
+					"canme": "孟强",
+					"cadd": "台湾莆田市墨脱县",
+					"phone": "15289581316"
+				},
+				{
+					"id": 18,
+					"number": 2,
+					"name": "John Brown",
+					"color": "#8a79f2",
+					"title": "Gzftkxi Eflvqzudi Bsifgmw Ezeefhp",
+					"url": "http://yka.ge/gipry",
+					"email": "y.cxmq@rjcttk.pw",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "1992-11-30 15:47:55",
+					"date2": "1980-11-19 21:36:55",
+					"ctitle": "本铁七作二装运装",
+					"canme": "夏丽",
+					"cadd": "广西壮族自治区重庆市尼玛县",
+					"phone": "15513478086"
+				},
+				{
+					"id": 19,
+					"number": 2,
+					"name": "Thomas Jackson",
+					"color": "#8af279",
+					"title": "Fcmr Bqtvpxkjh Majzpujwl Crk",
+					"url": "http://chkfwacemq.cr/yxpfwj",
+					"email": "s.ebhej@zbnvj.dk",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "1988-09-12 14:46:06",
+					"date2": "1981-08-07 08:29:19",
+					"ctitle": "县里段机它感加越",
+					"canme": "易敏",
+					"cadd": "海外日照市浦东新区",
+					"phone": "18931727212"
+				},
+				{
+					"id": 20,
+					"number": 5,
+					"name": "Joseph Walker",
+					"color": "#f279ae",
+					"title": "Fiofxnppj Sqcmaxv Vcsrl Rijvdeiw Vgd Ssnvus",
+					"url": "http://qoqfs.so/hvnnglmm",
+					"email": "j.fsjqbbawl@skviiv.bi",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "2004-02-24 10:19:14",
+					"date2": "1972-06-24 00:57:02",
+					"ctitle": "才同真条习动问六",
+					"canme": "朱秀英",
+					"cadd": "西藏自治区重庆市-",
+					"phone": "18365825590"
+				},
+				{
+					"id": 21,
+					"number": 2,
+					"name": "Joseph Davis",
+					"color": "#79d1f2",
+					"title": "Dgzlj Iorvirbs Zmhfnviax Sxjkjsnks",
+					"url": "http://qvfeqlcxu.id/udqagdcl",
+					"email": "h.tmtiptv@njjjta.la",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "2014-05-08 15:11:44",
+					"date2": "1977-11-28 18:59:09",
+					"ctitle": "义来内有个理传响",
+					"canme": "锺秀英",
+					"cadd": "黑龙江省荆州市-",
+					"phone": "18891433461"
+				},
+				{
+					"id": 22,
+					"number": 5,
+					"name": "David White",
+					"color": "#f2ef79",
+					"title": "Qsll Mhud Krtnmjev Sgcp Srrsri Qxerqt",
+					"url": "http://csuypea.ar/feywqpt",
+					"email": "v.cxtpdc@guuzg.ng",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "2004-01-19 08:31:02",
+					"date2": "1996-02-11 02:26:00",
+					"ctitle": "形文样划议你属六",
+					"canme": "姜丽",
+					"cadd": "甘肃省甘南藏族自治州陇川县",
+					"phone": "15412263571"
+				},
+				{
+					"id": 23,
+					"number": 6,
+					"name": "Richard Perez",
+					"color": "#cc79f2",
+					"title": "Mgongonnwg Nwoozll Dxxukx Rho",
+					"url": "http://jcagmnw.zm/nlvkrdoqvd",
+					"email": "d.binbv@jxoqdkb.as",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "1974-04-22 10:59:29",
+					"date2": "1982-10-29 19:08:43",
+					"ctitle": "非各且名各然到它",
+					"canme": "邱磊",
+					"cadd": "台湾重庆市肃南裕固族自治县",
+					"phone": "18742707246"
+				},
+				{
+					"id": 24,
+					"number": 6,
+					"name": "Jessica White",
+					"color": "#79f2a9",
+					"title": "Jsystg Tjqghpiqm Yakbx Alyvkl",
+					"url": "http://bcprhiewrf.ga/drrbebbm",
+					"email": "x.ycuim@mhh.sh",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "2004-05-15 00:30:19",
+					"date2": "1987-06-09 10:09:57",
+					"ctitle": "样定观候我体强单",
+					"canme": "陆磊",
+					"cadd": "青海省商洛市阳信县",
+					"phone": "13652109571"
+				},
+				{
+					"id": 25,
+					"number": 6,
+					"name": "Carol Williams",
+					"color": "#f28579",
+					"title": "Lncr Scl Jzeukyt Zadsbmw Uuqnibb Hxruw Qxnxi",
+					"url": "http://pctlz.md/enn",
+					"email": "y.scyvxogbt@lefvg.dj",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "2001-03-28 21:59:46",
+					"date2": "1989-04-07 10:24:10",
+					"ctitle": "头基华低总所子九",
+					"canme": "曾秀兰",
+					"cadd": "陕西省益阳市北港镇",
+					"phone": "18984117387"
+				},
+				{
+					"id": 26,
+					"number": 10,
+					"name": "Michael Davis",
+					"color": "#798ff2",
+					"title": "Fnbhdifvpi Nbvxipf Dqkdtideqb Yboc Zqqtvxbqf",
+					"url": "http://onuvric.bd/yty",
+					"email": "w.yvcujurcq@pmp.bj",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "2003-01-19 01:17:49",
+					"date2": "2018-11-29 16:32:06",
+					"ctitle": "格许必极力八关定",
+					"canme": "文伟",
+					"cadd": "云南省九龙阿克陶县",
+					"phone": "18621348625"
+				},
+				{
+					"id": 27,
+					"number": 10,
+					"name": "Michelle White",
+					"color": "#b3f279",
+					"title": "Iawomyqz Bcqcyjw Oujjenry Seewjcpl Odbjrusk Axxfgj Jkls",
+					"url": "http://fvivhpq.sy/wpxlrkyiyd",
+					"email": "i.klmwffpxq@gmpfb.ne",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "2007-07-29 12:08:40",
+					"date2": "1973-08-09 18:49:58",
+					"ctitle": "数织按百也龙而口",
+					"canme": "龙静",
+					"cadd": "河北省大同市孝南区",
+					"phone": "15131388148"
+				},
+				{
+					"id": 28,
+					"number": 8,
+					"name": "Scott Jones",
+					"color": "#f279d6",
+					"title": "Nxxekcl Vlvkpm Pdpq",
+					"url": "http://umsxjfgzd.is/vdrjjlgxf",
+					"email": "l.novuyb@hojfdy.qa",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "1990-04-01 05:27:44",
+					"date2": "1981-07-28 04:04:08",
+					"ctitle": "多难从属这五九六",
+					"canme": "罗丽",
+					"cadd": "山东省亳州市渝北区",
+					"phone": "13666157482"
+				},
+				{
+					"id": 29,
+					"number": 4,
+					"name": "Shirley Williams",
+					"color": "#79f2ea",
+					"title": "Hrzuim Whhs Xxqsnf Mtwjospobv Yrncty Wicdmvi Ohfybwx",
+					"url": "http://vxdray.gu/orov",
+					"email": "w.ojglwl@qwljwfngx.bs",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "2014-09-15 20:49:27",
+					"date2": "1970-09-07 16:01:10",
+					"ctitle": "非影标更写合团权",
+					"canme": "赖静",
+					"cadd": "天津海北藏族自治州秀林乡",
+					"phone": "18570159374"
+				},
+				{
+					"id": 30,
+					"number": 8,
+					"name": "Sarah Miller",
+					"color": "#f2c779",
+					"title": "Ehtektpzq Hdkwn Llfntgoo Usseqlou",
+					"url": "http://vtogikht.np/cfkjcyg",
+					"email": "h.ika@zvv.pf",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "2007-12-21 03:09:52",
+					"date2": "2003-02-19 03:11:09",
+					"ctitle": "低连工样复须经人",
+					"canme": "龚超",
+					"cadd": "北京黄山市东乡县",
+					"phone": "18491542716"
+				},
+				{
+					"id": 31,
+					"number": 7,
+					"name": "Richard Smith",
+					"color": "#a379f2",
+					"title": "Kkersuclwy Ckxqauvywr Drd Fdgidnai Ilmu",
+					"url": "http://yjixvvbyq.gr/bvtqbd",
+					"email": "f.fyvd@mzflv.pm",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "2015-04-12 10:09:49",
+					"date2": "2010-09-15 22:35:08",
+					"ctitle": "速部发体清空至教",
+					"canme": "文军",
+					"cadd": "台湾张家界市耀州区",
+					"phone": "15411417644"
+				},
+				{
+					"id": 32,
+					"number": 3,
+					"name": "Anthony Jackson",
+					"color": "#79f280",
+					"title": "Iqyoy Odketjomm Hvsziqk Wnmml Yfm",
+					"url": "http://rpqyivb.cr/vkqyfay",
+					"email": "n.dljxf@xryhxoye.zm",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "1971-06-13 13:03:27",
+					"date2": "1982-08-16 12:29:08",
+					"ctitle": "计或度包却公备值",
+					"canme": "苏平",
+					"cadd": "河北省楚雄彝族自治州西乡县",
+					"phone": "18556448456"
+				},
+				{
+					"id": 33,
+					"number": 2,
+					"name": "Carol Garcia",
+					"color": "#f27994",
+					"title": "Iaiuqwefyk Roqh Wuofhkr Jlxsuxxr",
+					"url": "http://uqjimnrvfh.sb/pfj",
+					"email": "y.svimdnl@coalmdm.za",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "2000-10-20 04:35:22",
+					"date2": "1996-01-12 18:29:41",
+					"ctitle": "效取或第内压气或",
+					"canme": "杨军",
+					"cadd": "浙江省铁岭市科尔沁右翼前旗",
+					"phone": "18126237264"
+				},
+				{
+					"id": 34,
+					"number": 4,
+					"name": "Ronald Rodriguez",
+					"color": "#79b8f2",
+					"title": "Avfrc Dgsmi Vqtlfeftc Nxlv Slqgzr",
+					"url": "http://svprr.sj/icdexq",
+					"email": "g.hdgju@swpyzj.bi",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "2018-07-10 07:51:16",
+					"date2": "1973-03-25 01:30:15",
+					"ctitle": "一高定深最安题该",
+					"canme": "汪芳",
+					"cadd": "黑龙江省通化市香河县",
+					"phone": "18171127893"
+				},
+				{
+					"id": 35,
+					"number": 8,
+					"name": "James Hernandez",
+					"color": "#dbf279",
+					"title": "Foytnxs Qrjhkf Foefoxra Pbykilqd",
+					"url": "http://boge.yu/tvjrmifv",
+					"email": "s.mokelkr@hsneqn.com.cn",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "1985-07-09 06:46:50",
+					"date2": "2014-02-26 03:17:28",
+					"ctitle": "她最规代交半果白",
+					"canme": "徐涛",
+					"cadd": "江西省玉树藏族自治州泸水县",
+					"phone": "18667249761"
+				},
+				{
+					"id": 36,
+					"number": 3,
+					"name": "Ronald Perez",
+					"color": "#e579f2",
+					"title": "Sgbcogit Zuowxbmda Bpzzjrfi Xrctroqpz Fyxsppv Ylqz",
+					"url": "http://vnmtfmdh.pl/xybhpln",
+					"email": "e.lnbbuel@lxljrkj.cz",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "1971-03-01 16:55:25",
+					"date2": "1975-12-04 08:13:26",
+					"ctitle": "声并文处县对革从",
+					"canme": "侯军",
+					"cadd": "湖北省新北市巴里坤哈萨克自治县",
+					"phone": "18918740692"
+				},
+				{
+					"id": 37,
+					"number": 4,
+					"name": "Frank Young",
+					"color": "#79f2c2",
+					"title": "Ijpfmhtqoz Gjgwu Edeuwr Xdpdeehx Mskts",
+					"url": "http://asvppdcyx.it/ychujwxtd",
+					"email": "w.jfjamdyl@qxxo.sn",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "2003-08-17 16:48:39",
+					"date2": "1983-01-25 14:53:00",
+					"ctitle": "线人正存情争相就",
+					"canme": "姚艳",
+					"cadd": "青海省攀枝花市怀柔区",
+					"phone": "13583748333"
+				},
+				{
+					"id": 38,
+					"number": 7,
+					"name": "Deborah Martin",
+					"color": "#f29e79",
+					"title": "Eikaposm Jqvighx Qjxjawltcu Xcjmitjqf Hkoeot Mclcvl Sbswub",
+					"url": "http://laiko.gm/cwxdkxvskk",
+					"email": "q.yfhfwc@vampb.nz",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "2010-03-04 04:23:36",
+					"date2": "1991-07-14 02:56:08",
+					"ctitle": "越何局热电属华效",
+					"canme": "廖芳",
+					"cadd": "云南省秦皇岛市玛纳斯县",
+					"phone": "18812300991"
+				},
+				{
+					"id": 39,
+					"number": 3,
+					"name": "Jeffrey Clark",
+					"color": "#7b79f2",
+					"title": "Bee Rhppcxpb Lwcwxj Bjysiycdnd Lewwejb",
+					"url": "http://yoqbd.za/ojjxk",
+					"email": "r.vrjikmeuz@lqxwgevhom.中国",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "1989-05-25 11:42:42",
+					"date2": "1977-12-25 10:38:53",
+					"ctitle": "复中更的响么定反",
+					"canme": "孙敏",
+					"cadd": "甘肃省海北藏族自治州仁和区",
+					"phone": "18813537622"
+				},
+				{
+					"id": 40,
+					"number": 9,
+					"name": "Richard Moore",
+					"color": "#9af279",
+					"title": "Mpoyhkrv Wrjdwj Ohrxgndcwv Pujfy Rxsaeowte",
+					"url": "http://xmstxvb.gw/nhyzyemy",
+					"email": "o.jfwmiwkicu@qdbo.sy",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "1983-01-07 13:32:50",
+					"date2": "2006-09-19 23:29:20",
+					"ctitle": "据质指原府矿张出",
+					"canme": "宋强",
+					"cadd": "江苏省晋中市华龙区",
+					"phone": "13725393309"
+				},
+				{
+					"id": 41,
+					"number": 3,
+					"name": "Kevin Perez",
+					"color": "#f279bd",
+					"title": "Nqbuowi Tkdkdhj Dqgyu Ift Kefmmhynki Rbb",
+					"url": "http://pcddd.gr/qdwv",
+					"email": "c.rckndq@wwsxobzd.kw",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "1993-10-29 06:41:06",
+					"date2": "1975-08-04 01:06:23",
+					"ctitle": "张清节方感精济上",
+					"canme": "段静",
+					"cadd": "海南省朝阳市九江县",
+					"phone": "15246833936"
+				},
+				{
+					"id": 42,
+					"number": 9,
+					"name": "Edward Wilson",
+					"color": "#79e0f2",
+					"title": "Tvjsm Sozzi Hgvpw Srsygrtzn Qgoohjd",
+					"url": "http://gwi.vg/zexs",
+					"email": "i.enmr@hdykef.mm",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "2008-06-29 01:56:51",
+					"date2": "1991-04-25 13:39:37",
+					"ctitle": "议第切接列手还义",
+					"canme": "石超",
+					"cadd": "北京本溪市钦南区",
+					"phone": "18841527584"
+				},
+				{
+					"id": 43,
+					"number": 7,
+					"name": "Larry Hernandez",
+					"color": "#f2e079",
+					"title": "Docwkngp Mrsypnc Edeni Wfm Inypquyko",
+					"url": "http://jrbxism.bf/ftp",
+					"email": "j.wdyd@ginphm.lt",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "2010-11-02 18:03:35",
+					"date2": "1993-11-03 16:34:01",
+					"ctitle": "结实油力期油标林",
+					"canme": "沈霞",
+					"cadd": "台湾牡丹江市中站区",
+					"phone": "18385311399"
+				},
+				{
+					"id": 44,
+					"number": 7,
+					"name": "Sarah Martinez",
+					"color": "#bc79f2",
+					"title": "Nrettn Dklrdax Mbijcsfe Hwvpioyh",
+					"url": "http://rvpmqxeug.is/pbqpyqu",
+					"email": "w.mbrotgvg@duwxf.nz",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "1995-08-31 00:53:29",
+					"date2": "2002-10-30 08:28:21",
+					"ctitle": "级而当制改边料劳",
+					"canme": "曾静",
+					"cadd": "西藏自治区北京市寿光市",
+					"phone": "18745921233"
+				},
+				{
+					"id": 45,
+					"number": 5,
+					"name": "Kenneth Davis",
+					"color": "#79f299",
+					"title": "Vroiyuf Brcngjnrev Njepucjz Wlkusoy",
+					"url": "http://ifjbdzfqiq.gd/khebjrqbgn",
+					"email": "k.xstgfppe@iqgkhwkb.org",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "1984-06-17 12:00:45",
+					"date2": "1973-12-07 02:15:15",
+					"ctitle": "等照平头业量治成",
+					"canme": "侯芳",
+					"cadd": "甘肃省泸州市闵行区",
+					"phone": "15534441020"
+				},
+				{
+					"id": 46,
+					"number": 5,
+					"name": "Linda Harris",
+					"color": "#f2797b",
+					"title": "Iibscchd Docm Lfwglwfte Lqdtxrpfd Rqccgx",
+					"url": "http://mihsjtxws.mr/kwq",
+					"email": "k.wydgbaors@jrlbo.cl",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "2007-03-25 10:17:41",
+					"date2": "1987-06-12 06:10:12",
+					"ctitle": "真广众然外品前结",
+					"canme": "侯秀英",
+					"cadd": "辽宁省九龙莲花县",
+					"phone": "18577743814"
+				},
+				{
+					"id": 47,
+					"number": 9,
+					"name": "Mary Lopez",
+					"color": "#799ff2",
+					"title": "Sodeybd Udorc Tvozoxixn",
+					"url": "http://yakulk.cz/fsgmyb",
+					"email": "o.pdlvjj@pvedtmqyf.sm",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "2009-10-22 09:51:54",
+					"date2": "1974-06-15 07:59:18",
+					"ctitle": "非我内位动口头连",
+					"canme": "韩秀英",
+					"cadd": "江西省辽源市渝北区",
+					"phone": "18810677532"
+				},
+				{
+					"id": 48,
+					"number": 4,
+					"name": "Robert Thomas",
+					"color": "#c2f279",
+					"title": "Dxjpqmvfnh Hhfclekr Crdmdpb Julecywgh Otdb",
+					"url": "http://ffovdmcbfy.aero/jbnggoodxk",
+					"email": "e.cdtk@rujwyigh.ni",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "1981-02-14 21:30:45",
+					"date2": "2002-12-02 11:43:53",
+					"ctitle": "然着着以调他气明",
+					"canme": "文军",
+					"cadd": "陕西省平凉市海沧区",
+					"phone": "18646226968"
+				},
+				{
+					"id": 49,
+					"number": 5,
+					"name": "Jeffrey Perez",
+					"color": "#f279e5",
+					"title": "Wufqdgy Ypftrftg Imriobx Ouulxtfd Rrnnsbn Jqqrwiqj",
+					"url": "http://yzgvlir.lc/jtiid",
+					"email": "s.ycx@irvqs.ee",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "2007-03-12 09:11:19",
+					"date2": "2004-12-26 16:55:34",
+					"ctitle": "适术长海社立也又",
+					"canme": "丁超",
+					"cadd": "江西省马鞍山市六枝特区",
+					"phone": "18533659369"
+				},
+				{
+					"id": 50,
+					"number": 4,
+					"name": "David Martin",
+					"color": "#79f2db",
+					"title": "Rhfopnkrb Bpjenodm Mrpb Jff Lpoqo Njrgepe",
+					"url": "http://rgcx.travel/tces",
+					"email": "o.hrlqeid@igt.sa",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "1991-07-21 13:27:48",
+					"date2": "1993-07-15 01:58:11",
+					"ctitle": "连教局收观内片式",
+					"canme": "范刚",
+					"cadd": "安徽省和田地区油尖旺区",
+					"phone": "18256386234"
+				},
+				{
+					"id": 51,
+					"number": 2,
+					"name": "Sandra Williams",
+					"color": "#f2b779",
+					"title": "Qfht Xmmd Bdsigsz Ycuwtpnie Sfap Iqrtrtcmd",
+					"url": "http://hevpcrutn.kh/etxnjns",
+					"email": "o.tgms@xyahzykjo.ly",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "1998-01-10 11:20:53",
+					"date2": "1979-11-15 21:29:51",
+					"ctitle": "平增马产候正气教",
+					"canme": "丁强",
+					"cadd": "海南省茂名市简阳市",
+					"phone": "18760273863"
+				},
+				{
+					"id": 52,
+					"number": 5,
+					"name": "Brian Harris",
+					"color": "#9479f2",
+					"title": "Jpdhyjmol Hhubsdbiy Xqg Eor",
+					"url": "http://leghbyqcyk.mv/sqajvx",
+					"email": "r.ntzom@ozeisbeb.py",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "1985-01-12 13:32:59",
+					"date2": "1972-01-04 15:47:50",
+					"ctitle": "验较儿产适选见温",
+					"canme": "范洋",
+					"cadd": "吉林省拉萨市府谷县",
+					"phone": "13543616928"
+				},
+				{
+					"id": 53,
+					"number": 10,
+					"name": "Elizabeth Taylor",
+					"color": "#81f279",
+					"title": "Vstju Nemb Audr Sdbkjopr",
+					"url": "http://sgt.info/qbmhoglo",
+					"email": "w.gaenrf@ayiqlpez.pw",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "1998-08-03 04:46:35",
+					"date2": "2000-06-05 06:28:00",
+					"ctitle": "并革改表且造感起",
+					"canme": "顾桂英",
+					"cadd": "台湾天津市资溪县",
+					"phone": "18237787151"
+				},
+				{
+					"id": 54,
+					"number": 5,
+					"name": "Mark Perez",
+					"color": "#f279a4",
+					"title": "Asbxjb Yjxudb Btdc Txyt",
+					"url": "http://pvqnrrwqxz.ni/wpsjr",
+					"email": "u.ipvkw@segpxaip.lb",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "1984-07-20 06:24:21",
+					"date2": "1980-06-20 18:08:29",
+					"ctitle": "力低斗集容包特门",
+					"canme": "袁伟",
+					"cadd": "河南省绍兴市铜陵县",
+					"phone": "13877814731"
+				},
+				{
+					"id": 55,
+					"number": 1,
+					"name": "Kimberly Taylor",
+					"color": "#79c7f2",
+					"title": "Bfjpab Ompwrnm Dmvzbed Tgrpbs Xceqwweuk Fguenld Hruyu",
+					"url": "http://xeojdnxd.mw/rslmf",
+					"email": "h.nps@helybem.net.cn",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "2006-09-18 00:55:25",
+					"date2": "2010-09-22 15:20:54",
+					"ctitle": "相用切候农华文后",
+					"canme": "孟明",
+					"cadd": "陕西省文山壮族苗族自治州平安县",
+					"phone": "18342827315"
+				},
+				{
+					"id": 56,
+					"number": 5,
+					"name": "Ruth Thomas",
+					"color": "#ebf279",
+					"title": "Nxwenvl Pafi Wqst Lkvwekqh Gra",
+					"url": "http://ywrxu.cr/yubr",
+					"email": "a.rshgewg@sjtogur.pn",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "2007-05-16 14:41:08",
+					"date2": "1979-01-20 10:38:26",
+					"ctitle": "例世解步半严即自",
+					"canme": "许涛",
+					"cadd": "辽宁省澳门半岛阳东县",
+					"phone": "13268427203"
+				},
+				{
+					"id": 57,
+					"number": 2,
+					"name": "Matthew White",
+					"color": "#d679f2",
+					"title": "Pojjc Iko Fhvepvrm Npdavukgm Lmeenqbuw Cunuhq Jsuarfod",
+					"url": "http://vsoh.si/eoynslb",
+					"email": "t.byhnbuv@otyfkzvy.ke",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "2002-12-10 04:09:09",
+					"date2": "2007-01-29 04:49:26",
+					"ctitle": "一局生马书五九方",
+					"canme": "廖平",
+					"cadd": "云南省赤峰市古冶区",
+					"phone": "18226110808"
+				},
+				{
+					"id": 58,
+					"number": 9,
+					"name": "Gary Clark",
+					"color": "#79f2b2",
+					"title": "Drjltore Kmnjjw Mvtnp",
+					"url": "http://bqkpkzfp.bd/fmlqyom",
+					"email": "q.vxdbiq@wit.ml",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "1974-02-11 16:51:27",
+					"date2": "2009-06-25 22:39:52",
+					"ctitle": "养你格油对手面车",
+					"canme": "曾平",
+					"cadd": "黑龙江省呼和浩特市浦东新区",
+					"phone": "13567345948"
+				},
+				{
+					"id": 59,
+					"number": 4,
+					"name": "Thomas Allen",
+					"color": "#f28f79",
+					"title": "Xppd Jymvd Luc Hpdlycnpcf Detvyageup",
+					"url": "http://poaf.np/rvnqdiwbo",
+					"email": "i.ajcdyyx@wwdpfr.sr",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "1996-09-28 00:39:20",
+					"date2": "1978-09-19 04:40:42",
+					"ctitle": "地直易习八比研除",
+					"canme": "邱秀英",
+					"cadd": "香港特别行政区喀什地区其它区",
+					"phone": "18430371561"
+				},
+				{
+					"id": 60,
+					"number": 8,
+					"name": "Daniel Thomas",
+					"color": "#7986f2",
+					"title": "Wstjcsd Kwuhmw Kvpvhatdk Oiaqnbp",
+					"url": "http://exov.vn/cryew",
+					"email": "n.tpjxr@nixraqnvbj.si",
+					"image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+					"date": "1974-08-15 14:29:26",
+					"date2": "1980-02-24 05:07:21",
+					"ctitle": "界体自快复解声交",
+					"canme": "韩敏",
+					"cadd": "湖南省宜春市城区",
+					"phone": "13576774123"
+				}
+			]
+
+		}
+		mui.init({
+			pullRefresh: {
+				container: '#pullrefresh',
+				down: {
+					style: 'circle',
+					callback: pulldownRefresh
+				},
+				up: {
+					auto: true,
+					contentrefresh: '正在加载...',
+					callback: pullupRefresh
+				}
+			}
+		});
+
+		mui.ajax(jj, {
+			dataType: 'json',//服务器返回json格式数据
+			type: 'post',//HTTP请求类型
+			timeout: 10000,//超时时间设置为10秒；
+			headers: { 'Content-Type': 'jj/json' },
+			success: function (data) {
+				//服务器返回响应，根据响应结果，分析是否登录成功；
+
+			},
+			error: function (xhr, type, errorThrown) {
+				//异常处理；
+				console.log(type);
+			}
+		});
+
+		var count = 0;
+		function pullupRefresh() {
+			setTimeout(function () {
+				mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
+				var table = document.body.querySelector('.mui-table-view');
+				var cells = document.body.querySelectorAll('.mui-table-view-cell');
+				var newCount = cells.length > 0 ? 5 : 20;//首次加载20条，满屏
+				for (var i = cells.length, len = i + newCount; i < len; i++) {
+
+					var li = document.createElement('li');
+					li.className = 'mui-table-view-cell';
+					li.innerHTML = '<a class="mui-navigate-right">' + "<span style='display:none;'>" + jj.list[i].id + "</span>" + "<br/>" + jj.list[i].name + "<br/>" + jj.list[i].title + "<br/>" + jj.list[i].cadd + "<br/>" + jj.list[i].phone + '</a>';
+					table.appendChild(li);
+				}
+			}, 1500);
+		}
+
+
+		function addData() {
+			var table = document.body.querySelector('.mui-table-view');
+			var cells = document.body.querySelectorAll('.mui-table-view-cell');
+			for (var i = cells.length, len = i + 5; i < len; i++) {
+				var li = document.createElement('li');
+				li.className = 'mui-table-view-cell';
+				li.innerHTML = '<a class="mui-navigate-right">' + "<span style='display:none;'>" + jj.list[i].id + "</span>" + "<br/>" + jj.list[i].name + "<br/>" + jj.list[i].title + "<br/>" + jj.list[i].cadd + "<br/>" + jj.list[i].phone + '</a>';
+				//下拉刷新，新纪录插到最前面；
+				table.insertBefore(li, table.firstChild);
+			}
+		}
+		/**
+		 * 下拉刷新具体业务实现
+		 */
+		function pulldownRefresh() {
+			setTimeout(function () {
+				addData();
+				mui('#pullrefresh').pullRefresh().endPulldownToRefresh();
+				mui.toast("为你推荐了5篇文章");
+			}, 1500);
+		}
+
+
+
+
+
+	</script>
+
+
+</body>
+
+</html>

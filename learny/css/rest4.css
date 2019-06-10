@@ -1,0 +1,255 @@
+body{
+    padding: 0;
+    margin: 0;
+
+}
+
+.main{
+    height: 19.2rem;
+}
+
+.head{
+    width: 100%;
+    background-color: #f5f5f5;
+    border-bottom: #ddd solid 1px;
+    height: 1rem;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+.head_cont{
+    font-size: 0.4rem;
+    text-align: center;
+    line-height: 0.9rem;
+}
+.head img{
+    width: 0.5rem;
+    float: left;
+    padding-top: 0.3rem;
+    padding-left: 0.3rem;
+
+}
+
+.cont{
+    padding: 0% 3%;
+    width: 98%;
+    margin-top: 1.3rem;
+    
+}
+
+input{
+    width: 100% !important;
+    height: 0.8rem !important;
+    color: darkgray !important;
+    border: 1px solid #ddd !important;
+    border-radius: 0.2rem !important;
+    padding: 0.2rem !important;
+    font-size: 0.3rem !important;
+    margin-bottom: 0.2rem !important;
+    outline: none !important;
+    color: #666 !important;
+}
+
+#showCityPicker31{
+    width: 100% !important;
+    height: 0.8rem !important;
+    border: 1px solid #ddd !important;
+    border-radius: 0.2rem !important;
+    padding: 0.2rem !important;
+    font-size: 0.3rem !important;
+    margin-bottom: 0.2rem !important;
+    outline: none !important;
+    text-align: left !important;
+    color: #666 !important;
+}
+
+#showCityPicker3{
+    width: 100% !important;
+    height: 0.8rem !important;
+    border: 1px solid #ddd !important;
+    border-radius: 0.2rem !important;
+    padding: 0.2rem !important;
+    font-size: 0.3rem !important;
+    margin-bottom: 0.2rem !important;
+    outline: none !important;
+    text-align: left !important;
+    color: #666 !important;
+  
+   
+}
+
+#x_date{
+    width: 100% !important;
+    height: 0.8rem !important;
+    border: 1px solid #ddd !important;
+    border-radius: 0.2rem !important;
+    padding: 0.2rem !important;
+    font-size: 0.3rem !important;
+    margin-bottom: 0.2rem !important;
+    outline: none !important;
+    text-align: left !important;
+    color: #666 !important;
+
+}
+.mui-content-padded{
+    margin: 0 !important;
+}
+.song{
+    background-color: #ffe037;
+    color: #10805a;
+    font-size: .26rem;
+    width: 48%;
+    border-radius: .1rem;
+    line-height: 260%;
+}
+
+.remove{
+    float: right;
+    background-color: #eee;
+    color: #999;
+    font-size: .26rem;
+    width: 48%;
+    border-radius: .1rem;
+    line-height: 260%;
+}
+
+.add{
+    margin: 0;
+    background-color: #ffe037;
+    color: #10805a;
+    font-size: .26rem;
+    width: 100%;
+    border-radius: .1rem;
+    line-height: 260%;
+   
+}
+
+.line{
+    border: 5px solid pink;
+    margin-bottom: 0.3rem;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+
+.nav1{
+    font-size: 0.3rem;
+    color: #999;
+    text-align: center;
+    border-top: 13px solid #ddd;
+    border-bottom: 2px solid #ddd;
+  
+
+}
+
+.nav1 p{
+    margin-top: 0.3rem;
+    font-size: 0.3rem;
+
+
+}
+
+.nav2{
+    font-size: 0.3rem;
+    text-align: center;
+    margin-top: 0.3rem;
+}
+
+.nav2 a{
+    color: #999;
+    margin-right: 0.3rem;
+  
+
+}
+
+.txt{
+    text-align: center;
+    color: #999;
+    font-size: .20rem;
+    line-height: 180%;
+    margin-top: 0.3rem;
+}
+
+.txt p{
+    text-align: center;
+    color: #999;
+    font-size: .20rem;
+    line-height: 180%;
+}
+.pick-arrow{
+    position: absolute;
+    top: 37%;
+    margin-right: 7%;
+    margin-top: -.05rem;
+    right: 0;
+    display: block;
+    border: .1rem solid #999;
+    border-left: .1rem solid transparent;
+    border-right: .1rem solid transparent;
+    border-bottom: .1rem solid transparent;
+}
+
+.pick-arrow2{
+    position: absolute;
+    bottom: 8.5%;
+    margin-right: 7%;
+    margin-top: -.05rem;
+    right: 0;
+    display: block;
+    border: .1rem solid #999;
+    border-left: .1rem solid transparent;
+    border-right: .1rem solid transparent;
+    border-bottom: .1rem solid transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+.info1 {
+    margin-right: 0.1rem;
+}
+
+.info4 {
+    margin-right: 0.2rem;
+}
+.last {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 49;
+    box-shadow: 0 1px 15px #eef0f4;
+    /* padding: 0.01rem; */
+    width: 100%;
+    border-top: 2px solid #d7d7d7;
+    background-color: #ffe037;
+    height: 1.2rem;
+    color:black;
+}
+
+.last img {
+    width: 0.46rem;
+    height: 0.45rem;
+}
+
+.last div {
+    display: inline-block;
+    margin-left: 1.0rem;
+    font-size: 0.1rem;
+
+}
+
+.last p {
+    font-size: 0.2rem;
+    margin: 0 0 10px;
+}
+

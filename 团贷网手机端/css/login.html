@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/swiper.min.css">
+
+</head>
+
+<style>
+    body {
+        margin: 0;
+    }
+
+    .row {
+        background: black;
+
+    }
+
+
+    .header {
+        color: white;
+        width: 100%;
+
+    }
+
+    .col-md-10 {
+        padding-left: 7%;
+    }
+
+    .nav_ul {
+        height: 4px;
+        display: inline-block;
+
+
+    }
+
+    .nav_img {
+        display: inline-block;
+
+
+    }
+
+    .nav_ul1 div li {
+        display: inline-block;
+        list-style-type: none;
+        color: #757575;
+        font-family: montserrat;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .nav_ul_div {
+        background: white;
+        color: black;
+    }
+
+    .nav_cont {
+        margin-left: 4%;
+
+    }
+
+    .nav_ul {
+        margin-top: 4%;
+        background: white;
+        margin-left: 0;
+        line-height: 10px;
+    }
+
+    .nav_two_img {
+
+
+        float: right;
+        margin-right: 10%;
+
+    }
+
+    html,
+    body {
+        position: relative;
+        height: 100%;
+    }
+
+    body {
+
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+    }
+
+    .swiper-container {
+        width: 100%;
+
+    }
+
+
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    .new_arr_cont {
+        background: white;
+
+    }
+
+    .new_arr_cont img {
+        width: 225px;
+
+    }
+
+    .arr1_size ul li {
+        list-style-type: none;
+        display: inline-block;
+
+    }
+
+    .arr1_size {
+        background: #f7f7f9 none repeat scroll 0 0;
+    }
+
+    .arr1_size h4 {
+        display: inline;
+    }
+
+    .arr1_size ul {
+        padding: 6px;
+        display: inline-block;
+    }
+
+    .pro-content {
+        border: 1px solid pink;
+
+    }
+
+    .pro-content h3 p {
+        display: inline-block;
+    }
+</style>
+
+<body>
+
+<!-- 最大的div -->
+<div id="main">
+    <div class="header">
+        <div class="row">
+            <div class="log col-md-10">
+                LOG IN | REGISTER
+            </div>
+            <div class="col-md-2">
+                ENG <img src="img/down.jpg">
+                USD <img src="img/down.jpg">
+
+            </div>
+
+
+        </div>
+
+
+        <div class="nav">
+            <!-- 让这个div内容居中在中间 -->
+            <div class="nav_cont">
+                <div class="nav_img">
+                    <img src="img/logo.png">
+                </div>
+                <div class="nav_ul row">
+
+
+                    <ul class="nav_ul1">
+                        <div class="col-md-2">
+                            <li>HOME</li>
+                        </div>
+
+                        <div class="col-md-2">
+                            <li>SHOP</li>
+                        </div>
+                        <div class="col-md-2">
+                            <li>PAGES</li>
+                        </div>
+                        <div class="col-md-2">
+                            <li>BLOG</li>
+                        </div>
+                        <div class="col-md-4">
+                            <li>CONTACT</li>
+                        </div>
+                    </ul>
+
+                </div>
+                <div class="nav_two_img">
+                    <img src="img/serch.jpg">
+                    <img src="img/gwc.jpg">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img/main.jpg" style="width:100%;"></div>
+            <div class="swiper-slide"><img src="img/main2.jpg" style="width:100%;"></div>
+
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <div class="new_arr">
+        <h3 style="text-align:center;margin-top:7%;">New Arrival——Best Seller——Most Wanted</h3>
+
+        <div class="new_arr_cont row">
+
+            <div class="col-md-3">
+                <div class="arr1">
+                    <img src="img/1.jpg">
+                    <div class="arr1_size">
+                        <h4>Sizes:</h4>
+                        <ul class="arr1_ul">
+                            <li>s</li>
+                            <li>xs</li>
+                            <li>m</li>
+                            <li>l</li>
+                            <li>xl</li>
+                            <li>xxl</li>
+                        </ul>
+                        <div></div>
+                        <h4>Colors:</h4>
+                        <ul>
+                            <li
+                                    style="background:blue;color: blue;border-radius: 100%;width: 20px;font-size: 14px;">
+                                a</li>
+                            <li style="background:red;color: red;border-radius: 50%;width: 20px;font-size: 14px;"> b
+                            </li>
+                            <li
+                                    style="background:green;color: green;border-radius: 50%;width: 20px;font-size: 14px;">
+                                c</li>
+                            <li
+                                    style="background:purple;color: purple;border-radius: 50%;width: 20px;font-size: 14px;">
+                                d</li>
+                            <li
+                                    style="background:black;color: black;border-radius: 50%;width: 20px;font-size: 14px;">
+                                e</li>
+                        </ul>
+                    </div>
+                    <div class="pro-content">
+                        <div class="top fix">
+                            <h3><a href="#">Stripped Wool</a></h3>
+                            <p>$ 46</p>
+                        </div>
+                        <div>
+                            <a>Mens wear</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+
+</body> <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+
+
+</html>
+<script src="js/swiper.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+</script>
+</script>
+
+</html>

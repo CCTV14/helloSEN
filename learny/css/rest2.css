@@ -1,0 +1,315 @@
+body{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.head img{
+    width: 0.5rem;
+
+}
+
+.head_cont {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    bottom: 0.3rem;
+    z-index: 999;
+    position: fixed;
+    top: 0.2rem;
+    width: 100%;
+  
+}
+
+.line2{
+    background: #f1f1f1;
+    height: 0.5rem;
+}
+.head{
+    background-color: #f5f5f5;
+    border-bottom: #ddd solid 1px;
+    text-align: center;
+    height: 1rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+.he1{
+    border: #ffe037 solid 1px;
+    color: #10805a;
+    background-color: #ffe037;
+    opacity: 1;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 100px;
+    font-size: .26rem;
+    color: #333;
+    width: 1.4rem;
+    margin: 0 !important;
+    height: auto;
+    line-height: 200%;
+}
+.he2{
+    color: #10805a;
+    opacity: 1;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 100px;
+    font-size: .26rem;
+    color: #333;
+    width: 1.4rem;
+    margin: 0 !important;
+    height: auto;
+    line-height: 200%;
+}
+.he3{
+    color: #10805a;
+    opacity: 1;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 100px;
+    font-size: .26rem;
+    color: #333;
+    width: 1.4rem;
+    margin: 0 !important;
+    height: auto;
+    line-height: 200%;
+}
+
+.bo_main img{
+    width: 100%;
+}
+
+.shop_info h2{
+    font-size: .26rem;
+    color: #333;
+    line-height: 150%;
+    padding: 2% 0;
+    margin: 0;
+    padding: 0;
+}
+
+
+.price{
+    margin: 0;
+    line-height: 0;
+    margin-right: 0.5rem;
+    padding: 1% 1%;
+}
+
+.price a{
+    font-size: 0.3rem;
+}
+
+.shop_info{
+    height: 2.2rem;
+    border-bottom: 5px solid #f1f1f1;
+}
+
+.dis_flex a{
+    margin-right: 1.9rem;
+}
+
+.price span{
+    font-size: .22rem;
+    color: #999;
+    text-decoration: line-through;
+}
+img.img_1 {
+    margin: 0;
+}
+.dis_flex{
+    padding: 5% 1%;
+    margin-top: 3%;
+    font-size: 0.25rem;
+    color: #999;
+}
+
+.dis_flex img{
+    width: 0.3rem;
+}
+
+.shop_fen {
+    padding: 0% 2%;
+    padding-top: 0.1rem;
+    padding-bottom: 0.2rem;
+    border-bottom: 5px solid #f1f1f1;
+}
+
+.shop_fen h2{
+    font-size: 0.3rem;
+    margin-right: 3.35rem;
+    display: inline-block;
+}
+
+.shop_fen em{
+    font-style: normal;
+    color: #10805a;
+    font-size: 0.55rem;
+  
+    
+}
+
+.number {
+    padding: 0% 2%;
+    height: 0.8rem;
+    margin-top: 0.3rem;
+    border-bottom: 5px solid #f1f1f1;
+}
+
+.number h2{
+    font-size: 0.3rem;
+    display: inline-block;
+}
+
+.number span{
+    text-align: center;
+    margin-left: 0.2rem;
+    margin-right: 1.7rem;
+}
+
+.number i{
+    display: inline-block;
+    font-size: .28rem;
+    color: #999;
+    font-style: normal;
+    border: #ddd solid 1px;
+    width: .495rem;
+    height: .495rem;
+    border-radius: 50%;
+}
+
+.number input{
+    text-align: center;
+    line-height: .495rem;
+    width: .8rem;
+    height: .495rem;
+    font-size: .26rem;
+    color: #333;
+    border: none;
+}
+
+.number em {
+    font-size: 0.25rem;
+    color: #999;
+    margin-left: 0.8rem;
+}
+
+.inter {
+    margin-top: -0.5rem;
+    padding: 0% 2%;
+
+    margin-top: 0.1rem;
+    margin-bottom: 0.2rem;
+}
+
+.inter h2{
+    font-size: 0.3rem;
+    display: inline-block;
+}
+
+.inter img{
+    transform: rotate(-90deg);
+    float: right;
+    width: 0.3rem;
+
+}
+
+
+.detail{
+    margin-top: 0.3rem;
+  
+}
+
+.detail_title h2 {
+    font-size: 0.3rem;
+    padding: 0% 2%;
+    margin: 0;
+    height: 0.5rem;
+}
+
+.detail_title{
+    background: url(img/line_botm.jpg) no-repeat center bottom;
+}
+
+.detail_title img{
+    width: 100%;
+    padding: 0;
+    margin-bottom: 0.8rem;
+}
+
+.detail_title img{
+    padding: 0%;
+}
+
+/*  */
+
+
+.foot{
+   
+    text-align: center;
+    background-color: #fafafa;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    /* position: fixed; */
+    /* bottom: 0; */
+
+}
+.foot p{
+    padding: 0;
+    margin: 0;
+    float: left;
+    padding-bottom: -10px;
+    padding-top: -3.1rem;
+    border-top: #ddd solid 1px;
+    border-left: #ddd solid 1px;
+    width: 18.33333%;
+    height: 0.8rem;
+    width: 1rem !important;
+
+  
+}
+p.add_car {
+    padding-top: 0.2rem;
+    height: 0.6rem;
+    width: 2.05rem !important;
+}
+p.now_add {
+    padding-top: 0.2rem;
+    height: 0.6rem;
+    width: 2.05rem !important;
+}
+.foot img{
+width: 0.45rem;
+height: 0.45rem;
+
+}
+
+.foot span{
+    font-size: 0.2rem;
+    display: block;
+}
+
+.add_car{
+    font-size: .28rem;
+    color: #fff;
+    background-color: #10805a;
+    line-height: 100%;
+    padding: .32rem 0;
+    width: 30%;
+}
+
+.now_add{
+    background-color: #ffe037;
+    color: #10805a;
+    font-size: .28rem;
+    color: #fff;
+    background-color: #ffe037;
+    line-height: 100%;
+    padding: .32rem 0;
+    width: 30%;
+}
+

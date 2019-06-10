@@ -1,0 +1,67 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.head{
+    padding: 1% 6%;
+    background: #ddd;
+   
+}
+.search{
+    margin-top: 0.2rem;
+}
+.search img{
+    width: 0.4rem;
+    position: absolute;
+    top: 3%;
+    left: 8%;
+
+}
+
+.sea{
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 0.8rem 4rem;
+    box-sizing: border-box;
+    background: white !important;
+    border-radius: 3rem;
+}
+
+.nav_ul{
+    border-bottom: 1px solid #ccc;
+    margin: 0;
+    padding: 0;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.nav_ul li{
+    list-style-type: none;
+    font-size: 0.4rem;
+    text-align: center;
+  display: inline-block;
+  margin-right: 0.4rem;
+    
+}
+
+.one_ul{
+    padding: 0;
+    width: 50%;
+    height: 25rem;
+    overflow: auto;
+    line-height: 1.5;
+}
+
+.text-1{
+    position: absolute;
+    left: 20%;
+}
+.one_ul li{
+    text-align: left;
+    list-style-type: none;
+}
+
+.mui-ios{
+    background: white !important;
+}

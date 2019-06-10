@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/rest4.css">
+    <link rel="stylesheet" href="swiper.min.css">
+    <!-- <link rel="stylesheet" href="css/mui.css"> -->
+    <link rel="stylesheet" href="/css/mui.min.css">
+    <!--App自定义的css-->
+    <link rel="stylesheet" type="text/css" href="/css/app.css" />
+    <link href="/css/mui.picker.css" rel="stylesheet" />
+    <link href="/css/mui.poppicker.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/css/mui.picker.min.css" />
+
+
+
+    <script src="swiper.min.js"></script>
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="main">
+        <header class="head">
+            <div class="head_cont">
+                <img src="img/back_jt.png">
+                <span class="head_cont">请填写收货地址</span>
+            </div>
+        </header>
+
+        <div class="cont">
+            <div style="margin-top: 0.8rem;">
+                <input type="text" placeholder="买了个东西" class="buy">
+            </div>
+            <div class="line_div">
+                <input type="text" placeholder="电子邮件地址" class="email">
+            </div>
+            <div class="mui-content">
+                <div class="mui-content-padded">
+                    <button id='x_date' data-options='{}' class="btn mui-btn mui-btn-block">选择日期时间 ...</button>
+                    <div id='result' class="ui-alert"></div>
+                </div>
+            </div>
+            <div class="mui-content-padded line_div">
+                <button id='showCityPicker3' class="mui-btn mui-btn-block" type='button'>北京市/北京市/东城区</button>
+                <em class="pick-arrow" style="right: 8px;"></em>
+            </div>
+            <div class="line_div">
+                <input type="text" value="花果园国际金融街5号27全层写字楼">
+            </div>
+
+            <div class="line_div">
+                <input type="text" value="15008508888">
+            </div>
+
+            <div class="two_btn">
+                <button class="song">配送至这个地址</button>
+                <button class="remove">删除这个地址</button>
+            </div>
+
+        </div>
+
+        <div class="cont" style="margin-top: -1.1rem;">
+            <img src="img/line_botm.jpg" style="width: 103%;">
+            <div class="line"></div>
+            <div>
+                <input type="text" placeholder="收货人姓名" class="buy">
+            </div>
+
+            <div class="line_div">
+                <input type="text" placeholder="电子邮件地址" class="email">
+            </div>
+            <div class="line_div mui-content-padded">
+                <button id='showCityPicker31' class="mui-btn mui-btn-block" type="button">请选择省/请选择市/请选择县</button>
+                <em class="pick-arrow2" style="right: 8px;"></em>
+            </div>
+            <div class="line_div">
+                <input type="text" placeholder="详细地址">
+            </div>
+
+            <div class="line_div">
+                <input type="text" value="手机号(必填)">
+            </div>
+
+            <input type="button" id="btn" style="background: yellow;" class="add" value="免费获取验证码"
+                onclick="settime(this)" />
+            <!-- <button class="add">新增收货地址</button> -->
+
+            <img src="img/line_botm.jpg" style="width:103%;">
+
+        </div>
+
+        <div class="nav1">
+            <p>
+                登录 | 注册 | 商家中心 | 门店查询
+            </p>
+
+        </div>
+
+        <div class="nav2">
+            <a>关于我们</a>
+            <a>购物指南</a>
+            <a>支付方式</a>
+            <a>售后服务</a>
+        </div>
+
+        <div class="txt">
+            <p>Copyright © 2018 贵州颜文明体育用品有限公司</p>
+            <p>联系地址：贵州省清镇市巢东路9号颜文明大厦</p>
+            <p>全国服务热线：400-6679-555&nbsp;&nbsp;&nbsp;技术支持：<a href="https://www.wangid.com" target="blank"
+                    style="color: #999;">WangID驰通网络</a>
+            </p>
+        </div>
+    </div>
+
+    <footer class="last">
+        <div class="info1" style="margin-left:0;">
+            <img src="img/menu_icon01_r.png">
+            <p>首页</p>
+
+        </div>
+        <div class="info2">
+            <img src="img/menu_icon02.png">
+            <p>分类</p>
+        </div>
+        <div class="info3" onclick="javascript:location.href='chop_car.html'">
+            <img src="img/menu_icon03.png">
+            <p>购物车</p>
+        </div>
+        <div class="info4">
+            <img src="img/menu_icon04.png">
+            <p>我的</p>
+        </div>
+    </footer>
+
+    </div>
+</body>
+
+<script src="js/rem.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="swiper.min.js"></script>
+<script src="/js/mui.min.js"></script>
+<!--<script src="../js/mui.picker.min.js"></script>-->
+<script src="/js/mui.picker.js"></script>
+<script src="/js/mui.poppicker.js"></script>
+<script src="/js/city.data.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/city.data-3.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    (function ($, doc) {
+        $.init();
+        $.ready(function () {
+            /**
+             * 获取对象属性的值
+             * 主要用于过滤三级联动中，可能出现的最低级的数据不存在的情况，实际开发中需要注意这一点；
+             * @param {Object} obj 对象
+             * @param {String} param 属性名
+             */
+            var _getParam = function (obj, param) {
+                return obj[param] || '';
+            };
+            var cityPicker3 = new $.PopPicker({
+                layer: 3
+            });
+            cityPicker3.setData(cityData3);
+            var showCityPickerButton = doc.getElementById('showCityPicker3');
+            var showCityPickerButton1 = doc.getElementById('showCityPicker31');
+            var cityResult3 = doc.getElementById('cityResult3');
+            var cityResult31 = doc.getElementById('cityResult31');
+            showCityPickerButton.addEventListener('tap', function (event) {
+                cityPicker3.show(function (items) {
+                    showCityPickerButton.innerText = _getParam(items[0], 'text') + "/" + _getParam(items[1], 'text') + "/" + _getParam(items[2], 'text');
+                    //返回 false 可以阻止选择框的关闭
+                    //return false;
+                });
+            }, false);
+            showCityPickerButton1.addEventListener('tap', function (event) {
+                cityPicker3.show(function (items) {
+                    showCityPickerButton1.innerText = _getParam(items[0], 'text') + "/" + _getParam(items[1], 'text') + "/" + _getParam(items[2], 'text');
+                    //返回 false 可以阻止选择框的关闭
+                    //return false;
+                });
+            }, false);
+        });
+    })(mui, document);
+</script>
+<script src="js/mui.picker.min.js"></script>
+<script>
+    (function ($) {
+        $.init();
+        var result = $('#result')[0];
+        var result2 = document.getElementById('x_date');
+        var btns = $('.btn');
+        btns.each(function (i, btn) {
+            btn.addEventListener('tap', function () {
+                var _self = this;
+                if (_self.picker) {
+                    _self.picker.show(function (rs) {
+                        result.innerText = rs.text;
+                        _self.picker.dispose();
+                        _self.picker = null;
+                    });
+                } else {
+                    var optionsJson = this.getAttribute('data-options') || '{}';
+                    var options = JSON.parse(optionsJson);
+                    var id = this.getAttribute('id');
+                    /*
+                     * 首次显示时实例化组件
+                     * 示例为了简洁，将 options 放在了按钮的 dom 上
+                     * 也可以直接通过代码声明 optinos 用于实例化 DtPicker
+                     */
+                    _self.picker = new $.DtPicker(options);
+                    _self.picker.show(function (rs) {
+                        result2.innerText = rs.text;
+                        _self.picker.dispose();
+                        _self.picker = null;
+                    });
+                }
+
+            }, false);
+        }
+
+        );
+    })(mui);
+
+</script>
+
+<script>
+    //js 版本，代码需记忆
+    var countdown = 60;
+    function settime(obj) {
+        if (countdown == 0) {
+            obj.removeAttribute("disabled");
+            obj.value = "免费获取验证码";
+            countdown = 60;
+            return;
+        } else {
+            obj.setAttribute("disabled", true);
+            obj.value = "重新发送(" + countdown + ")";
+            if (countdown == 50) {
+
+                $("#btn").css("background", "red");
+            }
+            if (countdown == 40) {
+                countdown = 60;
+                $("#btn").css("background", "#ffe037");
+                obj.setAttribute("disabled", true);
+                obj.value = "重新发送(" + countdown + ")";
+            }
+            countdown--;
+
+        }
+        setTimeout(function () {
+            settime(obj)
+        }
+            , 1000)
+    }
+
+    // jquery版本，代码也需记忆
+
+</script>
+
+</html>

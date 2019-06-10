@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+body{
+    text-align: center;
+}
+</style>
+<body>
+
+    <button class="ck" onclick="ss()">点击我下载</button>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/rem.js"></script>
+<script>
+
+    function ss() {
+        var u = navigator.userAgent;
+        var device = ""; //当前设备信息
+        if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {//安卓手机
+            device = "Android";
+            alert("安卓")
+        } else if (u.indexOf('iPhone') > -1) {//苹果手机
+            device = "iPhone";
+            alert("苹果")
+        } else if (u.indexOf('micromessenger') > -1) {
+            device = "Weixin";
+            alert("微信")
+        }
+        else if (u.indexOf('Chrome') > -1) {
+            device = "Chrome";
+            alert("浏览器打开")
+        }
+        else{
+            alert("其他")
+        }
+    }
+
+</script>
+
+</html>

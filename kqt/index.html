@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/rest.css">
+</head>
+<style>
+    body {
+        overflow: hidden;
+        /* height: -webkit-fill-available; */
+        margin: 0;
+        padding: 0;
+        background: url(img/bg.jpg) no-repeat;
+        /* background-size: 100% 100%; */
+        background-size: cover;
+
+    }
+</style>
+
+<body>
+    <div class="top">考勤通&nbsp;·&nbsp;用数据改变未来</div>
+
+    <div class="form">
+        <div class="form_title">
+            <span>考勤通登录</span>
+        </div>
+        <div class="form_cont">
+            <div class="hao">
+                <img src="img/person.png">
+                <input placeholder="请输入账号" type="text" class="phone">
+            </div>
+            <div class="hao" style="margin-bottom: 60px;">
+                <img src="img/suo.png">
+                <input placeholder="请输入密码" type="password" class="password">
+            </div>
+            <div class="login_button">
+                <span>登录</span>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(".login_button").click(function(){
+        var phoneV=$(".phone").val();
+        var passwordV=$(".password").val();
+        if(phoneV==null || phoneV=='' ){
+            alert("输入你的账号");
+            return false;
+        }else if(passwordV==null || passwordV==''){
+            alert("输入你的密码");
+            return false;
+        }
+        alert("登录成功")
+        return true;
+
+    })
+</script>
+
+</html>

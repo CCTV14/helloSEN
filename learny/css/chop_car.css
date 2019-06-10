@@ -1,0 +1,252 @@
+body{
+    margin: 0%;
+    padding: 0%;
+}
+.div1_1 {
+    text-align: center;
+    margin-top: -0.45rem;
+    padding-bottom: 0.1rem;
+    background-color: #f5f5f5;
+}
+.img1_1 {
+    margin-right: 2rem;
+    width: 0.2rem;
+}
+
+.div2_1{
+    height: 4.7rem;
+}
+.span1_1 {
+    margin-right: 2rem;
+    font-size: 0.38rem;
+    line-height: 120%;
+    width: 74%;
+    margin: 0 42% 0 3%;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #333;
+}
+.div2_2 {
+    font-size: 0.35rem;
+    color: #333;
+    border-top: #efeff4 solid 5px;
+    border-bottom: #ddd solid 1px;
+    margin: 0;
+    padding: 3% 2%;
+}
+.cirle {
+    height: 0.4rem;
+    width: 0.4rem;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin-top: 0.8rem;
+    margin-left: 0.2rem;
+    display: inline-block;
+    float: left;
+}
+
+.cirle2 {
+    height: 0.4rem;
+    width: 0.4rem;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin-top: 0.8rem;
+    margin-left: 0.2rem;
+    display: inline-block;
+    float: left;
+}
+.div2_32 {
+    display: inline-block;
+    margin-top: 0.2rem;
+    margin-left: 0.2rem;
+    float: left;
+}
+
+.div2_32 i {
+    float: left;
+    width: 1.2rem;
+    height: 1.1rem;
+}
+.img2_1 {
+    width: 1.5rem;
+}
+dl {
+    float: left;
+    width: 2.9rem;
+    margin-left: .1rem;
+    height: 1.2rem;
+    position: relative;
+}
+dt {
+    margin-top: 1%;
+}
+.span2_1 {
+    color: #666;
+    font-size: .24rem;
+    line-height: .32rem;
+    display: block;
+    height: .62rem;
+    overflow: hidden;
+    margin-left: 0.3rem;
+    margin-top: -0.8rem;
+}
+dd {
+    position: absolute;
+    bottom: 0rem;
+    line-height: 140%;
+    margin-left: 0.3rem;
+    width: 2.5rem;
+}
+.price {
+    font-size: .26rem;
+    color: #e00400;
+    font-style: normal;
+    margin-right: .1rem;
+}
+.q_price {
+    color: #999;
+    font-size: .20rem;
+    font-weight: normal;
+    text-decoration: line-through;
+}
+.div3_1 {
+    float: right;
+    line-height: .495rem;
+    text-align: center;
+    margin-top: .4rem;
+}
+.jian {
+    display: inline-block;
+    font-size: .28rem;
+    color: #999;
+    font-style: normal;
+    border: #ddd solid 1px;
+    width: .495rem;
+    height: .495rem;
+    border-radius: 50%;
+    line-height: .495rem;
+}
+.jia {
+    display: inline-block;
+    font-size: .28rem;
+    color: #999;
+    font-style: normal;
+    border: #ddd solid 1px;
+    width: .495rem;
+    height: .495rem;
+    border-radius: 50%;
+    line-height: .495rem;
+}
+.input3_1 {
+    text-align: center;
+    line-height: .495rem;
+    width: .45rem;
+    height: .495rem;
+    font-size: .26rem;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+}
+.div4{
+    clear: both;
+    height: 2rem;
+}
+.div4_1 {
+    clear: both;
+    margin-top: -0.2rem;
+    position: absolute;
+    height: 2rem;
+}
+
+.div5 {
+    clear: both;
+}
+.div5_1 {
+    clear: both;
+    height: 0.4rem;
+    width: 0.4rem;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin-left: -4.8rem;
+    display: inline-block;
+}
+.div5_11 {
+    color: #666;
+    font-size: .26rem;
+    display: inline-block;
+}
+
+.line{
+    height: 3rem;
+    background: #efeff4;
+}
+
+.gong p{
+    font-size: 0.3rem;
+}
+
+
+.goo p{
+    font-size: .24rem;
+    color: #f00;
+    line-height: 100%;
+    margin: .12rem 0;
+}
+.p5_1 {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #8f8f94;
+}
+.span5_1 {
+    display: block;
+    font-size: .24rem;
+    color: #f00;
+    line-height: 100%;
+    margin: .12rem 0;
+}
+em {
+    font-size: .20rem;
+    color: #666;
+    font-style: normal;
+    display: block;
+    line-height: 100%;
+}
+.input5_1{
+    background-color: #ffe037;
+    color: #10805a;
+    line-height: 100%;
+    font-size: .28rem;
+    text-align: center;
+    padding: .32rem 0;
+    width: 2rem;
+    border: none;
+    border-radius: 0;
+}
+
+.flow_foot span{
+    font-size: 0.3rem;
+}
+
+
+.gong{
+    float: right;
+    margin-right: 2.5rem;
+}
+
+.flow_foot input{
+    background-color: #ffe037;
+    color: #10805a;
+    line-height: 100%;
+    font-size: .28rem;
+    text-align: center;
+    padding: .32rem 0;
+    width: 2rem;
+    border: none;
+    border-radius: 0;
+    margin-top: 0.5rem;
+    position: absolute;
+    right: 0;
+}

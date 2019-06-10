@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/rest.css">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="cont">
+            <div class="title">
+                <span>免费注册</span>
+            </div>
+            <div class="form_cont">
+                <form action="">
+                    <div class="fo">
+                        <input type="text" class="must" placeholder="必填">
+                        <p>不能为空!!!</p>
+                        <p class="correct">√</p>
+                    </div>
+                    <div class="fo">
+                        <input type="text" class="re_must" placeholder="必填自定义提示">
+                        <p>这是自定义提示</p>
+                        <p>请输入2至4位字符+不为空</p>
+                        <p class="correct">√</p>
+                    </div>
+                    <div class="fo">
+                        <input type="text" class="user" placeholder="请输入用户名">
+                        <p>请输入用户名</p>
+                        <p>请输入3至8位字符的用户名+不为空</p>
+                        <p class="correct">√</p>
+                    </div>
+                    <div class="fo">
+                        <input type="text" class="name" placeholder="请输入昵称">
+                        <p>请输入昵称</p>
+                        <p>请输入3至12位字符的昵称+不为空</p>
+                        <p class="correct">√</p>
+                    </div>
+                    <div class="fo">
+                        <input type="text" class="phone" placeholder="请输入手机号">
+                        <p>请输入手机号</p>
+                        <p>请输入11位正确的手机号+不为空</p>
+                        <p class="correct">√</p>
+                    </div>
+                    <div class="fo">
+                        <input type="text" class="yzm" placeholder="请输入验证码">
+                        <p>请输入验证码</p>
+                        <p class="correct">√</p>
+                        <input type="button" id="btn" class="correct" value="免费获取验证码" onclick="settime(this)" />
+                    </div>
+                    <div class="fo">
+                        <!-- -->
+                        <input type="password" class="password" placeholder="请填写长度为6-20个字符的密码">
+                        <p>请输入密码</p>
+                        <p>请输入6至16位字符的密码+不为空</p>
+                        <p class="correct">√</p>
+                    </div>
+                    <div class="fo">
+                        <input type="password" class="re_password" placeholder="请再次输入密码">
+                        <p>请再次输入密码</p>
+                        <p>两次输入的密码不一致</p>
+                        <p class="correct">√</p>
+                    </div>
+                    <div class="fo">
+                        <input type="text" class="email" placeholder="请输入邮箱,邮箱格式,123@163.com">
+                        <p>请输入邮箱号</p>
+                        <p>请输入正确的邮箱号
+                        </p>
+                        <p class="correct">√</p>
+                    </div>
+                    <div class="fo">
+                        <input type="text" class="person" placeholder="请输入身份证">
+                        <p>请输入身份证</p>
+                        <p>身份证号码错误</p>
+                        <p class="correct">√</p>
+                    </div>
+                    <input type="button" class="btn" value="立即注册">
+                </form>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</body>
+
+
+<script>
+    //js 版本，代码需记忆
+    var countdown = 60;
+
+    function settime(obj) {
+        if (countdown == 0) {
+            obj.removeAttribute("disabled");
+            obj.value = "免费获取验证码";
+            countdown = 60;
+            return;
+        } else {
+            obj.setAttribute("disabled", true);
+            obj.value = "重新发送(" + countdown + ")";
+            if (countdown == 50) {
+
+                $("#btn").css("background", "red");
+            }
+            if (countdown == 0) {
+                countdown = 60;
+                $("#btn").css("background", "#ffe037");
+                obj.setAttribute("disabled", true);
+                obj.value = "重新发送(" + countdown + ")";
+            }
+            countdown--;
+
+        }
+        setTimeout(function () {
+            settime(obj)
+        }, 1000)
+    }
+</script>
+<script>
+    $("input").bind('input propertychange', function () {
+
+        var b = $(this).val();
+        if (!b.length < 1) {
+            $(this).next().next().show();
+            $(this).next().hide();
+            $(this).next().next().next().hide();
+            return true;
+        } else {
+            $(this).next().show();
+            $(this).next().next().hide();
+            $(this).next().next().next().hide();
+        }
+        return true;
+    });
+    $(".fo").children().blur(function () {
+        var zhi = $(this).val();
+        if (zhi == '' || zhi == null) {
+            $(this).next().show();
+            $(this).next().next().hide();
+            return false;
+        } else {
+            return true;
+        }
+    });
+
+
+    $(".re_must").bind('input propertychange', function () {
+        var nal = $(this).val();
+        if (nal.length < 2 || nal.length > 4) {
+            if (nal != '') {
+                $(this).next().hide();
+                $(this).next().next().show();
+
+                return false;
+            }
+        } else {
+            $(this).next().next().next().show();
+            $(this).next().next().hide();
+            return false;
+        }
+        return true;
+    });
+
+
+    $(".user").bind('input propertychange', function () {
+        var nal = $(this).val();
+        if (nal.length < 3 || nal.length > 8) {
+            if (nal != '') {
+                $(this).next().hide();
+                $(this).next().next().show();
+                $(this).next().next().next().hide();
+                return false;
+            }
+
+        } else {
+            $(this).next().next().next().show();
+            $(this).next().next().hide();
+            return false;
+        }
+        return true;
+    });
+
+    $(".name").bind('input propertychange', function () {
+        var nal = $(this).val();
+        if (nal.length < 3 || nal.length > 12) {
+            if (nal != '') {
+                $(this).next().hide();
+                $(this).next().next().show();
+                $(this).next().next().next().hide();
+                return false;
+            }
+        } else {
+            $(this).next().next().next().show();
+            $(this).next().next().hide();
+            return false;
+        }
+        return true;
+    });
+
+
+    $(".phone").bind('input propertychange', function () {
+        var phoneErroe = /^1[34578]\d{9}$/;
+        var nal = $(this).val();
+        if (!phoneErroe.test(nal) && nal != '') {
+            $(this).next().hide();
+            $(this).next().next().show();
+            $(this).next().next().next().hide();
+            return false;
+        } else {
+            $(this).next().next().next().show();
+            $(this).next().next().hide();
+            return false;
+        }
+    });
+
+    $(".password").bind('input propertychange', function () {
+        var nal = $(this).val();
+        if (nal.length < 6 || nal.length > 16) {
+            if (nal != '') {
+                $(this).next().hide();
+                $(this).next().next().show();
+                $(this).next().next().next().hide();
+                return false;
+            }
+        } else {
+            $(this).next().next().next().show();
+            $(this).next().next().hide();
+            return false;
+        }
+        return true;
+    });
+
+    $(".re_password").bind('input propertychange', function () {
+        var nal = $(this).parent().prev().children().val();
+        var nal2 = $(this).val();
+        if (nal != nal2 && nal2 != '') {
+            $(this).next().next().show();
+            $(this).next().next().next().hide();
+
+        } else if (nal == nal2 && nal2 != '') {
+            $(this).next().next().hide();
+            $(this).next().next().next().show();
+        } else {
+            $(this).next().next().hide();
+            $(this).next().show();
+            $(this).next().next().next().hide();
+            return false;
+        }
+        return true;
+    });
+
+    $(".email").bind('input propertychange', function () {
+        var phoneErroe = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+        var nal = $(this).val();
+        if (!phoneErroe.test(nal)) {
+            $(this).next().hide();
+            $(this).next().next().show();
+            $(this).next().next().next().hide();
+            return false;
+        } else {
+            $(this).next().next().next().show();
+            $(this).next().next().hide();
+            return false;
+        }
+    });
+
+    $(".person").bind('input propertychange', function () {
+        var phoneErroe = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
+        var nal = $(this).val();
+        if (!phoneErroe.test(nal) && nal != "") {
+            $(this).next().hide();
+            $(this).next().next().show();
+            $(this).next().next().next().hide();
+            return false;
+        } else {
+            $(this).next().next().next().hide();
+            $(this).next().next().hide();
+            return false;
+        }
+    });
+
+
+
+    // $(".btn").click(function () {
+    //     var tt = $("input").val();
+    //     if (tt == '' || tt==null) {
+    //      $(this).siblings(this).children().next().show();
+          
+    //     }else{
+    //         $(this).siblings(this).children().next().hide();
+    //     }
+    //     return true;
+    // })
+</script>
+
+
+</html>

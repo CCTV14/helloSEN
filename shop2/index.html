@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/css/swiper.min.css">
+
+</head>
+
+<style>
+    body {
+        margin: 0;
+    }
+
+    .header {
+        line-height: 30px;
+        height: 30px;
+        font-size: 12px;
+        letter-spacing: 3px;
+        background: black;
+        color: white;
+    }
+
+    .header div {
+        display: inline-block;
+    }
+
+    .head_left {
+
+        padding-left: 6%;
+    }
+
+
+    .head_right {
+        float: right;
+        padding-right: 15%;
+    }
+
+    .nav {
+        height: 50px;
+    }
+
+    .nav_cont {
+        height: 5%;
+        margin-left: 4%;
+        margin-top: 3%;
+        margin-bottom: 3%
+    }
+
+    .nav_txt li {
+        display: inline-block;
+        margin-left: 7%;
+        line-height: 10px;
+        font-size: 15px;
+
+
+    }
+
+
+    .nav_txt {
+
+
+        width: 40%;
+        display: inline-block;
+    }
+
+    .nav_logo {
+
+        display: inline-block;
+    }
+
+    .nav_twobutton div {
+        display: inline-block;
+        margin-left: 5%;
+        margin-bottom: 5%;
+    }
+
+    .nav_twobutton {
+        float: right;
+        width: 35%;
+        margin-top: -6%;
+        margin-left: 15%;
+
+    }
+
+    .main_img img {
+        width: 100%;
+    }
+
+    .main_img {
+        margin-bottom: 5%;
+        width: 100%;
+    }
+
+    .main_two div {
+        margin: 0;
+
+        display: inline;
+
+    }
+
+    .main_two {
+
+        height: 500px;
+        text-align: center;
+        position: relative;
+        margin-top: -135px;
+
+    }
+
+    .new_arr_title li {
+
+        font-size: 30px;
+        display: inline-block;
+    }
+
+    .new_arr_title ul {
+        text-align: center;
+    }
+
+    .size1 li {
+        display: inline-block;
+        list-style-type: none;
+
+
+    }
+
+    .size1 {
+        display: none;
+        width: 270px;
+        background: #f7f7f9 none repeat scroll 0 0;
+    }
+
+    .size1 ul {
+        display: inline;
+    }
+
+    /*  */
+    .size2 li {
+        display: inline-block;
+        list-style-type: none;
+
+
+    }
+
+    .size2 {
+        display: none;
+        width: 270px;
+        background: #f7f7f9 none repeat scroll 0 0;
+    }
+
+    .size2 ul {
+        display: inline;
+    }
+
+    /*  */
+    .size3 li {
+        display: inline-block;
+        list-style-type: none;
+
+
+    }
+
+    .size3 {
+        display: none;
+        width: 270px;
+        background: #f7f7f9 none repeat scroll 0 0;
+    }
+
+    .size3 ul {
+        display: inline;
+    }
+
+    /*  */
+    .size4 li {
+        display: inline-block;
+        list-style-type: none;
+
+
+    }
+
+    .size4 {
+        display: none;
+        width: 270px;
+        background: #f7f7f9 none repeat scroll 0 0;
+    }
+
+    .size4 ul {
+        display: inline;
+    }
+
+
+
+    .main_two img {
+        max-width: 45%;
+    }
+
+    .color li {
+        display: inline-block;
+        list-style-type: none;
+
+    }
+
+    .last {
+        height: 50px;
+        background: #333 none repeat scroll 0 0;
+
+    }
+
+    .color {
+        border: 1px solid pink;
+
+
+    }
+
+    .from1_txt {
+        margin-left: 1%;
+        margin-right: -2%;
+        display: inline-block;
+    }
+
+
+    .from2_txt {
+        margin-left: 1%;
+
+
+        display: inline-block;
+    }
+
+    .brand_img1 {
+        display: inline-block;
+        border: 1px solid black;
+    }
+
+    .from1 {
+        height: 500px;
+
+    }
+
+    .last_span {
+        margin-left: 5%;
+        margin-top: 2%;
+    }
+
+    .rat {
+        height: 525px;
+        text-align: center;
+    }
+
+    .new_arr div {
+        text-align: center;
+
+    }
+
+    .four_img img:hover {
+
+        box-shadow: 0px 12px 0px 0px gray;
+        filter: blur(3px);
+        transition: all .3s ease 0s;
+        transform: rotate(7deg);
+
+    }
+
+    .new_arr {
+        text-align: center;
+
+
+    }
+
+    .brand {
+        height: 180px;
+    }
+
+    .get_txt1_input {
+        background: #fff none repeat scroll 0 0;
+        border: medium 0;
+        color: #333;
+        /* display: block; */
+        float: left;
+        font-size: 12px;
+        height: 36px;
+        padding: 0 15px;
+        width: 470px;
+    }
+
+    .color {
+        width: 270px;
+    }
+
+    .new_arr_cont1 {
+
+        display: inline-block;
+
+
+    }
+
+    .four_img {
+        height: 700px;
+
+    }
+
+    .from1 {
+        margin-left: 5%;
+
+    }
+
+    .from_title {
+        text-align: center;
+        height: 80px;
+    }
+
+    .foot {
+        color: white;
+    }
+
+    .pro-content {
+        border: 1px solid pink;
+    }
+
+    .four_img1:hover {
+        box-shadow: 0px 0px 8px 8px pink;
+
+    }
+
+    .four_img2:hover {
+        box-shadow: 0px 0px 8px 8px pink;
+
+    }
+
+    .get_txt1_button {
+        background: #272727 none repeat scroll 0 0;
+        border: medium 0;
+        color: #fff;
+        display: block;
+        float: left;
+        height: 36px;
+        line-height: 36px;
+        text-transform: uppercase;
+        width: 100px;
+    }
+
+
+    .nav {
+        height: 120px;
+    }
+
+    .new_arr {
+        height: 600px;
+    }
+
+    .chr_img {
+        width: 49%;
+    }
+
+    .foot {
+        height: 300px;
+        background: black;
+    }
+
+
+    body {
+
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+    }
+
+    .swiper-container {
+        width: 100%;
+
+    }
+
+
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+
+    .brand_img1 {
+        margin-right: 1%;
+    }
+
+    .last_span {
+        color: white;
+        padding-top: 10px;
+    }
+
+    .nav_hidden_txt {
+        position: absolute;
+        border: 1px solid black;
+        display: none;
+        z-index: 999;
+        background: pink;
+    }
+
+    .win_img {
+        width: 49%;
+    }
+
+    .chir_win {
+        height: 450px;
+    }
+
+    .rat_title {
+        height: 60px;
+        text-align: center;
+    }
+
+
+    .three_d {
+        margin: 0 auto;
+        border: 1px solid pink;
+        text-align: center;
+
+        height: 40px;
+
+        width: 88%;
+    }
+
+
+
+    .get_title {
+        color: #fff;
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: 7px;
+        line-height: 28px;
+        margin-bottom: 10px;
+
+    }
+
+    .get_txt1 {
+        position: absolute;
+        left: 25%;
+        padding-top: 15%;
+    }
+
+    .foot1 p:hover {
+        color: red;
+    }
+
+    .main_one_img:hover {
+
+        box-shadow: 0px 12px 0px 0px gray;
+        filter: blur(3px);
+        transition: all .3s ease 0s;
+        transform: rotate(7deg);
+    }
+
+    .xie_img:hover {
+
+        box-shadow: 0px 12px 0px 0px gray;
+        filter: blur(3px);
+        transition: all .3s ease 0s;
+        transform: rotate(7deg);
+    }
+</style>
+
+<body>
+    <div id="main">
+        <div class="header">
+            <div class="head_left">
+                LOG IN | REGISTER
+
+
+            </div>
+
+            <div class="head_right">
+
+                ENG <img src="img/down.jpg">
+
+                USD <img src="img/down.jpg">
+
+            </div>
+
+        </div>
+
+        <!-- ============================================= -->
+
+        <div class="nav">
+            <div class="nav_cont row">
+                <div class="nav_logo col-md-1">
+                    <img src="img/logo.png">
+
+                </div>
+
+                <div class="nav_txt col-md-8">
+                    <ul style="margin-top: 8px;">
+                        <li class="nav_li">
+                            HOME
+                            <p></p>
+
+                            <p></p>
+                            <div class="nav_hidden_txt">
+                                <p>HOME ONE</p>
+                                <hr />
+                                <p>HOME TWO</p>
+                                <hr />
+                                <p>HOME THREE</p>
+
+                            </div>
+
+                        </li>
+                        <li class="nav_li">SHOP
+                            <div class="nav_hidden_txt">
+                                <p>HOME ONE</p>
+                                <hr />
+                                <p>HOME TWO</p>
+                                <hr />
+                                <p>HOME THREE</p>
+
+                            </div>
+
+
+                        </li>
+                        <li class="nav_li">PAGES
+                            <div class="nav_hidden_txt">
+                                <p>HOME ONE</p>
+                                <hr />
+                                <p>HOME TWO</p>
+                                <hr />
+                                <p>HOME THREE</p>
+
+                            </div>
+
+                        </li>
+                        <li class="nav_li">BLOG
+                            <div class="nav_hidden_txt">
+                                <p>HOME ONE</p>
+                                <hr />
+                                <p>HOME TWO</p>
+                                <hr />
+                                <p>HOME THREE</p>
+
+                            </div>
+
+                        </li>
+                        <li class="nav_li">CONTACT
+                            <div class="nav_hidden_txt">
+                                <p>HOME ONE</p>
+                                <hr />
+                                <p>HOME TWO</p>
+                                <hr />
+                                <p>HOME THREE</p>
+
+                            </div>
+
+                        </li>
+
+                    </ul>
+
+
+                </div>
+
+            </div>
+            <div class="nav_twobutton col-md-3">
+                <div class="serch_img">
+                    <img src="img/serch.jpg">
+
+
+                </div>
+
+                <div class="gwc_img">
+                    <img src="img/gwc.jpg">
+
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <!-- ================================================== -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/main.jpg" style="width:100%;"></div>
+                <div class="swiper-slide"><img src="img/main2.jpg" style="width:100%;"></div>
+
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+
+    </div>
+
+    </div>
+    <div class="main_two">
+        <div class="main_two_one">
+            <img src="img/one.jpg" class="main_one_img" style="z-index: 999;
+            position: relative;">
+            <img src="img/two.jpg" class="xie_img" style="z-index: 999;
+            position: relative;">
+        </div>
+
+
+    </div>
+
+    <div class="new_arr row">
+        <div style=" position: absolute;color: white;">w</div>
+        <div class="new_arr_title" style="height:150px;">
+            <ul>
+                <li style="color:#272727;">New Arrival ——</li>
+                <li style="color:#9b9b9c;">Best Seller ——</li>
+                <li style="color:#9b9b9c;">Most Wanted</li>
+            </ul>
+        </div>
+
+        <div class="new_arr_cont1 col-md-3">
+
+            <img src="img/1.jpg" style="display: block;">
+            <div class="size1">
+
+
+
+
+                <h4 style="display: inline-block;">Sizes:</h4>
+                <ul style="display: inline-block;">
+                    <li>s</li>
+                    <li>xs</li>
+                    <li>m</li>
+                    <li>l</li>
+                    <li>xl</li>
+                    <li>xxl</li>
+                </ul>
+
+                <div>
+
+                </div>
+                <h4 style="display: inline;">Colors:</h4>
+                <ul>
+                    <li style="background:blue;color:blue;border-radius: 100%;">b</li>
+                    <li style="background:
+            orange;color:orange;border-radius: 100%;">o</li>
+                    <li style="background:green;color:green;border-radius: 100%;">g</li>
+                    <li style="background:purple;color:purple;border-radius: 100%;">p</li>
+                    <li style="background:pink;color:pink;border-radius: 100%;">p</li>
+                </ul>
+            </div>
+
+
+
+
+            <div class="pro-content1">
+                <div>
+                    <h3 style="  display: inline-block;"><a>Stripped Wool</a></h3>
+                    <p style="  display: inline-block;">$ 46</p>
+                </div>
+                <div>
+                    <a style="color:pink;">Mens wear</a>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+        <div class="new_arr_cont1 col-md-3">
+
+            <img src="img/2.jpg" style="display: block;">
+            <div class="size2">
+
+
+
+
+                <h4 style="display: inline-block;">Sizes:</h4>
+                <ul style="display: inline-block;">
+                    <li>s</li>
+                    <li>xs</li>
+                    <li>m</li>
+                    <li>l</li>
+                    <li>xl</li>
+                    <li>xxl</li>
+                </ul>
+
+                <div>
+
+                </div>
+                <h4 style="display: inline;">Colors:</h4>
+                <ul>
+                    <li style="background:blue;color:blue;border-radius: 100%;">b</li>
+                    <li style="background:
+                orange;color:orange;border-radius: 100%;">o</li>
+                    <li style="background:green;color:green;border-radius: 100%;">g</li>
+                    <li style="background:purple;color:purple;border-radius: 100%;">p</li>
+                    <li style="background:pink;color:pink;border-radius: 100%;">p</li>
+                </ul>
+            </div>
+
+
+
+
+            <div class="pro-content2">
+                <div>
+                    <h3 style="  display: inline-block;"><a>Stripped Wool</a></h3>
+                    <p style="  display: inline-block;">$ 46</p>
+                </div>
+                <div>
+                    <a style="color:pink;">Mens wear</a>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+
+        <div class="new_arr_cont1 col-md-3">
+
+            <img src="img/3.jpg" style="display: block;">
+            <div class="size3">
+
+
+
+
+                <h4 style="display: inline-block;">Sizes:</h4>
+                <ul style="display: inline-block;">
+                    <li>s</li>
+                    <li>xs</li>
+                    <li>m</li>
+                    <li>l</li>
+                    <li>xl</li>
+                    <li>xxl</li>
+                </ul>
+
+                <div>
+
+                </div>
+                <h4 style="display: inline;">Colors:</h4>
+                <ul>
+                    <li style="background:blue;color:blue;border-radius: 100%;">b</li>
+                    <li style="background:
+                    orange;color:orange;border-radius: 100%;">o</li>
+                    <li style="background:green;color:green;border-radius: 100%;">g</li>
+                    <li style="background:purple;color:purple;border-radius: 100%;">p</li>
+                    <li style="background:pink;color:pink;border-radius: 100%;">p</li>
+                </ul>
+            </div>
+
+
+
+
+            <div class="pro-content3">
+                <div>
+                    <h3 style="  display: inline-block;"><a>Stripped Wool</a></h3>
+                    <p style="  display: inline-block;">$ 46</p>
+                </div>
+                <div>
+                    <a style="color:pink;">Mens wear</a>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+        <div class="new_arr_cont1 col-md-3">
+
+            <img src="img/1.jpg" style="display: block;">
+            <div class="size4">
+
+
+
+
+                <h4 style="display: inline-block;">Sizes:</h4>
+                <ul style="display: inline-block;">
+                    <li>s</li>
+                    <li>xs</li>
+                    <li>m</li>
+                    <li>l</li>
+                    <li>xl</li>
+                    <li>xxl</li>
+                </ul>
+
+                <div>
+
+                </div>
+                <h4 style="display: inline;">Colors:</h4>
+                <ul>
+                    <li style="background:blue;color:blue;border-radius: 100%;">b</li>
+                    <li style="background:
+                orange;color:orange;border-radius: 100%;">o</li>
+                    <li style="background:green;color:green;border-radius: 100%;">g</li>
+                    <li style="background:purple;color:purple;border-radius: 100%;">p</li>
+                    <li style="background:pink;color:pink;border-radius: 100%;">p</li>
+                </ul>
+            </div>
+
+
+
+
+            <div class="pro-content4">
+                <div>
+                    <h3 style="  display: inline-block;"><a>Stripped Wool</a></h3>
+                    <p style="  display: inline-block;">$ 46</p>
+                </div>
+                <div>
+                    <a style="color:pink;">Mens wear</a>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+
+    <div class="four_img row" style="text-align:center;">
+
+        <div style="display:inline-block;" class="col-md-8">
+            <img src="img/live.jpg" style="margin-right: 25px;">
+            <img src="img/sale.jpg">
+            <div></div>
+            <img src="img/new.jpg" style="margin-top: 25px;">
+
+
+        </div>
+
+        <div style="display: inline;" class="col-md-4">
+            <img src="img/red.jpg" style="margin-left: 15px;">
+
+        </div>
+
+
+    </div>
+
+
+    <div class="chir_win row">
+        <img src="img/chris.jpg" class="chr_img">
+        <img src="img/win.jpg" class="win_img">
+
+    </div>
+
+    <div class="rat">
+        <div>
+
+            <h2 class="rat_title">Top Rated Product</h2>
+        </div>
+
+        <div class="new_arr_cont1 col-md-3">
+
+            <img src="img/5.jpg" style="display: block;">
+            <div class="size1">
+
+
+
+
+                <h4 style="display: inline-block;">Sizes:</h4>
+                <ul style="display: inline-block;">
+                    <li>s</li>
+                    <li>xs</li>
+                    <li>m</li>
+                    <li>l</li>
+                    <li>xl</li>
+                    <li>xxl</li>
+                </ul>
+
+                <div>
+
+                </div>
+                <h4 style="display: inline;">Colors:</h4>
+                <ul>
+                    <li style="background:blue;color:blue;border-radius: 100%;">b</li>
+                    <li style="background:
+                orange;color:orange;border-radius: 100%;">o</li>
+                    <li style="background:green;color:green;border-radius: 100%;">g</li>
+                    <li style="background:purple;color:purple;border-radius: 100%;">p</li>
+                    <li style="background:pink;color:pink;border-radius: 100%;">p</li>
+                </ul>
+            </div>
+
+
+
+
+            <div class="pro-content1">
+                <div>
+                    <h3 style="  display: inline-block;"><a>Stripped Wool</a></h3>
+                    <p style="  display: inline-block;">$ 46</p>
+                </div>
+                <div>
+                    <a style="color:pink;">Mens wear</a>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+        <div class="new_arr_cont1 col-md-3">
+
+            <img src="img/6.jpg" style="display: block;">
+            <div class="size2">
+
+
+
+
+                <h4 style="display: inline-block;">Sizes:</h4>
+                <ul style="display: inline-block;">
+                    <li>s</li>
+                    <li>xs</li>
+                    <li>m</li>
+                    <li>l</li>
+                    <li>xl</li>
+                    <li>xxl</li>
+                </ul>
+
+                <div>
+
+                </div>
+                <h4 style="display: inline;">Colors:</h4>
+                <ul>
+                    <li style="background:blue;color:blue;border-radius: 100%;">b</li>
+                    <li style="background:
+                    orange;color:orange;border-radius: 100%;">o</li>
+                    <li style="background:green;color:green;border-radius: 100%;">g</li>
+                    <li style="background:purple;color:purple;border-radius: 100%;">p</li>
+                    <li style="background:pink;color:pink;border-radius: 100%;">p</li>
+                </ul>
+            </div>
+
+
+
+
+            <div class="pro-content2">
+                <div>
+                    <h3 style="  display: inline-block;"><a>Stripped Wool</a></h3>
+                    <p style="  display: inline-block;">$ 46</p>
+                </div>
+                <div>
+                    <a style="color:pink;">Mens wear</a>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+
+        <div class="new_arr_cont1 col-md-3">
+
+            <img src="img/7.jpg" style="display: block;">
+            <div class="size3">
+
+
+
+
+                <h4 style="display: inline-block;">Sizes:</h4>
+                <ul style="display: inline-block;">
+                    <li>s</li>
+                    <li>xs</li>
+                    <li>m</li>
+                    <li>l</li>
+                    <li>xl</li>
+                    <li>xxl</li>
+                </ul>
+
+                <div>
+
+                </div>
+                <h4 style="display: inline;">Colors:</h4>
+                <ul>
+                    <li style="background:blue;color:blue;">b</li>
+                    <li style="background:
+                        orange;color:orange;border-radius: 100%;">o</li>
+                    <li style="background:green;color:green;border-radius: 100%;">g</li>
+                    <li style="background:purple;color:purple;border-radius: 100%;">p</li>
+                    <li style="background:pink;color:pink;border-radius: 100%;">p</li>
+                </ul>
+            </div>
+
+
+
+
+            <div class="pro-content3">
+                <div>
+                    <h3 style="  display: inline-block;"><a>Stripped Wool</a></h3>
+                    <p style="  display: inline-block;">$ 46</p>
+                </div>
+                <div>
+                    <a style="color:pink;">Mens wear</a>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+        <div class="new_arr_cont1 col-md-3">
+
+            <img src="img/8.jpg" style="display: block;">
+            <div class="size4">
+
+
+
+
+                <h4 style="display: inline-block;">Sizes:</h4>
+                <ul style="display: inline-block;">
+                    <li>s</li>
+                    <li>xs</li>
+                    <li>m</li>
+                    <li>l</li>
+                    <li>xl</li>
+                    <li>xxl</li>
+                </ul>
+
+                <div>
+
+                </div>
+                <h4 style="display: inline;">Colors:</h4>
+                <ul>
+                    <li style="background:blue;color:blue;border-radius: 100%;">b</li>
+                    <li style="background:
+                    orange;color:orange;border-radius: 100%;">o</li>
+                    <li style="background:green;color:green;border-radius: 100%;">g</li>
+                    <li style="background:purple;color:purple;border-radius: 100%;">p</li>
+                    <li style="background:pink;color:pink;border-radius: 100%;">p</li>
+                </ul>
+            </div>
+
+
+
+
+            <div class="pro-content4">
+                <div>
+                    <h3 style="  display: inline-block;"><a>Stripped Wool</a></h3>
+                    <p style="  display: inline-block;">$ 46</p>
+                </div>
+                <div>
+                    <a style="color:pink;">Mens wear</a>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <div class="three_d">
+        <div>
+            <span style="font-weight:bold;line-height:1;font-size: 25px;color:red;">. . .</span>
+
+        </div>
+
+
+
+    </div>
+    <div style="height:70px;"></div>
+
+
+    <div class="from row" style="background:#757575;">
+        <div class="from_title">
+            <h2>From The Blog</h2>
+        </div>
+
+        <div class="from1">
+
+            <div class="from1_txt col-md-6">
+                <img src="img/tgirl.jpg" style="margin-bottom: 35%;">
+                <div class="from1_txt_txt" style="width: 50%;display: inline-block;">
+                    <span style="color:pink;">December 26, 2015</span>
+                    <h2><a>Milan Fashion Week 2015</a></h2>
+                    <p style="color:pink;">Lorem ipsum dolor sit amet, consec adipisicing elit, sed do eiusmod empor
+                        incididunt oloremque laudantium, Eos qui ratione voluptatem sequi. Neque porro quisquam est, et
+                        dolore. </p>
+                    <span style="color:pink;">By</span><a> Kevin Smith</a>
+                </div>
+
+
+
+            </div>
+
+            <div class="from2_txt col-md-6">
+                <img src="img/wgirl.jpg" style="margin-bottom: 35%;">
+
+                <div class="from1_txt_txt" style="width: 50%;display: inline-block;">
+                    <span style="color:pink;">December 26, 2015</span>
+                    <h2><a>Milan Fashion Week 2015</a></h2>
+                    <p style="color:pink;">Lorem ipsum dolor sit amet, consec adipisicing elit, sed do eiusmod empor
+                        incididunt oloremque laudantium, Eos qui ratione voluptatem sequi. Neque porro quisquam est, et
+                        dolore. </p>
+                    <span style="color:pink;">By</span><a> Kevin Smith</a>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+    </div>
+    <div class="get" style="height:650px;">
+        <img src="img/get.jpg" style="position:absolute;">
+        <div class="get_txt1">
+            <div>
+
+                <div>
+                    <h2 class="get_title">Get Notified of any offers!</h2>
+                    <p>Subscribe to our Newsletter to be notified about promotions</p>
+                </div>
+
+                <div>
+                    <form>
+                        <input type="text" placeholder="Your email address" class="get_txt1_input">
+                        <input type="submit" value="submit" class="get_txt1_button">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="brand">
+        <div class="brand_txt">
+            <h1 style="display: inline-block;margin-right: 5%;">Top Brands</h1>
+            <div class="brand_img1">
+                <img src="img/b1.jpg">
+            </div>
+            <div class="brand_img1">
+                <img src="img/b1.jpg">
+            </div>
+            <div class="brand_img1">
+                <img src="img/b1.jpg">
+            </div>
+            <div class="brand_img1">
+                <img src="img/b1.jpg">
+            </div>
+
+        </div>
+
+    </div>
+    <div class="foot row">
+        <div class="foot1 col-md-3" style="padding-top:4%;padding-left:6%;display: inline-block;">
+            <img src="img/footer-logo.png">
+            <div></div>
+            <p style="width: 91%;">Lorem ipsum dolor sit amet, consec adipisicing elit,
+                sed do eiusmod empor
+                incididunt oloremque laudantium,</p>
+        </div>
+
+        <div class="foot1 col-md-3" style="padding-top:4%;display: inline-block;">
+            <h3>ADDRESS</h3>
+            <div></div>
+            <p style="width: 38%;">
+                1025-1035 Park Ave,
+                New York,
+                NY 10028, USA
+
+                +1 123-456-7890
+
+                sales@koolinc.com,</p>
+        </div>
+        <div class="foot1 col-md-3" style="padding-top:4%;display: inline-block;">
+            <h3>COLLECTION</h3>
+            <div></div>
+            <p style="width: 38%;">
+                Men
+                Women
+                Kids
+                Accessories
+                Sale
+                Coming Soon</p>
+        </div>
+        <div class="foot1 col-md-3" style="padding-top:4%;display:inline-block;">
+            <h3>SHOP</h3>
+            <div></div>
+            <p style="width: 38%;">
+                About Us
+                Shipping Methods
+                Career
+                Contact
+            </p>
+        </div>
+    </div>
+
+    <div class="last">
+        <span class="last_span">© 2016 wilylab. All Rights Reserved</span>
+        <img src="img/last.jpg" style="float:right;">
+
+    </div>
+
+    </div>
+
+    </div>
+</body>
+
+<script src="js/swiper.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+    var swiper = new Swiper('.swiper-container', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+
+    $(".nav_li").hover(function () {
+        $(this).children().slideDown();
+    }, function () {
+        $(this).children().slideUp();
+    })
+    $(".pro-content1").hover(function () {
+        $(".size1").slideDown(1000, function () {
+            $(".size1").show();
+        })
+    }, function () {
+        $(".size1").slideUp(1000, function () {
+            $(".size1").hide();
+        })
+    });
+
+    $(".pro-content2").hover(function () {
+        $(".size2").slideDown(1000, function () {
+            $(".size2").show();
+        })
+    }, function () {
+        $(".size2").slideUp(1000, function () {
+            $(".size2").hide();
+        })
+
+    })
+    $(".pro-content3").hover(function () {
+        $(".size3").slideDown(1000, function () {
+            $(".size3").show();
+        })
+    }, function () {
+        $(".size3").slideUp(1000, function () {
+            $(".size3").hide();
+        })
+
+    })
+    $(".pro-content4").hover(function () {
+        $(".size4").slideDown(1000, function () {
+            $(".size4").show();
+        })
+    }, function () {
+        $(".size4").slideUp(1000, function () {
+            $(".size4").hide();
+        })
+
+    })
+
+
+</script>
+
+</html>

@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+</head>
+<style>
+    body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    #main {
+        width: 100%;
+    }
+
+    .head {
+        background: black;
+        color: white;
+        font-size: 14px;
+
+    }
+
+    .nav_cont {
+        margin-left: 3%;
+        margin-top: 3%;
+    }
+
+
+    .nav_cont_ul ul li {
+        font-size: 15px;
+        margin-left: 35px;
+        display: inline-block;
+        list-style-type: none;
+        line-height: 3;
+
+
+    }
+
+    .nav_cont {
+        width: 100%;
+        display: inline-block;
+    }
+
+    .nav_cont_ul {
+        display: inline-block;
+
+    }
+
+    .nav_cont_two {
+        margin-top: -37px;
+        display: inline-block;
+
+    }
+
+    .see {
+        border: 2px solid #272727;
+        color: #272727;
+        display: inline-block;
+        font-size: 18px;
+        line-height: 46px;
+        text-align: center;
+        text-transform: uppercase;
+        width: 190px;
+        position: absolute;
+        left: 5%;
+        bottom: 160px;
+
+        text-decoration: none;
+    }
+
+    .see:hover {
+        background: #272727;
+        color: white;
+        text-decoration: none;
+    }
+
+    .main_img img {
+        width: 100%;
+        position: relative;
+    }
+
+
+
+    .cate_select1_title {
+        border-bottom: 1px solid #eee;
+        line-height: 19px;
+        padding: 10px 17px 10px 20px;
+
+    }
+
+    .cate_select1_title a {
+        float: right;
+    }
+
+    .cate_select {
+        margin-top: 5%;
+        margin-left: 5%;
+
+
+    }
+
+    .cate_select1 {
+        background: #fff none repeat scroll 0 0;
+    }
+
+
+
+    .cate {
+        width: 100%;
+        height: 1180px;
+        list-style-type: none;
+        background: #efefef;
+    }
+
+
+    .cate_ul li {
+
+        border-bottom: 1px solid #eee;
+        color: #6f6f6f;
+        display: block;
+        font-size: 12px;
+        line-height: 17px;
+        padding: 10px 10px 10px 30px;
+
+
+    }
+
+
+    .cate_select1_title a {
+        color: #6f6f6f;
+        display: inline;
+
+        font-size: 12px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+
+    }
+
+    .cate_select1_title h4 {
+
+        color: #272727;
+        display: inline;
+
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        line-height: 19px;
+        text-transform: uppercase;
+    }
+
+    .price_title h4 {
+
+        color: #272727;
+        display: inline;
+
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        line-height: 19px;
+        text-transform: uppercase;
+    }
+
+
+
+    .color_select1_title h4 {
+        color: #272727;
+        display: inline;
+
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        line-height: 19px;
+        text-transform: uppercase;
+
+    }
+
+    .color_select1_title a {
+        color: #6f6f6f;
+        display: inline;
+
+        font-size: 12px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+
+    }
+
+    .size1 li {
+        display: inline-block;
+        list-style-type: none;
+
+
+    }
+
+    .size1 {
+        display: none;
+        width: 270px;
+        background: #f7f7f9 none repeat scroll 0 0;
+    }
+
+    .size1 ul {
+        display: inline;
+    }
+
+    .cate_select1_cont {
+
+        padding: 10px 17px 10px 20px;
+        color: #272727;
+        font-family: montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        position: relative;
+        -webkit-font-smoothing: antialiased;
+        border-bottom: 1px solid #eee;
+
+    }
+
+    .clo_ul li {
+
+        border-right: 1px solid #eee;
+        list-style-type: none;
+        float: left;
+        width: 20%;
+
+
+    }
+
+    .clo_ul li a {
+        padding-right: 13px;
+    }
+
+    .clo_ul {
+        padding: 0px;
+    }
+
+    .clo_ul li a {
+        color: #6f6f6f;
+        display: block;
+        font-size: 12px;
+        letter-spacing: 1.5px;
+        line-height: 52px;
+        text-align: center;
+        text-transform: uppercase;
+
+    }
+
+    .get_txt1_button {
+        background: #272727 none repeat scroll 0 0;
+        border: medium 0;
+        color: #fff;
+        display: block;
+        float: left;
+        height: 36px;
+        line-height: 36px;
+        text-transform: uppercase;
+        width: 100px;
+    }
+
+    .get_title {
+        color: #fff;
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: 7px;
+        line-height: 28px;
+        margin-bottom: 10px;
+
+    }
+
+    .get_txt1 {
+        position: absolute;
+        left: 25%;
+        padding-top: 15%;
+    }
+
+    .get_txt1_input {
+        background: #fff none repeat scroll 0 0;
+        border: medium 0;
+        color: #333;
+        /* display: block; */
+        float: left;
+        font-size: 12px;
+        height: 36px;
+        padding: 0 15px;
+        width: 470px;
+    }
+
+    .cate_select1_cont h4 {
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .new_arr_cont1 {
+
+        display: inline-block;
+        margin-top: 5%;
+
+
+    }
+
+    .price {
+        margin-top: 5%;
+    }
+
+    .head {
+        width: 100%;
+    }
+
+    .sin-shop-sidebar {
+        width: 25%;
+    }
+
+    .brand_img1 {
+        margin-right: 1%;
+        display: inline-block;
+    }
+
+    .price_cont {
+        padding: 10px 17px 10px 20px;
+    }
+
+
+
+    .foot {
+        height: 300px;
+        background: black;
+
+        color: white;
+    }
+
+    .foot1 p:hover {
+        color: red;
+    }
+
+
+    .last {
+        background:#333 none repeat scroll 0 0;
+    height: 40px;
+}
+
+
+.last span{
+    color: rgb(185, 94, 94);
+}
+
+    .brand_ul li {
+        list-style-type: none;
+        border-bottom: 1px solid #eee;
+
+    }
+
+    .brand_img1{
+        border: 1px solid;
+    }
+
+    .brand{
+        margin-bottom: 8%;
+    }
+
+    .brand_ul li a {
+        color: #6f6f6f;
+        display: block;
+        font-size: 12px;
+        letter-spacing: 1.5px;
+        line-height: 36px;
+        padding: 0 20px;
+        float: left;
+    }
+
+    .show {
+        margin-top: 5%;
+
+    }
+</style>
+
+<body>
+    <div id="main">
+        <div class="head row">
+            <div class="head_log col-md-10">
+                <span style="margin-left:5%;">
+                    LOG IN
+                    |
+                    REGISTER
+
+                </span>
+
+            </div>
+
+            <div class="head_eng col-md-2">
+                ENG<img src="img/down.jpg">
+                USD<img src="img/down.jpg">
+
+            </div>
+
+        </div>
+        <div class="nav">
+            <div class="nav_cont row">
+                <div class="nav_cont_img col-md-1">
+                    <img src="img/logo.png">
+                </div>
+
+                <div class="nav_cont_ul col-md-8">
+                    <ul>
+                        <li>HOME</li>
+                        <li>SHOP</li>
+                        <li>PAGES</li>
+                        <li>BLOG</li>
+                        <li>CONTACT</li>
+                    </ul>
+
+                </div>
+
+                <div class="nav_cont_two col-md-2">
+                    <img src="img/serch.jpg">
+                    <img src="img/gwc.jpg">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="main_img">
+            <img src="img/main.jpg">
+            <a href="#" class="see">See Collection</a>
+
+        </div>
+
+        <div class="cate">
+
+            <div class="cate_select col-md-3">
+                <div class="cate_select1">
+                    <div class="cate_select1_title">
+                        <h4>CATEGORIES</h4>
+                        <a href="#">all</a>
+
+                    </div>
+                    <div class="cate_select1_cont">
+
+
+                        <h4 style="display:inline-block;">MEN</h4>
+                        <span class="caret" style="float:right;margin-top: 22px;"></span>
+
+                        </ul>
+
+                    </div>
+
+                    <!--  -->
+                    <div class="cate_select1_cont">
+
+
+                        <h4 style="display:inline-block;">WOMEN</h4>
+                        <span class="caret" style="float:right;margin-top: 22px;"></span>
+
+
+                    </div>
+                    <div class="cate_select1_cont">
+
+
+                        <h4 style="display:inline-block;">Accessories</h4>
+                        <span class="caret" style="float:right;margin-top: 22px;"></span>
+
+
+                    </div>
+                    <!--  -->
+                    <div class="cate_select1_cont" style="border-bottom:none;">
+
+
+                        <h4 style="display:inline-block;">Jewelry</h4>
+                        <span class="caret" style="float:right;margin-top: 22px;"></span>
+
+                    </div>
+                </div>
+                <div class="sin-shop-sidebar"
+                    style="width:100%;background: #fff none repeat scroll 0 0;margin-top: 16%;">
+                    <div class="cate_select1_title">
+                        <h4>PRICE</h4>
+
+
+
+                    </div>
+
+                    <div class="price_cont">
+                        <p>You Range<input type="text" id="price-amount" readonly=""></p>
+
+                    </div>
+
+
+                </div>
+
+
+
+
+                <div class="cate_select1_title" style="background:white;margin-top: 16%;height: 82px;">
+                    <div style="border-bottom: 1px solid #eee;">
+
+
+                        <h4>CLOTHING SIZES</h4>
+                        <a href="#">all</a>
+                    </div>
+
+
+                    <ul class="clo_ul">
+                        <li><a href="#">s</a></li>
+                        <li><a href="#">m</a></li>
+                        <li><a href="#">l</a></li>
+                        <li><a href="#">xl</a></li>
+                        <li><a href="#">xxl</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="cate_select1_title" style="background:white;margin-top: 16%;height: 200px;">
+                    <div style="border-bottom: 1px solid #eee;">
+
+
+                        <h4>BRANDS</h4>
+                        <a href="#">all</a>
+                    </div>
+
+                    <ul class="brand_ul" style="height: 134px;
+                    float: left;">
+                        <li><a href="#">Armani Jeans</a></li>
+                        <li><a href="#">Ecko Untld.</a></li>
+                        <li><a href="#">Custo</a></li>
+                        <li><a href="#">Caramell</a></li>
+
+
+
+                    </ul>
+
+                </div>
+
+
+
+                <div class="cate_select1_title" style="background:white;margin-top: 16%;height: 200px;">
+                    <div style="border-bottom: 1px solid #eee;">
+
+
+                        <h4>BRANDS</h4>
+                        <a href="#">all</a>
+                    </div>
+
+                    <ul class="brand_ul" style="height: 134px;
+                        float: left;">
+                        <li><a href="#">Armani Jeans</a></li>
+                        <li><a href="#">Ecko Untld.</a></li>
+                        <li><a href="#">Custo</a></li>
+                        <li><a href="#">Caramell</a></li>
+
+
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="show col-md-8">
+                <img src="img/守望.jpg" style="width:100%;">
+
+            </div>
+
+            <div class="new_arr_cont1 col-md-2">
+
+                <img style="display: block;" src="img/1.jpg">
+                <div class="size1">
+                    <h4 style="display: inline-block;">Sizes:</h4>
+                    <ul style="display: inline-block;">
+                        <li>s</li>
+                        <li>xs</li>
+                        <li>m</li>
+                        <li>l</li>
+                        <li>xl</li>
+                        <li>xxl</li>
+                    </ul>
+
+                    <div>
+
+                    </div>
+                    <h4 style="display: inline;">Colors:</h4>
+                    <ul>
+                        <li style="background:blue;color:blue;border-radius: 100%;">b</li>
+                        <li style="background:orange;color:orange;border-radius: 100%;">o</li>
+                        <li style="background:green;color:green;border-radius: 100%;">g</li>
+                        <li style="background:purple;color:purple;border-radius: 100%;">p</li>
+                        <li style="background:pink;color:pink;border-radius: 100%;">p</li>
+                    </ul>
+                </div>
+
+
+
+
+                <div class="pro-content1" style="background:white;width: 270px;">
+                    <div>
+                        <h3 style="  display: inline-block;"><a>Stripped Wool</a></h3>
+                        <p style="  display: inline-block;">$ 46</p>
+                    </div>
+                    <div>
+                        <a style="color:pink;">Mens wear</a>
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+            </div>
+
+            <div class="new_arr_cont1 col-md-2" style="margin-left:7%;">
+
+                <img style="display: block;" src="img/1.jpg">
+                <div class="size1">
+                    <h4 style="display: inline-block;">Sizes:</h4>
+                    <ul style="display: inline-block;">
+                        <li>s</li>
+                        <li>xs</li>
+                        <li>m</li>
+                        <li>l</li>
+                        <li>xl</li>
+                        <li>xxl</li>
+                    </ul>
+
+                    <div>
+
+                    </div>
+                    <h4 style="display: inline;">Colors:</h4>
+                    <ul>
+                        <li style="background:blue;color:blue;border-radius: 100%;">b</li>
+                        <li style="background:orange;color:orange;border-radius: 100%;">o</li>
+                        <li style="background:green;color:green;border-radius: 100%;">g</li>
+                        <li style="background:purple;color:purple;border-radius: 100%;">p</li>
+                        <li style="background:pink;color:pink;border-radius: 100%;">p</li>
+                    </ul>
+                </div>
+
+
+
+
+                <div class="pro-content1" style="background:white;width: 270px;">
+                    <div>
+                        <h3 style="  display: inline-block;"><a>Stripped Wool</a></h3>
+                        <p style="  display: inline-block;">$ 46</p>
+                    </div>
+                    <div>
+                        <a style="color:pink;">Mens wear</a>
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+            </div>
+
+            <div class="new_arr_cont1 col-md-2" style="margin-left:7%;">
+
+                <img style="display: block;" src="img/1.jpg">
+                <div class="size1">
+                    <h4 style="display: inline-block;">Sizes:</h4>
+                    <ul style="display: inline-block;">
+                        <li>s</li>
+                        <li>xs</li>
+                        <li>m</li>
+                        <li>l</li>
+                        <li>xl</li>
+                        <li>xxl</li>
+                    </ul>
+
+                    <div>
+
+                    </div>
+                    <h4 style="display: inline;">Colors:</h4>
+                    <ul>
+                        <li style="background:blue;color:blue;border-radius: 100%;">b</li>
+                        <li style="background:orange;color:orange;border-radius: 100%;">o</li>
+                        <li style="background:green;color:green;border-radius: 100%;">g</li>
+                        <li style="background:purple;color:purple;border-radius: 100%;">p</li>
+                        <li style="background:pink;color:pink;border-radius: 100%;">p</li>
+                    </ul>
+                </div>
+
+
+
+
+                <div class="pro-content1" style="background:white;width: 270px;">
+                    <div>
+                        <h3 style="  display: inline-block;"><a>Stripped Wool</a></h3>
+                        <p style="  display: inline-block;">$ 46</p>
+                    </div>
+                    <div>
+                        <a style="color:pink;">Mens wear</a>
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+            </div>
+
+            <div class="new_arr_cont1 col-md-2" style="display:block;">
+
+                <img style="display: block;" src="img/1.jpg">
+                <div class="size1">
+                    <h4 style="display: inline-block;">Sizes:</h4>
+                    <ul style="display: inline-block;">
+                        <li>s</li>
+                        <li>xs</li>
+                        <li>m</li>
+                        <li>l</li>
+                        <li>xl</li>
+                        <li>xxl</li>
+                    </ul>
+
+                    <div>
+
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="pro-content1" style="background:white;width: 270px;">
+                    <div>
+                        <h3 style="  display: inline-block;"><a>Stripped Wool</a></h3>
+                        <p style="  display: inline-block;">$ 46</p>
+                    </div>
+                    <div>
+                        <a style="color:pink;">Mens wear</a>
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+            </div>
+
+
+            <div class="new_arr_cont1 col-md-2" style="margin-left:7%;">
+
+                <img style="display: block;" src="img/1.jpg">
+                <div class="size1">
+                    <h4 style="display: inline-block;">Sizes:</h4>
+                    <ul style="display: inline-block;">
+                        <li>s</li>
+                        <li>xs</li>
+                        <li>m</li>
+                        <li>l</li>
+                        <li>xl</li>
+                        <li>xxl</li>
+                    </ul>
+
+                    <div>
+
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="pro-content1" style="background:white;width: 270px;">
+                    <div>
+                        <h3 style="  display: inline-block;"><a>Stripped Wool</a></h3>
+                        <p style="  display: inline-block;">$ 46</p>
+                    </div>
+                    <div>
+                        <a style="color:pink;">Mens wear</a>
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="new_arr_cont1 col-md-2" style="margin-left:7%;">
+
+                <img style="display: block;" src="img/1.jpg">
+                <div class="size1">
+                    <h4 style="display: inline-block;">Sizes:</h4>
+                    <ul style="display: inline-block;">
+                        <li>s</li>
+                        <li>xs</li>
+                        <li>m</li>
+                        <li>l</li>
+                        <li>xl</li>
+                        <li>xxl</li>
+                    </ul>
+
+                    <div>
+
+                    </div>
+
+                </div>
+                <div class="pro-content1" style="background:white;width: 270px;">
+                    <div>
+                        <h3 style="  display: inline-block;"><a>Stripped Wool</a></h3>
+                        <p style="  display: inline-block;">$ 46</p>
+                    </div>
+                    <div>
+                        <a style="color:pink;">Mens wear</a>
+                        <div>
+
+                        </div>
+                    </div>
+                  
+        
+                </div>
+
+
+
+
+            </div>
+         
+
+
+         
+        </div>
+
+      
+
+       
+
+        <div class="get" style="height:450px;">
+            <img src="img/get.jpg" style="position:absolute;width: 100%;">
+            <div class="get_txt1">
+                <div>
+
+                    <div>
+                        <h2 class="get_title">Get Notified of any offers!</h2>
+                        <p>Subscribe to our Newsletter to be notified about promotions</p>
+                    </div>
+
+                    <div>
+                        <form>
+                            <input type="text" placeholder="Your email address" class="get_txt1_input">
+                            <input type="submit" value="submit" class="get_txt1_button">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="brand" style="width:100%;">
+            <div class="brand_txt">
+                <h1 style="display: inline-block;margin-right: 5%;">Top Brands</h1>
+                <div class="brand_img1">
+                    <img src="img/b1.jpg">
+                </div>
+                <div class="brand_img1">
+                    <img src="img/b1.jpg">
+                </div>
+                <div class="brand_img1">
+                    <img src="img/b1.jpg">
+                </div>
+                <div class="brand_img1">
+                    <img src="img/b1.jpg">
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="foot row">
+            <div class="foot1 col-md-3" style="padding-top:4%;padding-left:6%;display: inline-block;">
+                <img src="img/footer-logo.png">
+                <div></div>
+                <p style="width: 91%;">Lorem ipsum dolor sit amet, consec adipisicing elit,
+                    sed do eiusm empor
+                    incididunt oloremque laudantium,</p>
+            </div>
+
+            <div class="foot1 col-md-3" style="padding-top:4%;display: inline-block;">
+                <h3>ADDRESS</h3>
+                <div></div>
+                <p style="width: 38%;">
+                    1025-1035 Park Ave,
+                    New York,
+                    NY 10028, USA
+
+                    +1 123-456-7890
+
+                    sales@koolinc.com,</p>
+            </div>
+            <div class="foot1 col-md-3" style="padding-top:4%;display: inline-block;">
+                <h3>COLLECTION</h3>
+                <div></div>
+                <p style="width: 38%;">
+                    Men
+                    Women
+                    Kids
+                    Accessories
+                    Sale
+                    Coming Soon</p>
+            </div>
+            <div class="foot1 col-md-3" style="padding-top:4%;display:inline-block;">
+                <h3>SHOP</h3>
+                <div></div>
+                <p style="width: 38%;">
+                    About Us
+                    Shipping Methods
+                    Career
+                    Contact
+                </p>
+            </div>
+        </div>
+
+        <div class="last">
+            <span class="last_span">© 2016 wilylab. All Rights Reserved</span>
+            <img src="img/last.jpg" style="float:right;">
+
+        </div>
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        window.onload = function () {
+            /*720代表设计师给的设计稿的宽度，你的设计稿是多少，就写多少;100代表换算比例，这里写100是
+              为了以后好算,比如，你测量的一个宽度是100px,就可以写为1rem,以及1px=0.01rem等等*/
+            getRem(720, 100)
+        };
+        window.onresize = function () {
+            getRem(720, 100)
+        };
+        function getRem(pwidth, prem) {
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth / pwidth * prem + "px";
+        }
+    </script>
+    <title>Document</title>
+    <link rel="stylesheet" href="mui.min.css">
+    <style>
+        body {
+            background-color: #E6E6FA;
+        }
+
+        li {
+            text-align: center;
+            padding-top: 0.3rem;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        .header {
+            font-size: 0.4rem;
+            font-weight: bold;
+            text-align: left;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+
+        </ul>
+    </div>
+
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+
+        function getQueryVariable(variable) {
+            var query = window.location.search.substring(1);
+            var vars = query.split("&");
+            for (var i = 0; i < vars.length; i++) {
+                var pair = vars[i].split("=");
+                if (pair[0] == variable) { return pair[1]; }
+            }
+            return (false);
+        }
+        getQueryVariable("ch_name")
+        console.log(getQueryVariable("ch_name"))
+        var w_url = "http://www.duans.top"
+        $.ajax(w_url + '/freeApi/broadcasting.php?act=musicBroadcastingDetails', {
+            dataType: 'json',//服务器返回json格式数据
+            type: 'post',//HTTP请求类型	 
+            data: {
+                channelname: getQueryVariable("ch_name")
+            },
+            success: function (data) {
+                console.log(data)
+                $('ul').append(
+                    '<li style="display:none">' + data.result.ch_name + '</li>' +
+                    '<li class="header">' + data.result.channel + '</li>'
+                )
+                for (i = 0; i < data.result.songlist.length; i++) {
+                    $('ul').append(
+                        '<li>' + data.result.songlist[i].artist + '</li>' +
+                        '<li style="display:none">' + data.result.songlist[i].artist_id + '</li>' +
+                        '<li style="display:none">' + data.result.songlist[i].songid + '</li>' +
+                        '<li style="display:none">' + data.result.songlist[i].thumb + '</li>' +
+                        '<li>' + data.result.songlist[i].title + '</li>'
+                    )
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

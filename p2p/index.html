@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .head {
+        background: #9915fd;
+        font-size: 0.3rem;
+        text-align: center;
+        color: white;
+    }
+
+    .head a {
+        color: white;
+    }
+
+    .logo_img {
+        display: inline;
+    }
+
+    .money_three {
+        z-index: 1;
+        text-align: center;
+        background: #9915fd;
+        color: white;
+        height: 3.75rem;
+    }
+
+    .money_three img {
+        width: 0.8rem;
+        height: auto;
+    }
+
+    .money_three div {
+        display: inline-block;
+    }
+
+    .money_w {
+        margin-top: 10%;
+        margin-left: 1.5rem;
+    }
+
+    .money_w p {
+        font-size: 0.25rem;
+    }
+
+    .max_ed {
+        width: 90%;
+        height: 1.26rem;
+        background: white;
+        margin: -1.05rem auto 0;
+        z-index: 999;
+        position: relative;
+        padding: 0.3rem;
+    }
+
+    .max_ed p {
+        color: #babef9;
+        font-size: 0.3rem;
+    }
+
+
+    .max_ed_num {
+        display: inline-block;
+        margin-right: 0.8rem;
+    }
+
+    .max_ed_pg {
+        display: inline-block;
+    }
+
+    .max_ed_num h3 {
+        font-size: 0.7rem;
+        color: #4957fc;
+        font-weight: bold;
+    }
+
+    .max_ed_pg span {
+        background-color: #9915fd;
+        color: #fff;
+        padding: 0.18rem 0.2rem;
+        border-radius: 20px;
+        font-size: 0.25rem;
+    }
+
+    .max_ed {
+        box-shadow: 0 8px 15px #eef0f4;
+        height: 2.8rem;
+    }
+
+    .help_money h1 {
+        font-size: 0.35rem;
+        color: #575757;
+        font-weight: bold;
+        margin-left: 0.3rem;
+
+    }
+
+    .help1 {
+        background-image: linear-gradient(to right, #44cefb, #3a74f2);
+        box-shadow: 0 3px 12px #3c9af2;
+        text-align: center;
+        display: inline-block;
+        border-radius: 0.05rem;
+        width: 2.1rem;
+        height: 1.5rem;
+        background-color: #3a74f2;
+    }
+
+    .help2 {
+        background-image: linear-gradient(to right, #bd59fe, #7e48fd);
+        box-shadow: 0 3px 12px #7e48fd;
+        text-align: center;
+        display: inline-block;
+        border-radius: 0.05rem;
+        width: 2.1rem;
+        height: 1.5rem;
+        background-color: #7e48fd;
+
+        margin-left: 0.1rem;
+        margin-right: 0.1rem;
+    }
+
+    .help1 h2 {
+        padding-top: 0;
+        height: auto;
+        font-size: 0.4rem;
+        font-weight: normal;
+        color: white;
+
+    }
+
+    .help1 p {
+        color: #fff;
+        opacity: 0.8;
+
+    }
+
+    .help2 h2 {
+        padding-top: 0;
+        height: auto;
+        font-size: 0.4rem;
+        font-weight: normal;
+        color: white;
+
+    }
+
+    .help2 p {
+        color: #fff;
+        opacity: 0.8;
+
+    }
+
+    .help3 h2 {
+        padding-top: 0;
+        height: auto;
+        font-size: 0.4rem;
+        font-weight: normal;
+        color: white;
+
+    }
+
+    .help3 p {
+        color: #fff;
+        opacity: 0.8;
+
+    }
+
+
+    .help3 {
+        background-image: linear-gradient(to right, #ff914f, #fc486d);
+        box-shadow: 0 3px 12px #fc486d;
+        text-align: center;
+        display: inline-block;
+        border-radius: 0.05rem;
+        width: 2.1rem;
+        height: 1.5rem;
+        background-color: #fc486d;
+        ;
+    }
+
+    .help_cont {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .look_title h1 {
+        font-size: 0.35rem;
+        color: #575757;
+        font-weight: bold;
+        margin-left: 0.3rem;
+    }
+
+    .look_cont {
+        width: 90%;
+        margin: 0 auto;
+        box-shadow: 0 2px 15px #eef0f4;
+    }
+
+    .look_cont img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border: none;
+    }
+
+    .last {
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 49;
+        box-shadow: 0 1px 15px #eef0f4;
+        /* padding: 0.01rem; */
+
+        width: 100%;
+        height: 0.9rem;
+        padding-top: 0.1rem;
+    }
+
+    .last img {
+        width: 0.4rem;
+    }
+
+    .last div {
+        display: inline-block;
+        margin-left: 1.2rem;
+        color: #979797;
+    }
+</style>
+
+<body>
+
+    <div class="main">
+        <header class="head">
+            <a style="padding-top:0.2rem;float: left;padding-left: 0.3rem;">
+                北京
+
+            </a>
+
+            <div class="logo_img">
+                <img src="img/logo.png" style="width:2rem;height: auto;margin-top: 0.25rem;">
+
+
+            </div>
+
+            <a style="padding-top:0.2rem;float: right;padding-right: 0.3rem;">
+                签到
+            </a>
+        </header>
+        <div class="money_three">
+
+            <div class="money_w" style="margin-left:0%;">
+                <img src="img/icon-top-001.png">
+                <p></p>
+                <p>我要贷款</p>
+
+            </div>
+            <div class="money_w">
+                <img src="img/icon-top-002.png">
+                <p></p>
+
+                <p>办信组卡</p>
+
+            </div>
+            <div class="money_w">
+                <img src="img/icon-top-003.png">
+                <p></p>
+                <p>查询信用</p>
+
+            </div>
+
+        </div>
+
+        <div class="max_ed">
+
+            <p>
+                最高申请额度(元)
+            </p>
+
+            <div class="max_ed_num">
+                <h3>1000~50万</h3>
+
+            </div>
+
+            <div class="max_ed_pg">
+                <span>预估额度</span>
+
+            </div>
+        </div>
+
+        <div class="help_money">
+            <h1>帮你拿钱</h1>
+        </div>
+
+        <div class="help_cont">
+
+            <div class="help1">
+                <h2>一键选贷款</h2>
+                <p>订制私人贷款</p>
+
+            </div>
+
+            <div class="help2">
+                <h2>信用卡贷款</h2>
+                <p>额度高批款快</p>
+            </div>
+
+
+            <div class="help3">
+                <h2>小额贷款</h2>
+                <p>24小时内放款</p>
+            </div>
+
+
+        </div>
+
+        <div class="look_title">
+            <h1>活动发现</h1>
+
+        </div>
+
+        <div class="look_cont">
+            <img src="img/img-ad.png">
+        </div>
+
+
+        <footer class="last">
+            <div class="last_sy" style="margin-left:0;">
+                <img src="img/house.png">
+                <p style="color:#3c9af2;">
+                    首页
+                </p>
+
+
+            </div>
+            <div class="last_zx">
+                <img src="img/txt.png">
+                <p>资讯</p>
+
+            </div>
+            <div class="last_lt">
+                <img src="img/info.png">
+                <p>论坛</p>
+
+            </div>
+            <div class="last_zh">
+                <img src="img/person.png">
+                <p>账户</p>
+
+            </div>
+
+        </footer>
+    </div>
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/rem.js"></script>
+
+<script>
+
+
+</script>
+
+</html>

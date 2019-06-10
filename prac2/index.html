@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="test">这是段落中的<b>粗体</b>文本</p>
+    <button id="btn1">显示文本</button>
+    <button id="btn2">显示HTML</button>
+
+    <input type="text">
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#btn1").click(function(){
+        alert("Text:"+$("#test").text());
+    });
+
+    $("#btn2").click(function(){
+        alert("HTML:"+$("#test").html());
+    })
+
+    $("input").attr("type","password");
+})
+</script>
+</html>

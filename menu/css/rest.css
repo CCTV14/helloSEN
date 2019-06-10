@@ -1,0 +1,174 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: silver;
+}
+
+.main{
+    margin: 0 auto;
+    max-width: 950px;
+    padding: 30px 30px;
+    background-color: #ffffff;
+    height: 300px;
+}
+
+.title p{
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+
+.row{
+    width: 100%;
+    background-color: rgb(50, 50, 49);
+    height: 45px;
+}
+
+.jt{
+   transform: rotate(30%);
+}
+
+.row{
+    color: white;
+}
+
+.row_ul{
+    padding: 0;
+}
+
+.row_ul li{
+    display: inline-block;
+    height: 45px;
+    width: 90px;
+    text-align: center;
+    line-height: 3.5;
+    font-size: 13px;
+    
+    
+}
+
+.blog_son{
+    margin: 0;
+    padding: 0;
+    display: none;
+    background-color: rgb(50, 50, 49);
+    width: 150px;
+    position: absolute;
+   
+}
+
+.blog_son li{
+    width: 93%;
+    text-align: left;
+    color: white;
+    padding-left: 7%;
+    border-bottom: 1px solid white;
+   
+
+}
+
+.pages_son{
+    margin: 0;
+    padding: 0;
+    display: none;
+    background-color: rgb(50, 50, 49);
+    width: 150px;
+    position: absolute;
+
+}
+
+.pages_son li{
+   
+    width: 93%;
+    text-align: left;
+    color: white;
+    border-bottom: 1px solid white;
+    padding-left: 7%;
+}
+.pages_grandson{
+    display: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(50, 50, 49);
+    width: 150px;
+    position: absolute;
+    left: 150px;
+    bottom: -137px;
+
+}
+
+.pages_grand_grand_son{
+    display: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(50, 50, 49);
+    width: 150px;
+    position: absolute;
+    left: 150px;
+    bottom: -93px;
+
+
+}
+
+li{
+    list-style-type: none;
+}
+
+.pages_grand_grand_son li{
+    padding-left: 7%;
+    
+    width: 93%;
+    text-align: left;
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+.pages{
+    position: relative;
+}
+
+.blog{
+    position: relative;
+}
+
+.drop1{
+    position: relative;
+}
+
+.jt{
+ position: absolute;
+    top: 23px;
+    right: 10px;
+    margin-top: -4px;
+    margin-left: 30px;
+    width: 6px;
+    height: 6px;
+    border: white solid;
+    border-width: 1px 1px 0 0;
+    content: ' ';
+    transform: rotate(135deg);
+
+}
+
+.pages_grand_grand_son{
+    display: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(50, 50, 49);
+    width: 150px;
+    position: absolute;
+    left: 150px;
+    bottom: -137px;
+}
+
+.pages_grand_grand_son li{
+    padding-left: 7%;
+    width: 93%;
+    text-align: left;
+    color: white;
+    border-bottom: 1px solid white;
+} 
+
+
+.ho{
+    background-color: rgb(255, 180, 12) !important;
+}

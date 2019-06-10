@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/rest.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="title">
+            <p>DEFAULT:</p>
+        </div>
+
+        <div class="row">
+            <ul class="row_ul">
+                <li class="ho">HOME</li>
+                <li class="blog">
+                    BLOG
+                    <i class="jt"></i>
+
+                    <ul class="blog_son">
+                        <li>LINK1</li>
+                        <li>LINK2</li>
+                        <li>LINK3</li>
+                    </ul>
+                </li>
+                <li>PORTFOLIO</li>
+                <li class="pages">
+                    PAGES
+                    <i class="jt"></i>
+
+                    <ul class="pages_son">
+                        <li>LINK1</li>
+                        <li>LINK2</li>
+                        <li>LINK3</li>
+                        <li class="drop1">
+
+                            Dropdown &nbsp; >
+                           
+
+                            <ul class="pages_grandson">
+                                <li>LINK1</li>
+                                <li>LINK2</li>
+                                <li>LINK3</li>
+                                <li style="border:none;" class="drop2">
+                                    Dropdown &nbsp; >
+                                    <ul class="pages_grand_grand_son">
+                                        <li>LINK1</li>
+                                        <li>LINK2</li>
+                                        <li>LINK3</li>
+                                        <li style="border: none;">LINK4</li>
+
+                                    </ul>
+                                </li>
+
+                            </ul>
+
+
+                        </li>
+                        <li style="border: none;">LINK5</li>
+                    </ul>
+
+                </li>
+                <li>CONTACT</li>
+                <li>ABOUT</li>
+
+            </ul>
+
+
+        </div>
+
+
+    </div>
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    
+    $(".row_ul").children().hover(function () {
+        $(this).css("background-color", "rgb(255, 180, 12)");
+    }, function () {
+        $(this).css("background-color", "rgb(50, 50, 49)");
+    });
+    $(".blog").hover(function () {
+        $(".blog_son").show();
+    }, function () {
+        $(".blog_son").hide();
+    });
+    $(".pages").hover(function () {
+        $(".pages_son").show();
+    }, function () {
+        $(".pages_son").hide();
+    });
+    $(".drop1").hover(function () {
+        $(".pages_grandson").show();
+    }, function () {
+        $(".pages_grandson").hide();
+    });
+    $(".drop2").hover(function () {
+        $(".pages_grand_grand_son").show();
+    }, function () {
+        $(".pages_grand_grand_son").hide();
+    });
+    $(".blog_son").children().hover(function () {
+        $(this).css("background-color", "rgb(255, 180, 12)");
+     
+    }, function () {
+        $(this).css("background-color", "rgb(50, 50, 49)");
+    });
+    $(".pages_son").children().hover(function () {
+        $(this).css("background-color", "rgb(255, 180, 12)");
+    }, function () {
+        $(this).css("background-color", "rgb(50, 50, 49)");
+    });
+
+    $(".pages_grandson").children().hover(function () {
+        $(this).css("background-color", "rgb(255, 180, 12)");
+    }, function () {
+        $(this).css("background-color", "rgb(50, 50, 49)");
+    });
+    $(".pages_grand_grand_son").children().hover(function () {
+        $(this).css("background-color", "rgb(255, 180, 12)");
+    }, function () {
+        $(this).css("background-color", "rgb(50, 50, 49)");
+    });
+</script>
+
+</html>

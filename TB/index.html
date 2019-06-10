@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .head {
+        width: 100%;
+        font-size: 0.36rem;
+        text-align: center;
+        line-height: 3;
+    }
+
+    .head img {
+        width: 0.32rem;
+        margin-top: 0.3rem;
+
+
+    }
+
+    .null_cont {
+        background: white;
+        height: 2rem;
+    }
+
+    .four_info {
+        text-align: center;
+        border-bottom: 6px solid pink;
+    }
+
+    .four_info div {
+        display: inline-block;
+        margin-left: 0.3rem;
+        text-align: center;
+    }
+
+    .four_info img {
+        height: 0.7rem;
+
+    }
+
+    .info1 {
+        margin-right: 0.1rem;
+    }
+
+    .info4 {
+        margin-right: 0.2rem;
+    }
+
+    .four_info span {
+        color: #535353;
+        font-size: 0.26rem;
+        font-weight: bold;
+
+        display: block;
+    }
+
+    .newer_title {
+        text-align: center;
+        height: 0.3rem;
+        color: #f46054;
+        font-size: 0.28rem;
+        text-align: center;
+        padding: 0.32rem 0 0.0rem 0;
+
+    }
+
+
+    .wrap_ul {
+
+        text-align: center;
+        margin: 0 auto;
+        margin-right: 0.7rem;
+    }
+
+    .wrap_ul li {
+        font-size: 0.28rem;
+        display: inline-block;
+
+
+    }
+
+    .tz a {
+        display: block;
+        width: 6.6rem;
+        height: 0.72rem;
+        line-height: 0.72rem;
+        margin: 0.42rem auto 0.38rem;
+        font-size: 0.34rem;
+        border-radius: 0.3rem;
+        text-align: center;
+        color: #fff;
+        background: -webkit-linear-gradient(left, #fd8247, #f46054);
+        background: -o-linear-gradient(left, #fd8247, #f46054);
+        background: -moz-linear-gradient(left, #fd8247, #f46054);
+        background: linear-gradient(left, #fd8247, #f46054);
+    }
+
+    .slogan {
+        color: #a2a2a1;
+        font-size: 0.22rem;
+        padding-bottom: 1.5rem;
+        line-height: 1.18rem;
+        text-align: center;
+        background: #f4f4f3;
+
+    }
+
+    .slogan img {
+        width: 0.20rem;
+        margin-right: 0.1rem;
+    }
+
+
+    .last {
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 49;
+        box-shadow: 0 1px 15px #eef0f4;
+        /* padding: 0.01rem; */
+        width: 100%;
+        border-top: 2px solid #d7d7d7;
+        background: #f4f4f3;
+        height: 1.2rem;
+    }
+
+    .last img {
+        width: 0.46rem;
+        height: 0.45rem;
+    }
+
+    .last div {
+        display: inline-block;
+        margin-left: 1.0rem;
+        font-size: 0.1rem;
+
+    }
+
+    .last p {
+        font-size: 0.2rem;
+        margin: 0 0 10px;
+    }
+</style>
+
+<body>
+
+    <div class="main">
+        <header class="head">
+
+            <img src="img/ld.png" style="float:left;margin-left: 0.15rem;">
+
+            <span>投呗生活</span>
+
+            <img src="img/person.png" style="float: right;margin-right: 0.15rem">
+
+        </header>
+
+        <div class="null_cont">
+        </div>
+
+        <div class="four_info">
+            <div class="info1">
+                <img src="img/block.png">
+                <span>平台数据</span>
+            </div>
+            <div class="info2">
+                <img src="img/ewma.png">
+                <span>专属二维码</span>
+
+            </div>
+            <div class="info3">
+                <img src="img/dp.png">
+                <span>新手攻略</span>
+            </div>
+            <div class="info4">
+                <img src="img/gift.png">
+                <span>积分商城</span>
+
+            </div>
+
+        </div>
+
+        <div class="newer_title">
+            <span>——————安心理财 稳健收益——————</span>
+        </div>
+
+
+        <ul class="wrap_ul">
+            <li><span>锁定期 |</span></li>
+            <li><span>剩余金额 |</span></li>
+            <li><span>起投金额</span></li>
+        </ul>
+
+        <div class="tz">
+            <a>立即投资</a>
+        </div>
+
+        <p class="slogan"><img src="img/dui.png">账户安全由人保财险和广东华兴银行共同保障</p>
+
+        <footer class="last">
+
+
+
+            <div class="info1" style="margin-left:0;">
+                <img src="img/house.png">
+                <p>首页</p>
+
+            </div>
+
+
+            <div class="info2">
+                <img src="img/money.png">
+                <p>理财</p>
+            </div>
+
+
+            <div class="info3">
+                <img src="img/acti.png">
+                <p>商城</p>
+            </div>
+
+
+            <div class="info4">
+                <img src="img/head.png" onclick="javascript:location.href='mys.html'">
+                <p>我的</p>
+            </div>
+
+
+
+        </footer>
+
+
+
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/rem.js"></script>
+<script>
+
+    $(".info4").click(function () {
+        location.href = "login.html";
+    })
+    $(".info2").click(function () {
+        location.href = "money.html";
+    })
+</script>
+
+</html>

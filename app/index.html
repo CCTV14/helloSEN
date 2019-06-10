@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+  
+    <title>英语APP介绍</title>
+    <style type="text/css">
+        img {
+            width: 300px;
+            height: 300px;
+        }
+
+      
+
+
+     
+
+    
+
+ 
+    img { height: auto; width: auto\9; width:100%; }
+
+    
+    
+
+     
+
+        #bo {
+            postion: relative;
+            bottom: 0px;
+            margin: 0 auto;
+            float: left;
+            width: 950px;
+            height: 50px;
+            background-color: grey;
+            text-align: center;
+            line-height: 50px;
+            color: white;
+            font-size: 25px;
+        }
+
+        td{
+          padding-left: 20px;
+          padding-top: 20px;
+        }
+       
+    </style>
+
+    <script>
+
+    </script>
+</head>
+
+<body>
+      
+    <div id="nav">
+
+
+
+        <table>
+            <tr>
+               
+                <td><img src="imgs/帝泰招牌鱼.jpg" class="zpy"></td>
+                <td>
+                        <img src="imgs/帝介绍.jpg" style="display:none;" class="zpy_hide">
+                    <img src="imgs/桂鱼两吃.jpg" class="gy">
+                
+                </td>
+                <td>
+                        <img src="imgs/桂介绍.jpg" style="display:none;" class="gy_hide">
+                    <img src="imgs/椒香鲨鱼肚.JPG" class="sy">
+
+
+                
+                </td>
+
+            </tr>
+
+            <tr>
+                <td>
+                        <img src="imgs/椒介绍.JPG" style="display:none;" class="sy_hide">
+                    <img src="imgs/田螺鸡翅.JPG" class="tl">
+
+                
+                
+                </td>
+                <td>
+                        <img src="imgs/田介绍.JPG" style="display:none;" class="tl_hide">
+                    <img src="imgs/翠珠三色球.JPG" class="ssq">
+                </td>
+              
+                <td>
+                        <img src="imgs/翠介绍.JPG" style="display:none;" class="ssq_hide">
+                    
+                    <img src="imgs/香酥糯米鸭.JPG" class="nmy_hide">
+                    
+                
+                </td>
+
+               
+            </tr>
+          
+        </table>
+         <img src="imgs/香介绍.JPG" class="x_hide">
+        
+
+    </div>
+    
+    <div id="bo">到底啦........ </div>
+</body>
+
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+
+<script>
+    $(".ssq").hover(function(){
+        $(".nmy_hide").hide();
+        $(".ssq_hide").show();
+
+    },function(){
+        $(".ssq_hide").hide();
+        $(".nmy_hide").show();
+    });
+
+    $(".zpy").hover(function(){
+        $(".gy").hide();
+        $(".zpy_hide").show();
+
+    },function(){
+        $(".zpy_hide").hide();
+        $(".gy").show();
+    });
+
+    $(".gy").hover(function(){
+        $(".sy").hide();
+        $(".gy_hide").show();
+
+    },function(){
+        $(".gy_hide").hide();
+        $(".sy").show();
+    });
+
+    $(".sy").hover(function(){
+        $(".tl").hide();
+        $(".sy_hide").show();
+
+    },function(){
+        $(".sy_hide").hide();
+        $(".tl").show();
+    });
+
+    $(".tl").hover(function(){
+        $(".ssq").hide();
+        $(".tl_hide").show();
+
+    },function(){
+        $(".tl_hide").hide();
+        $(".ssq").show();
+    });
+
+    $(".nmy_hide").hover(function(){
+       
+        $(".x_hide").show();
+
+    },function(){
+     
+        $(".x_hide").hide();
+       
+    });
+
+   
+
+
+</script>
+
+</html>

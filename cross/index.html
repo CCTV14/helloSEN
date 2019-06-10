@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Hello MUI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="../css/mui.min.css">
+    <style type="text/css">
+        .mui-content>.mui-table-view:first-child {
+            margin-top: -1px;
+        }
+
+        .mui-scroll {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!--下拉刷新容器-->
+    <div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+
+        <div class="mui-scroll">
+            <!--数据列表-->
+            <ul class="mui-table-view mui-table-view-chevron"></ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+
+
+        // mui.ajax('http://www.duans.top//freeApi/broadcasting.php?act=musicBroadcasting',
+        //     {
+        //         dataType: 'json',
+        //         type: 'get',//HTTP请求类型//超时时间设置为10秒
+        //         timeout: 10000,//超时时间设置为10秒；
+        //         headers: { 'Content-Type': 'application/json' },
+        //         success: function (data) {
+        //             alert(111)
+        //         },
+        //         error: function (xhr, type, errorThrown, data) {
+        //             //异常处理；
+        //             console.log(type);
+        //             alert(222)
+        //         }
+        //     });
+
+
+
+
+        $.ajax('http://www.duans.top//freeApi/broadcasting.php?act=musicBroadcasting&callback=cb', {
+            dataType: 'jsonp',//服务器返回json格式数据
+            type: 'get',//HTTP请求类型
+            timeout: 10000,//超时时间设置为10秒；
+            headers: { 'Content-Type': 'application/json' },
+            callback: "cb",
+            success: function (data) {
+                //服务器返回响应，根据响应结果，分析是否登录成功
+                pullupRefresh(data);
+                addData(data);
+
+            }, error: function (xhr, type, errorThrown) {
+                //异常处理；
+                console.log(type);
+                alert(222)
+            }
+        });
+
+
+        var count = 0;
+        function pullupRefresh(data) {
+            setTimeout(function () {
+                mui('#pullrefresh').pullRefresh(data).endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
+                var table = document.body.querySelector('.mui-table-view');
+                var cells = document.body.querySelectorAll('.mui-table-view-cell');
+                var newCount = cells.length > 0 ? 5 : 5;//首次加载20条，满屏
+                for (var i = cells.length, len = i + newCount; i < len; i++) {
+
+                    var li = document.createElement('li');
+                    li.className = 'mui-table-view-cell';
+                    // li.innerHTML = '<a class="mui-navigate-right">姓名' + (i + 1) + '</a>';
+
+
+                    table.appendChild(li);
+
+                }
+            }, 1500);
+        }
+
+        function addData(data) {
+            var table = document.body.querySelector('.mui-table-view');
+            var cells = document.body.querySelectorAll('.mui-table-view-cell');
+            for (var i = cells.length, len = i + 5; i < len; i++) {
+                var li = document.createElement('li');
+                li.className = 'mui-table-view-cell';
+                for (j = 0; j < data.result.length; j++) {
+                    for (i = 0; i < data.result[j].channellist.length; i++) {
+                        $('ul').append(
+                            '<li>' + data.result[j].channellist[i].thumb + '</li>'
+                            + '<li style="color:red">' + data.result[j].channellist[i].name + '</li>'
+                            + '<li>' + data.result[j].channellist[i].cate_name + '</li>'
+                            + '<li>' + data.result[j].channellist[i].cate_sname + '</li>'
+                            + '<li>' + '<a>' + data.result[j].channellist[i].ch_name + '</a>' + '</li>'
+                            + '<li>' + data.result[j].channellist[i].title + '</li>'
+                            + '<li style="display:none">' + data.result[j].channellist[i].cid + '</li>'
+                            + '<li style="display:none">' + data.result[j].channellist[i].value + '</li>'
+                            + '<li  style="display:none">' + data.result[j].channellist[i].channelid + '</li>'
+                            + '<li style="display:none">' + data.result[j].channellist[i].artistid + '</li>'
+                            + '<li>' + data.result[j].channellist[i].avatar + '</li>'
+                        )
+                    }
+                }
+
+                //下拉刷新，新纪录插到最前面；
+                table.insertBefore(li, table.firstChild);
+
+
+            }
+        }
+		/**
+		 * 下拉刷新具体业务实现
+		 */
+        function pulldownRefresh() {
+            setTimeout(function () {
+                addData();
+                mui('#pullrefresh').pullRefresh().endPulldownToRefresh();
+                mui.toast("为你更新5条数据");
+            }, 1500);
+        }
+
+
+    </script>
+</body>
+
+</html>

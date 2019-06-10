@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="mui.min.css">
+    <title>Document</title>
+
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .last {
+        text-align: center;
+        z-index: 49;
+        box-shadow: 0 1px 15px #eef0f4;
+
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+
+        border-top: 2px solid #d7d7d7;
+        background: #f4f4f3;
+        height: 1.2rem;
+    }
+
+    .last img {
+        width: 0.46rem;
+        height: 0.45rem;
+    }
+
+    .last div {
+        display: inline-block;
+        margin-left: 1.0rem;
+        font-size: 0.1rem;
+
+    }
+
+    .last p {
+        font-size: 0.2rem;
+        margin: 0 0 10px;
+    }
+
+    .main {
+        width: 100%;
+
+    }
+
+    .head {
+        /* height: 0.56rem; */
+        width: 100%;
+        padding: 0.16rem 0;
+        /* border: 1px solid black; */
+        /* background-color: #fd8147; */
+        background: -moz-linear-gradient(top, #fd8147, #F46054);
+        background: -o-linear-gradient(top, #fd8147, #F46054);
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fd8147), to(#F46054));
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        margin-bottom: 2rem;
+        position: fixed;
+        top: 0;
+    }
+
+    .head ul {
+        height: 0.6rem;
+        margin: 0 auto;
+        border: 1px solid white;
+        overflow: hidden;
+        /* position: absolute; */
+        /* left: 4%; */
+        /* z-index: 1000; */
+        line-height: 0.6rem;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        padding: 0;
+    }
+
+    .head ul li {
+        float: left;
+        height: 0.6rem;
+        width: 25%;
+        box-sizing: border-box;
+        font-size: 0.26rem;
+        text-align: center;
+        color: white;
+        border-right: 1px solid white;
+        list-style-type: none;
+    }
+
+    .read_ul li {
+        margin-right: 0.4rem;
+        font-size: 0.3rem;
+        list-style-type: none;
+        display: inline-block;
+
+    }
+
+    .mark4_f span {
+        display: block;
+        width: 48px;
+        height: 48px;
+        background: #e1e1e1;
+        margin: 0 auto;
+        margin-top: 15px;
+        border-radius: 50%;
+        border: 2px solid #3DB1FA;
+        overflow: hidden;
+    }
+
+
+    .mark4_f p {
+        font-size: 12px;
+        text-align: center;
+        height: 20px;
+        line-height: 20px;
+        display: block;
+        width: 48px;
+        margin-top: -10px;
+        color: #333;
+    }
+
+    .mark4_f span img {
+        display: block;
+        width: 48px;
+        height: 50%;
+        left: 0;
+        bottom: 0;
+    }
+
+    .read1 span {
+        font-size: 0.3rem;
+    }
+
+    .read_ul li {
+        display: inline-block;
+        font-size: 0.3rem;
+        list-style-type: none;
+        margin-right: 0.9rem;
+        text-align: center;
+    }
+
+    .read {
+        background: white;
+        border-radius: 3%;
+    }
+
+    .read_ul {
+        padding-left: 2px;
+    }
+
+    .mui-block {
+        margin-top: 1rem;
+    }
+
+    .re_now {
+        padding-top: 0.63rem;
+    }
+
+    .num {
+        font-size: 0.6rem;
+
+    }
+
+    .year {
+        display: inline-block;
+    }
+
+    .move {
+        margin-left: 1rem;
+        display: inline-block;
+    }
+</style>
+
+
+
+<body>
+
+    <header class="head">
+
+        <ul class="head_ul">
+            <li class="co" style="background: #fde1df;color: #fd8147;">新手专区</li>
+            <li class="co">智能专区</li>
+            <li class="color">定投专区</li>
+            <li style="border: 0;" class="co">转让专区</li>
+        </ul>
+    </header>
+    <div class="main" id="pullrefresh">
+        <div class="re_now">
+        </div>
+        <footer class="last">
+            <div class="info1" style="margin-left:0;">
+                <img src="img/house.png" onclick="javascript:location.href='index.html'">
+                <p>首页</p>
+
+            </div>
+
+
+            <div class="info2">
+                <img src="img/money.png">
+                <p>理财</p>
+            </div>
+
+
+            <div class="info3">
+                <img src="img/acti.png">
+                <p>商城</p>
+            </div>
+
+
+            <div class="info4">
+                <img src="img/head.png">
+                <p>我的</p>
+            </div>
+
+
+
+        </footer>
+    </div>
+</body>
+
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="mui.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/rem.js"></script>
+
+<script>
+
+
+    mui.init({
+        pullRefresh: {
+            container: '#pullrefresh',
+            down: {
+                auto: true,
+                style: 'circle',
+                callback: pulldownRefresh
+            }
+        }
+    });
+
+    var count = 0;
+    var ii = 0;
+    function pullupRefresh() {
+        setTimeout(function () {
+            mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
+            for (var i = 0; i < 5; i++) {
+                $('.re_now').append("<div class='read'><ul class='read_ul'><p style='border-bottom: 1px solid black; font-size:0.4rem'>新手标XS" + (i + 1) + "期</p><li><p class='num'>12.8</p><p class='year'>预期年化率</p></li><li><span>1个月</span><span>100元起投</span><p>剩余金额0元</p></li><li class='mark4_f'><span><img src='img/red.png'><p>50%</p></span></li></ul></div>");
+            }
+        }, 1500);
+    }
+
+    function addData() {
+
+        for (ii = 0; ii < 5; ii++) {
+            $('.re_now').append("<div class='read'><ul class='read_ul'><p style='border-bottom: 1px solid black; font-size:0.4rem'>新手标XS" + (ii + 1) + "期</p><li><p class='num'>12.8</p><p class='year'>预期年化率</p></li><li><span>1个月</span><span>100元起投</span><p>剩余金额0元</p></li><li class='mark4_f'><span><img src='img/red.png'><p>50%</p></span></li></ul></div>");
+        }
+    }
+    function pulldownRefresh() {
+        setTimeout(function () {
+            addData();
+            mui('#pullrefresh').pullRefresh().endPulldownToRefresh();
+            mui.toast("为你推荐了5篇文章");
+        }, 1500);
+    }
+
+</script>
+<script>
+    $(".head_ul").children().eq(0).click(function () {
+        $(".head_ul").children().siblings().css({ "background": "#fd8147", "color": "white" });
+        $(this).css({ "background": "white", "color": "#fd8147" });
+
+    });
+    $(".head_ul").children().eq(1).click(function () {
+        $(".head_ul").children().siblings().css({ "background": "#fd8147", "color": "white" });
+        $(this).css({ "background": "white", "color": "#fd8147" });
+
+    });
+    $(".head_ul").children().eq(2).click(function () {
+        $(".head_ul").children().siblings().css({ "background": "#fd8147", "color": "white" });
+        $(this).css({ "background": "white", "color": "#fd8147" });
+
+    });
+    $(".head_ul").children().eq(3).click(function () {
+        $(".head_ul").children().siblings().css({ "background": "#fd8147", "color": "white" });
+        $(this).css({ "background": "white", "color": "#fd8147" });
+
+    });
+</script>
+
+</html>

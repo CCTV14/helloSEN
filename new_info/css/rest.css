@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    background: #fff;
+    text-align: center;
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 2%;
+}
+
+.cont {
+    padding: 15px 30px 30px;
+    border: 1px solid rgba(0, 0, 0, .14);
+    border-radius: 6px;
+}
+
+.title {
+    margin-bottom: 5%;
+}
+
+.title span {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.fo {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.fo p {
+    font-size: 12px;
+    padding-top: 2px;
+    display: inline;
+    color: red;
+    position: absolute;
+    right: 5%;
+    top: -3%;
+    display: none;
+}
+
+.form_cont {
+    text-align: center;
+}
+
+input {
+    display: block;
+    height: 40px;
+    padding: 5px 15px;
+    width: 100%;
+    border: solid 1px #ddd;
+    border-radius: 3px;
+    color: #353434;
+    box-sizing: border-box;
+}
+
+.btn {
+    height: 40px;
+    padding: 5px 15px;
+    width: 100%;
+    border: solid 1px #ddd;
+    border-radius: 3px;
+    color: #353434;
+    box-sizing: border-box;
+}
+
+.yzm {
+    width: 60%;
+    float: left;
+}
+
+.codebtn {
+    width: 40%;
+    float: left;
+
+}
+
+.correct {
+    font-size: 12px;
+    padding-top: 2px;
+    color: rgb(78, 117, 4);
+    width: 40%;
+}

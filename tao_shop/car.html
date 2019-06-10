@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="rest.css">
+</head>
+
+<body>
+    <header class="head">
+        <div class="head_txt">
+            <img src="img/back.png" style="float: left;">
+            <span>购物车</span>
+            <img src="img/last1.png" class="h2_img" style=" padding-top: 0.34rem;">
+        </div>
+    </header>
+
+    <div class="show">
+        <p class="show_title">
+            已购商品
+        </p>
+
+        <div class="show_cont">
+        </div>
+
+    </div>
+
+    <div class="accounts">
+
+    </div>
+
+    <footer class="last">
+        <div class="info1" style="margin-left:0;">
+            <img src="img/last1.png">
+            <p>首页</p>
+        </div>
+        <div class="info2">
+            <img src="img/last2.png">
+            <p>分类</p>
+        </div>
+        <div class="info3">
+            <img src="img/last3.png">
+            <p style="color: #ea2979;">购物车</p>
+        </div>
+        <div class="info4">
+            <img src="img/last4.png">
+            <!--  onclick="javascript:location.href='mys.html'" -->
+            <p>个人中心</p>
+        </div>
+    </footer>
+
+
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/rem.js"></script>
+<script>
+    var pri = 240;
+    var num = 1;
+    var acc = 1200;
+    $.ajax({
+        type: "get",
+        url: "product.json",
+        dataType: "json",
+        success: function (data) {
+            var sum_arr = [];
+            for (var i = 0; i < data.product.length; i++) {
+                sum_arr.push(Number(data.product[i].number));
+            }
+
+            
+            function sum(arr) {
+                var price = 0;
+                var s = 0;
+                for (var i = sum_arr.length - 1; i >= 0; i--) {
+                    s += arr[i];
+                }
+                $(".assemble").text(s);
+                // $(".assemble").append("<a class='go_s'>去结算</a>")
+                return s;
+            }
+            for (var i = 0; i < 5; i++) {
+                $(".show_cont").append("<div class='shopping'><span class='hidd'>"
+                    + data.product[i].id
+                    + "</span><img src='"
+                    + data.product[i].image
+                    + "'><div class='shop_info'><p class='productName'>"
+                    + data.product[i].productName
+                    + "</p><p class='number'>"
+                    + data.product[i].number
+                    + "袋/箱</p><input type='hidden' class='hidd' value='"
+                    + data.product[i].number + "'<span style='color: red;'>￥:</span><p class='price'>"
+                    + data.product[i].number + "</p><div class='gw_num'><span class='jian'>-</span><input type='text' value='1' class='num'/><span class='add'>+</span></div></div>");
+            }
+        }, error: function (data) {
+            alert("出错咯");
+        }
+    });
+
+    $(".accounts").append("<span class='assemble'></span>");
+    $(document).ready(function () {
+
+        //加
+        $(".add").click(function () {
+            var n = $(this).prev().val();
+            var hid = $(this).parent().siblings(".hidd").val();
+            var num = parseInt(n) + 1;
+            var q1 = Number(num * hid);
+            $(this).parent().prev().html(q1);
+            $(this).prev().val(num);
+
+
+            var sums1 = $(".assemble").text();
+
+            $(".assemble").text(Number(sums1) + Number(hid));
+        });
+
+        //减
+        $(".jian").click(function () {
+            var n1 = $(this).next().val();
+            var hid1 = $(this).parent().siblings(".hidd").val();
+            var num = parseInt(n1) - 1;
+            if (num == 0) {
+                alert("你还没加商品嘞")
+                return;
+            }
+            var q1 = Number(num * hid1);
+            $(this).parent().prev().html(q1);
+            $(this).next().val(num);
+
+
+            var sums1 = $(".assemble").text();
+
+            $(".assemble").text(Number(sums1) - Number(hid));
+
+        });
+
+
+        //总和
+
+    });
+
+
+
+
+
+
+
+</script>
+
+</html>

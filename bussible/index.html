@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="css/pc.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+<style>
+    @media screen and (max-width: 768px) {}
+
+
+    body {
+        margin: 0 auto;
+    }
+
+    .header {
+        background-color: #f6f6f6;
+        width: 100%;
+        height: 60px;
+        padding: 0 50px;
+        float: left;
+    }
+
+    .logo {
+        /* max-height: 73px; */
+        width: 105px;
+        /* width: auto; */
+        padding-left: 15px;
+        padding-top: 15px;
+    }
+
+    .header_nav,
+    a {
+
+        text-decoration: none;
+    }
+
+
+    .header_nav {
+        padding: -26px 0;
+        margin-top: -35px;
+        float: right;
+        padding-right: 120px;
+        font-size: 20px;
+    }
+
+    .header_nav div {
+        display: inline;
+        padding-right: 25px;
+    }
+
+
+    .header_nav ul {
+
+        float: right;
+
+    }
+
+    .bussible_logo {
+
+        width: 30%;
+    }
+
+    .two_nav {
+        font-size: 20px;
+        width: 100%;
+        padding: 0 60px;
+        padding-top: 5%;
+        padding-bottom: 14px;
+    }
+
+    .two_nav a {
+        color: #c8c8c8;
+        margin-right: 20px;
+    }
+
+    .main_img {
+        width: 100%;
+        position: relative;
+        height: 720px;
+    }
+
+
+
+    .big_img {
+        display: inline;
+
+    }
+
+    .big_img_txt {
+        text-align: center;
+        color: #757575;
+        padding-top: -15px;
+        position: absolute;
+        top: 40%;
+        left: 20%;
+        z-index: 9999;
+        color: white;
+    }
+
+    .xy_img {
+        position: absolute;
+        left: 0;
+        bottom: 40px;
+        z-index: 999;
+    }
+
+    .dy_img {
+        position: absolute;
+        right: 0;
+        bottom: 40px;
+        z-index: 999;
+    }
+
+    .down_img {
+        position: absolute;
+
+        left: 48%;
+        z-index: 999;
+        bottom: -48%;
+    }
+
+    .About_txt {
+        padding-left: 100px;
+    }
+
+    .middle {
+
+        margin-top: 90px
+    }
+
+    .About_txt {
+        width: 50%;
+        height: 180px;
+    }
+
+    .phone2 {
+        float: right;
+        position: absolute;
+        top: 147%;
+        right: 60px;
+        /* max-width: calc(100% - 100px); */
+        width: 40%;
+        height: 300px;
+    }
+
+    .About_img {
+        display: inline;
+    }
+
+    .middle_Our {
+        height: 650px;
+        background: #f6f6f6;
+    }
+
+    .our_Services {
+        font-size: 42px;
+        text-align: center;
+        padding-top: 70px;
+    }
+
+
+    .our_txt1 {
+        width: 50%;
+        float: left;
+        padding-left: 50px;
+    }
+
+    .our_txt1,
+    h4 p {
+        padding-left: 50px;
+    }
+
+    .our_txt1_p {
+        padding-left: 75px;
+        width: 50%;
+    }
+
+    .our_txt1_h3 {
+        display: inline;
+        padding-left: 30px;
+    }
+
+    .About_txt_p {
+
+        width: 420px;
+        padding-left: 0px;
+
+    }
+
+    .our_txt2 {
+
+
+        display: inline;
+
+
+    }
+
+
+
+    .our_txt2_p {
+        padding-left: 75px;
+        width: 27%;
+    }
+
+    .our_txt2_h3 {
+        display: inline;
+        padding-left: 30px;
+    }
+
+
+
+    .our_txt3 {
+        width: 50%;
+        float: left;
+        padding-left: 50px;
+    }
+
+    .our_txt3,
+    h4 {
+        padding-left: 50px;
+    }
+
+    .our_txt3_p {
+        padding-left: 75px;
+        width: 50%;
+    }
+
+    .our_txt3_h3 {
+        display: inline;
+        padding-left: 40px;
+    }
+
+    .our_txt3 {
+        margin-top: 50px;
+    }
+
+
+    .our_txt4 {
+
+
+        display: inline;
+
+
+    }
+
+    .cust {
+        height: 500px;
+    }
+
+    .our_txt4_p {
+        padding-left: 75px;
+        width: 27%;
+    }
+
+    .our_txt4_h3 {
+        display: inline;
+        padding-left: 30px;
+    }
+
+    .video_img {
+        width: 550px;
+        height: 400px;
+        margin-left: 70px;
+        margin-bottom: 70px;
+        margin-top: 45px;
+
+    }
+
+    .video_txt {
+        position: absolute;
+        display: inline-block;
+        width: 171px;
+        width: 14%;
+
+        margin-left: 60px;
+    }
+
+    .video {
+        display: inline-block;
+    }
+
+    .video_ul ul {
+        margin-right: 350px;
+        float: right;
+        /* position: absolute; */
+        padding-top: -26px;
+        /* margin-bottom: 23px; */
+        margin-top: -200px;
+
+
+    }
+
+    .video_ul li {
+        list-style-type: none;
+        margin-top: 10px;
+
+    }
+
+    .pro img {
+        width: 100%;
+    }
+
+    .our_cust {
+        font-size: 42px;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .Anna {
+        float: left;
+        width: 50%
+    }
+
+    .anna_img {
+        width: 90px;
+        height: 90px;
+        margin-left: 10px;
+    }
+
+    .john_img {
+        width: 90px;
+        height: 90px;
+        margin-right: 10px;
+    }
+
+    .John {
+        float: left;
+        width: 50%;
+    }
+
+    .anna_txt {
+        color: pink;
+    }
+
+    .dian_img {
+
+        text-align: center;
+    }
+
+    .dian_img img {
+        margin-top: 60px;
+
+    }
+
+    .news {
+        background: #f6f6f6;
+        height: 700px;
+    }
+
+    .news_title {
+        text-align: center;
+        padding-top: 70px;
+        padding-bottom: 30px;
+
+    }
+
+    .news div {
+
+
+        width: 26%;
+        display: inline-block;
+        padding-left: 70px;
+
+    }
+
+    .news img {
+        width: 300px;
+        height: 200px;
+
+    }
+
+    .news1 {
+
+        float: left;
+    }
+
+    .news2 {
+
+        float: left;
+    }
+
+    .news3 {
+
+        float: left;
+    }
+
+    .news_last {
+        padding-left: 70px;
+        display: block;
+
+    }
+
+    .img-responsive {
+        width: 150px;
+        height: 150px;
+    }
+
+    .partners div {
+        display: inline-block;
+    }
+</style>
+
+<body>
+    <div class="main">
+
+        <div class="header">
+            <div class="bussible_logo">
+                <img src="img/logo.png" class="logo">
+
+
+            </div>
+
+
+            <div class="header_nav">
+                <div>
+                    <img src="img/email.jpg">
+                    <a>info@domain.com</a>
+
+                </div>
+                <div>
+                    <img src="img/phone.jpg">
+                    <a>+39 123456789</a>
+
+                </div>
+
+                <div>
+
+                    <a class="en">EN</a>
+
+                    &nbsp;
+                </div>
+
+
+                <div>
+
+                    |
+                    &nbsp;
+                    <img src="img/serch.jpg">
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+        </header>
+
+
+        <div class="two_nav">
+
+            <a>Home</a>
+            <a>About</a>
+            <a>Services</a>
+            <a>Contacts</a>
+
+
+        </div>
+
+
+        <div class="big_img">
+            <img src="img/xy.jpg" class="xy_img">
+            <img src="img/dy.jpg" class="dy_img">
+            <div class="big_img_txt">
+                <h1 style="font-size:70px;">Grow your business</h1>
+
+
+                <h3 style="font-size:30px;">The best Corporate HTML Template. Download now!</h3>
+                <br /> <br /> <br />
+
+
+                <img src="img/button_DOW.jpg">
+
+            </div>
+            <img src="img/slider3.jpg" class="main_img">
+            <img src="img/down.jpg" class="down_img">
+        </div>
+
+        <div class="middle">
+
+            <div class="About_txt">
+                <h1>About Us</h1>
+                <div>
+                    <p class="About_txt_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis</p>
+                    <a href="#">READ MORE</a>
+                </div>
+
+            </div>
+
+            <div class="About_img">
+                <img src="img/phone2.png" class="phone2">
+
+            </div>
+
+
+        </div>
+
+        <div class="middle_Our">
+            <h2 class="our_Services">Our Services</h2>
+
+
+            <div class="our_txt1">
+
+                <img src="img/house.jpg">
+
+                <h3 style="display:inline;" class="our_txt1_h3">Business Goals</h3>
+
+                <p class="our_txt1_p">
+
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem harum aspernatur sapiente error,
+                    voluptas fuga, laudantium ullam magni fugit. Qui!
+                </p>
+
+            </div>
+
+            <div class="our_txt2">
+
+                <img src="img/friends.jpg">
+
+                <h3 class="our_txt2_h3">Professional Team</h3>
+
+                <p class=".our_txt2_p ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem harum
+                    aspernatur sapiente error, voluptas fuga, laudantium ullam magni fugit. Qui!</p>
+            </div>
+
+
+
+            <div class="our_txt3">
+
+                <img src="img/deng.jpg">
+
+                <h3 class="our_txt3_h3">Vision</h3>
+
+                <p class="our_txt3_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem harum aspernatur
+                    sapiente error, voluptas fuga, laudantium ullam magni fugit. Qui!</p>
+            </div>
+
+
+            <div class="our_txt4">
+
+                <img src="img/ej.jpg" style="margin-top: 90px;">
+
+                <h3 class="our_txt4_h3">Support 24/24</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem harum aspernatur sapiente error,
+                    voluptas fuga, laudantium ullam magni fugit. Qui!</p>
+            </div>
+
+
+
+
+        </div>
+
+        <div class="benefict">
+            <div class="video">
+                <img src="img/video.jpg" class="video_img">
+
+            </div>
+
+            <div class="video_txt">
+                <h2>Benefict of working</h2>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua.</p>
+            </div>
+
+            <div class="video_ul">
+                <ul>
+
+                    <li>
+                        <img src="img/dh.jpg">
+                        &nbsp; Lorem ipsum dolor sit amet
+
+                    </li>
+                    <li>
+                        <img src="img/dh.jpg">
+                        &nbsp; Lorem ipsum dolor sit amet
+
+                    </li>
+                    <li>
+                        <img src="img/dh.jpg">
+                        &nbsp; Lorem ipsum dolor sit amet
+
+                    </li>
+                </ul>
+
+            </div>
+
+
+        </div>
+
+        <div class="pro">
+            <img src="img/provide.jpg">
+
+
+        </div>
+
+        <div class="cust">
+
+            <h2 class="our_cust">Our Customer Say</h2>
+
+            <div class="Anna">
+                <img src="img/anna.jpg" class="anna_img">
+                <h4 style="display:inline-block">
+                    Anna Brown
+                    <br />
+                    CEO at Index.com
+
+                </h4>
+                <br />
+                <span class="anna_txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur voluptatum
+                    fugiat molestias, veritatis perspiciatis laborum modi beatae placeat explicabo at laudantium
+                    aliquam, nam vero ut!</span>
+
+
+            </div>
+
+            <div class="John">
+                <img src="img/john.jpg" class="john_img">
+                <h4 style="display:inline-block">
+                    John Doe
+                    <br />
+                    CMO at Company.com
+
+                </h4>
+                <br />
+                <span style="color: pink;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur
+                    voluptatum fugiat molestias, veritatis perspiciatis laborum modi beatae placeat explicabo at
+                    laudantium aliquam, nam vero ut!</span>
+
+
+            </div>
+            <div class="dian_img">
+                <img src="img/dian.jpg">
+            </div>
+        </div>
+
+        <div class="news">
+            <h1 class="news_title">Our News</h1>
+
+            <div class="news1">
+                <img src="img/news1.jpg">
+
+                <div style="background:white;    width: 70%;">
+                    <h3>Meetup In Rome</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, voluptas corporis. Maxime
+                        sapiente, adipisci laborum.</p>
+                    <span>02 November 2017</span>
+                </div>
+
+
+
+            </div>
+
+            <div class="news2">
+                <img src="img/news2.jpg">
+                <div style="background:white;    width: 70%;">
+                    <h3>Brand Power</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, voluptas corporis. Maxime
+                        sapiente, adipisci laborum.</p>
+                    <span>12 May 2017</span>
+                </div>
+
+
+            </div>
+
+            <div class="news3">
+                <img src="img/news4.jpg">
+                <div style="background:white;    width: 70%;">
+                    <h3>Meetup In Rome</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, voluptas corporis. Maxime
+                        sapiente, adipisci laborum.</p>
+                    <span>13 March 2017</span>
+                </div>
+
+
+            </div>
+            <br />
+
+
+        </div>
+        <div class="partners">
+
+            <div>
+                <img class="img-responsive" src="img/logo-square-2-dark.png" alt="">
+            </div>
+            <div>
+                <img class="img-responsive" src="img/logo-square-3-dark.png" alt="">
+            </div>
+            <div>
+                <img class="img-responsive" src="img/logo-square-4-dark.png" alt="">
+            </div>
+            <div>
+                <img class="img-responsive" src="img/logo-square-5-dark.png" alt="">
+            </div>
+            <div>
+                <img class="img-responsive" src="img/logo-square-6-dark.png" alt="">
+            </div>
+        </div>
+
+
+        <img src="img/last.jpg" style="width:100%">
+
+
+    </div>
+
+
+
+
+
+
+</body>
+
+
+
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+</script>
+
+</html>

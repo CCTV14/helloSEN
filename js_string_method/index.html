@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+
+</style>
+<body>
+
+    <!-- charAt -->
+    <p id="demo">单击按钮显示字符串的第一个字符</p>
+    <button onclick="myFunction()">点我</button>
+    <!-- charAt -->
+
+    <!-- charCodeAt-->
+    <p id="demo2">单击按钮显示字符串的第一个字符的编码</p>
+    <button onclick="myFunction2()">点我</button>
+     <!-- charCodeAt -->
+
+     <!-- concat -->
+     <p id="demo3">单击按钮连接连个字符串成新的字符串</p>
+     <button onclick="myFunction3()"></button>
+    <!-- concat -->
+
+    <!-- fromcharcode -->
+    <p id="demo4">单击按钮显示一个UNIODE编码的字符</p>
+    <button onclick="myFunction4()"></button>
+     <!-- fromcharcode -->
+
+     <!-- indexOf -->
+     <p id="demo5">单击按钮来定位指定文本首次出现的位置</p>
+     <button onclick="myFunction5()"></button>
+      <!-- indexOf -->
+
+
+      <!-- includes -->
+      <p>点击按钮查看检测结果</p>
+      <button onclick="myFunction6()"></button>
+      <p id="demo6"></p>
+      <p><strong>注意:</strong>IE 11 及更早版本不支持includes(方法.)</p>
+       <!-- includes -->
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js">
+</script>
+<script>
+function myFunction(){
+    var str="HELLO WORLD";
+    document.getElementById("demo").innerHTML=str.charAt(0);
+}
+// ----------------------------------------------------------------
+
+function myFunction2(){
+    var str="HELLO WORLD";
+    var n=str.charCodeAt(0);
+    document.getElementById("demo2").innerHTML=n;
+}
+
+// ----------------------------------------------------------------
+function myFunction3(){
+    var txt1="Hello";
+    var txt2="world";
+    var n=txt1.concat(txt2);
+    document.getElementById("demo3").innerHTML=n;
+}
+// ----------------------------------------------------------------
+function myFunction4(){
+    var n=String.fromCharCode(65);
+    document.getElementById("demo4").innerHTML=n;
+}
+// ----------------------------------------------------------------
+function myFunction5(){
+    var str="Hello world,welcome to the universe."
+    var n=str.indexOf("welcome");
+    document.getElementById("demo5").innerHTML=n;
+}
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+</script>
+</html>

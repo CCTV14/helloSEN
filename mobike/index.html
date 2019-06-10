@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+
+    .main_div{
+        border: 1px solid pink;
+        margin-top: 30px;
+        width: 55%;
+      
+     
+    }
+
+    .name{
+        display: inline-block;
+        position: absolute;
+    }
+
+
+
+</style>
+<body>
+
+    <div id="big_div">
+        
+
+
+
+    </div>
+    
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+     var user={
+    "claa_name": [
+              {
+                        "id": 1,
+                        "name": "Donald Gonzalez",
+                        "title": "Mccfczwdm Rpth Ghgvh Kenfp",
+                        "email": "n.deui@hmor.uk",
+                        "image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+                        "birthday": "1973-10-13 06:01:27",
+                        "canme": "丁涛",
+                        "cadd": "广西壮族自治区湖州市肥城市",
+                        "phone": "15745833970"
+              },
+              {
+                        "id": 2,
+                        "name": "Amy Wilson",
+                        "title": "Jcmlqvp Kwxlxe Wvqbggstu Vuhcr Ycorf Pksyscjw",
+                        "email": "o.zfdulgkpm@mdojimmk.中国互联.公司",
+                        "image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+                        "birthday": "1981-09-01 05:28:56",
+                        "canme": "张霞",
+                        "cadd": "河北省上海市钟祥市",
+                        "phone": "13826521335"
+              },
+              {
+                        "id": 3,
+                        "name": "Linda Lewis",
+                        "title": "Ozon Bgmevpxrs Wictgew Dvwve Ygmmujh",
+                        "email": "s.uhbbvxc@cpnykuv.lt",
+                        "image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+                        "birthday": "1989-12-09 12:17:05",
+                        "canme": "姜平",
+                        "cadd": "山东省怒江傈僳族自治州宝坻区",
+                        "phone": "13762358283"
+              },
+              {
+                        "id": 4,
+                        "name": "Melissa Jones",
+                        "title": "Yyhpqixkv Lgwghhdhg Ntpxiqvwk Rbghe Euqsothc Ulumcxcsj Npqchtjmwm",
+                        "email": "j.ampolt@jjmpqzdx.bo",
+                        "image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+                        "birthday": "1984-05-17 11:02:23",
+                        "canme": "尹洋",
+                        "cadd": "海南省天津市信丰县",
+                        "phone": "15242980536"
+              },
+              {
+                        "id": 5,
+                        "name": "Margaret Martinez",
+                        "title": "Tehaihb Nzjr Exiah Igegpmn Hpkdb Tji Ccfwa",
+                        "email": "b.lzwypndcuj@hracno.nc",
+                        "image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+                        "birthday": "1980-09-07 12:35:14",
+                        "canme": "龚娟",
+                        "cadd": "贵州省固原市永年县",
+                        "phone": "15328504766"
+              },
+              {
+                        "id": 6,
+                        "name": "Matthew Williams",
+                        "title": "Kqam Fxp Jlkbecid Rbslcw",
+                        "email": "l.iaqlvbuhhp@svzmdstnb.gb",
+                        "image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+                        "birthday": "2004-09-18 19:54:35",
+                        "canme": "朱勇",
+                        "cadd": "吉林省海口市白河县",
+                        "phone": "18863857752"
+              },
+              {
+                        "id": 7,
+                        "name": "Shirley Thomas",
+                        "title": "Wba Mrhdyqhjrx Zelgfokrq Ibhflcwzgy Xddj Nrg",
+                        "email": "n.qnjxcddvx@lqfjsyqnq.gl",
+                        "image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+                        "birthday": "1993-08-19 23:22:39",
+                        "canme": "文娟",
+                        "cadd": "重庆苏州市上思县",
+                        "phone": "13174311346"
+              },
+              {
+                        "id": 8,
+                        "name": "Melissa Rodriguez",
+                        "title": "Yyrpbptms Yvmqy Uxac Xfy",
+                        "email": "m.ltobfx@mzjg.vc",
+                        "image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+                        "birthday": "1989-07-23 02:42:07",
+                        "canme": "彭洋",
+                        "cadd": "河北省泉州市其它区",
+                        "phone": "13112887267"
+              },
+              {
+                        "id": 9,
+                        "name": "Jose Jones",
+                        "title": "Dbzuwgkgx Nxtux Ymqlutvo Qpwy",
+                        "email": "u.unahehbmi@sjv.dj",
+                        "image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+                        "birthday": "2011-02-15 15:26:47",
+                        "canme": "毛超",
+                        "cadd": "安徽省黄南藏族自治州都匀市",
+                        "phone": "15218771372"
+              },
+              {
+                        "id": 10,
+                        "name": "Jessica Hernandez",
+                        "title": "Roiiqrwdsu Ydfj Oxodmnivi Gbqymrmd Ezk",
+                        "email": "o.wnigdpiuo@tcb.tj",
+                        "image": "http://dummyimage.com/200x200/50B347/FFF&text=Mock.js",
+                        "birthday": "1985-07-04 12:57:05",
+                        "canme": "史静",
+                        "cadd": "安徽省屏东县彭阳县",
+                        "phone": "18418923621"
+              }
+    ]
+}
+
+
+    for(var i=0;i<user.claa_name.length;i++){
+
+
+        $("#big_div").append(
+ "<div class='main_div'>"+
+
+            "<img src="+user.claa_name[i].image+">"
+    
+    +"<div class='name'>"+"<h3>"+user.claa_name[i].name+"</h3>"+"<h4 class='other'>"+"<input type='hidden' class='yc' value='"+user.claa_name[i].id+"'>"+user.claa_name[i].title+"</h4>"+"</div>"
+    +"</div>");
+     
+        
+    }
+
+
+    $(".other").click(function(){
+        
+        var bid=$(".yc").val();
+        
+
+        document.location.href="user_info.html?id="+bid;
+    })
+
+
+   
+
+   
+    
+
+</script>
+</html>
