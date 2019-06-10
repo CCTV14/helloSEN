@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .main img {
+        width: 100%;
+
+    }
+
+    .head {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        width: 100%;
+
+    }
+
+
+    .cont input {
+        background-color: transparent;
+        color: #979797;
+        width: 100%;
+        border: none;
+        font-size: 0.34rem;
+        outline: none;
+        height: 0.8rem;
+        line-height: 0.8rem;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+        padding-top: 0.45rem;
+
+    }
+
+    .cont {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        width: 90%;
+    }
+
+    .zy {
+        display: none;
+        position: absolute;
+        right: 0.42rem;
+        top: 2rem;
+
+    }
+
+    .by {
+        position: absolute;
+        right: 0.42rem;
+        top: 2rem;
+
+    }
+
+    .cont img {
+        width: 0.45rem;
+    }
+
+    .cont {
+        font-size: 0.4rem;
+    }
+
+    .head img {
+        float: left;
+        width: 0.24rem;
+        height: 0.46rem;
+        padding-left: 0.5rem;
+        padding-top: 0.3rem;
+
+
+    }
+
+    .head span {
+        float: right;
+        font-size: 0.3rem;
+        color: orange;
+        padding-right: 0.5rem;
+        padding-top: 0.3rem;
+    }
+
+    .login_txt {
+        background-color: #fd6246;
+
+        border-radius: 0.5rem;
+        display: block;
+        width: 5.85rem;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 0.34rem;
+        color: #fff;
+        height: 0.8rem;
+        line-height: 0.8rem;
+        margin-top: 0.6rem;
+    }
+
+    .wj {
+        width: 6.02rem;
+        margin: 0.42rem auto 0;
+        text-align: center;
+    }
+
+    .wj a {
+        font-size: 0.24rem;
+        color: #e17e8e;
+    }
+
+    .wx {
+        margin-top: 0.6rem;
+        text-align: center;
+
+
+    }
+
+    .wx img {
+        width: 0.7rem;
+    }
+</style>
+
+<body>
+    <div class="main">
+
+
+        <img src="img/tb_logo_main.png">
+
+        <header class="head">
+            <img src="img/return.png">
+            <span class="zc_load">注册</span>
+        </header>
+
+        <div class="cont">
+            <div class="username">
+                <input type="text" placeholder="用户名/手机号">
+            </div>
+            <div class="password">
+                <input type="password" placeholder="密码" class="pass">
+                <img class="by" src="img/by.png">
+                <img class="zy" src="img/zy.png">
+            </div>
+
+            <span class="login_txt">登录</span>
+            <p class="wj">
+                <a>忘记密码?</a>
+            </p>
+            <div class="wx">
+                <img src="img/wx.png">
+            </div>
+
+        </div>
+    </div>
+
+
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/rem.js"></script>
+<script>
+
+    $(".by").click(function () {
+        $(this).hide();
+        $(this).next().show();
+        $(".pass").attr("type", "text");
+    });
+    $(".zy").click(function () {
+        $(this).hide();
+        $(this).prev().show();
+        $(".pass").attr("type", "password");
+    });
+
+    $(".zc_load").click(function () {
+        location.href = "new_info.html";
+    })
+</script>
+
+</html>

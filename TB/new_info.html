@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+
+    .main img {
+        width: 100%;
+
+    }
+
+    .head {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        width: 100%;
+
+    }
+
+
+    .cont input {
+        background-color: transparent;
+        color: #979797;
+        width: 100%;
+        border: none;
+        font-size: 0.34rem;
+        outline: none;
+        height: 0.8rem;
+        line-height: 0.8rem;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+        padding-top: 0.45rem;
+
+    }
+
+    .cont {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        width: 90%;
+    }
+
+    .zy {
+        display: none;
+        position: absolute;
+        right: 0.42rem;
+        top: 2rem;
+
+    }
+
+    .by {
+        position: absolute;
+        right: 0.42rem;
+        top: 2rem;
+
+    }
+
+    .cont img {
+        width: 0.45rem;
+    }
+
+    .cont {
+        font-size: 0.4rem;
+    }
+
+    .head img {
+        float: left;
+        width: 0.24rem;
+        height: 0.46rem;
+        padding-left: 0.5rem;
+        padding-top: 0.3rem;
+
+
+    }
+
+    .head span {
+        float: right;
+        font-size: 0.3rem;
+        color: orange;
+        padding-right: 0.5rem;
+        padding-top: 0.3rem;
+    }
+
+    .new_txt {
+        background-color: #fd6246;
+
+        border-radius: 0.5rem;
+        display: block;
+        width: 5.85rem;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 0.34rem;
+        color: #fff;
+        height: 0.8rem;
+        line-height: 0.8rem;
+
+    }
+
+    .get_code {
+        position: absolute;
+        color: #fff;
+        right: 0;
+        bottom: 2.5rem;
+        font-size: 0.22rem;
+        text-align: center;
+        padding: 0.16rem 0.2rem;
+        background: #ffa08b;
+        border-radius: 0.5rem;
+    }
+
+
+    .new_person_info {
+        line-height: 1rem;
+        text-align: right;
+        padding-right: 0.63rem;
+        color: #fd6246;
+        font-size: 0.32rem;
+    }
+
+    .new_person_info img {
+        width: 0.3rem;
+    }
+
+    .xieyi {
+        margin-top: 0.24rem;
+        margin-left: 0.3rem;
+        font-size: 0.25rem;
+        text-align: center;
+        color: #979797;
+    }
+</style>
+
+<body>
+    <div class="main">
+
+
+        <img src="img/tb_logo_main.png">
+
+        <header class="head">
+            <img src="img/return.png" onclick="javascript:location.href='login.html'">
+            <span class="login_load">登录</span>
+        </header>
+
+        <div class="cont">
+            <div class="iphone">
+                <input type="text" placeholder="手机号码">
+            </div>
+            <div class="password">
+                <input type="password" placeholder="密码6-20位字母数字组合" class="pass">
+                <img class="by" src="img/by.png">
+                <img class="zy" src="img/zy.png">
+            </div>
+
+            <div class="re_num">
+                <input type="password" placeholder="短信验证码">
+                <span class="get_code">获取验证码</span>
+            </div>
+            <div class="new_person_info">
+                <img src="img/new_person.png">
+                <span>邀请人账号</span>
+
+            </div>
+            <span class="new_txt">注册</span>
+
+            <div class="xieyi">
+                <span class="xieyiname">注册账户表示您同意<a href="#">《投呗注册协议》</a></span>
+            </div>
+        </div>
+
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/rem.js"></script>
+<script>
+
+
+    $(".by").click(function () {
+        $(this).hide();
+        $(this).next().show();
+        $(".pass").attr("type", "text");
+
+    });
+    $(".zy").click(function () {
+        $(this).hide();
+        $(this).prev().show();
+        $(".pass").attr("type", "password");
+
+
+    });
+
+    $(".login_load").click(function () {
+        location.href = "login.html";
+    })
+
+
+    var countdown = 60;
+    
+    function settime(text) {
+        if (countdown == 0) {
+            val.removeAttribute("disabled");
+            countdown = 60;
+        } else {
+            val.setAttribute("disabled", true);
+            val.value = countdown;
+            countdown--;
+        }
+        setTimeout(function () {
+            settime(val)
+        }, 1000)
+    } 
+
+
+    $(".get_code").click(function () {
+
+        $(".re_num").children().html("<span class='xx'>" + settime(this) + "</span>");
+        $(".xx").show();
+    })
+
+
+
+</script>
+
+</html>
