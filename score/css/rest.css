@@ -1,0 +1,291 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+
+.head_cont{
+    position: relative;
+    text-align: center;
+    margin-top: -0.55rem;
+}
+input.search {
+    background: #ececec;
+    border-radius: 4px;
+    width: 6rem;
+    border: 0px;
+    height: 0.5rem;
+    padding-left: 0.5rem;
+}
+.search input{
+    width: 100%;
+    background: none;
+    border: none;
+    font-size: 0.85rem;
+    text-align: left;
+    height: 32px;
+    border-radius: 22px;
+    padding: 0.55rem 0 0.55rem 1.8rem;
+}
+.head_cont img {
+    width: 0.35rem;
+    position: absolute;
+    top: 0.8rem;
+    left: 0.5rem;
+}
+header.head {
+    position: fixed;
+    background: #fafafa;
+
+    width: 100%;
+}
+
+.five_shop{
+    line-height: 0.4;
+    text-align: center;
+    margin-bottom: 0.6rem;
+    padding-top: 0.7rem;
+}
+.five_shop span{
+    font-size: 0.25rem;
+    color: #666666;
+    text-align: center;
+    margin-right: 0.2rem;
+}
+
+.swiper-container{
+    width: 90% !important;
+}
+
+.back{
+    line-height: 0.1;
+    text-align: center;
+    margin-bottom: 0.3rem;
+}
+
+.back1{
+    display: inline-block;
+}
+
+.back1 img{
+    width: 0.4rem;
+
+}
+
+.back1 span{
+    font-size: 0.2rem;
+}
+
+ 
+.super img{
+    width: 100%;
+}
+
+.super{
+    border-top: 1px solid #f1f1f1;
+    border-bottom: 1px solid #f1f1f1;
+    
+}
+
+.shopping{
+    width: 100%;
+    border-bottom: 1px solid #f1f1f1;
+    height: 3.6rem;
+  
+
+}
+
+.shopping li{
+  float: left;
+    width: 20%;
+    list-style-type: none;
+    text-align: center;
+}
+
+.shopping li img{
+    width: 0.75rem;
+}
+
+.gift{
+    text-align: center;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+    border-bottom: 11px solid #f1f1f1;
+}
+
+.shopping li span{
+    display: block;
+    font-size: 0.25rem;
+    text-align: center;
+}
+
+.s1{
+    border-bottom: 1px solid #f1f1f1;
+    height: 3rem;
+}
+
+.s1_img img{
+    width: 2.31rem;
+    padding-left: 0.15rem;
+}
+
+.s1_cont h3{
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 0.26rem;
+    line-height: 1.4;
+    padding-top: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-weight: normal;
+}
+
+.s1_cont span{
+    background: #f9edef;
+    color: #f35a5a;
+    font-size: 0.2rem;
+    padding: 0.1rem 0.5rem;
+}
+
+.s1_cont h4{
+    color: #e6696a;
+    font-size: 0.3rem;
+    font-weight: normal;
+}
+
+
+.s1_cont_h{
+    margin-top: -0.5rem;
+}
+
+.s1_img{
+    display: inline;
+}
+
+.s1_cont{
+    display: inline-block;
+    width: 60%;
+    position: relative;
+}
+.s1_cont em{
+    font-size: 0.2rem;
+    color: #cccccc;
+    font-style: normal;
+    text-decoration: line-through;
+}
+
+.load{
+    width: 48%;
+    height: 0.3rem;
+    background: #efa5a4;
+    border-radius: 22px;
+    position: relative;
+}
+
+.load h5{
+    width: 100%;
+    position: absolute;
+    left: 0.3rem;
+    color: #fff;
+    font-size: 0.25rem;
+    font-weight: normal;
+    top: -2px;
+    z-index: 22;
+
+}
+
+.load em{
+    float: right;
+    padding-right: 0.4rem;
+    font-style: normal;
+    padding-top: 2px;
+}
+
+
+.loed_cont{
+    height: 0.3rem;
+    background: #e25f60;
+    border-radius: 22px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.go_shop button{
+    position: absolute;
+    background: #f35a5a;
+    color: #fff;
+    font-size: 0.25rem;
+    border-radius: 3px;
+    border: none;
+    padding: 0.05rem 0.3rem;
+    /* right: 1%; */
+    left: 2.9rem;
+    top: 2rem;
+}
+
+.all{
+    text-align: center;
+    margin-top: 0.4rem;
+    margin-bottom: 0.65rem;
+}
+
+.all button{
+    background: none;
+    color: #666;
+    font-size: 0.27rem;
+    border: 1px solid #d5d5d5;
+    padding: 0.05rem 0.3rem 0.05rem;
+    border-radius: 22px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.all img{
+    width: 0.3rem;
+}
+
+.miao{
+    text-align: center;
+}
+
+.foot{
+    text-align: center;
+    border-top: 1px solid #f1f1f1;
+}
+
+.foot ul li{
+    list-style-type: none;
+    display:inline-block;
+    margin-left: 0.5rem;
+}
+
+.foot img{
+    width: 0.45rem;
+}
+
+.foot span{
+    display: block;
+    font-size: 0.25rem;
+    margin: -10px 1px 33px;
+    color: #818085;
+}
+
+.foot{
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 49;
+    box-shadow: 0 1px 15px #eef0f4;
+    /* padding: 0.01rem; */
+    background: white;
+    width: 100%;
+    border-top: 2px solid #d7d7d7;
+  
+    height: 1rem;
+    margin-top: 1rem;
+}
