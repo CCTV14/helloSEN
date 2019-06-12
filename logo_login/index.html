@@ -135,17 +135,18 @@
         <form>
             <div v-bind:class="{login:login}">
                 <div v-bind:class="{phone:phone}">
-                    <input type="text" placeholder="请输入你的手机号" v-bind:class="{pin:pin}">
+                    <input type="text" placeholder="请输入你的手机号" v-bind:class="{pin:pin}" v-model="phone_val">
                 </div>
                 <div v-bind:class="{pass:pass}">
-                    <input type="password" value="123456789" v-bind:class="{pin:pin}" v-bind:type="myp">
+                    <input type="password" value="123456789" v-bind:class="{pin:pin}" v-bind:type="myp"
+                        v-model:value="password_val" placeholder="请输入密码">
                     <img src="img/by.png" v-bind:class="{by:by}" @click="bb">
                     <img src="img/zy.png" v-bind:class="{zy:zy}" @click="cc">
                 </div>
             </div>
         </form>
         <div v-bind:class="{div:div}">
-            <a href="javascript:;" v-bind:class="{lt:lt}">登 录</a>
+            <a href="javascript:;" v-bind:class="{lt:lt}" @click="look_null">登 录</a>
         </div>
         <div v-bind:class="{div1:div1}">
             忘记密码？
@@ -174,6 +175,8 @@
             div1: true,
             div2: true,
             span2: true,
+            phone_val: '',
+            password_val: ''
         },
         methods: {
             bb: function () {
@@ -185,6 +188,17 @@
                 this.by = true
                 this.zy = false
                 this.myp = 'password'
+            },
+            look_null: function () {
+                if (!this.phone_val) {
+                    alert("请填写手机号")
+                } else if (!this.password_val) {
+                    alert("请填写密码")
+                }else{
+                    alert("登录成功")
+                }
+
+               
             }
         },
     });
