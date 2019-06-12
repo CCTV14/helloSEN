@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+</head>
+
+<style>
+    .back {
+        background: #10a78e;
+        width: 2.9rem;
+        height: 2.9rem;
+        color: #fff;
+        line-height: 3rem;
+        font-size: 0.9rem;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 auto;
+        margin: 2rem auto 4rem;
+        text-align: center;
+    }
+
+    .phone {
+        border-bottom: 1px solid #ebebeb;
+        height: 1.3rem;
+        padding: 0.3rem;
+        position: relative;
+        overflow: hidden;
+        margin-top: -0.6rem;
+        margin: 0 auto;
+        width: 78%;
+    }
+
+    .pin {
+        border: none;
+        line-height: 3rem;
+        width: 100%;
+        outline: 0;
+        font-size: 0.2rem;
+        height: 1rem;
+    }
+
+    .pass {
+        border-bottom: 1px solid #ebebeb;
+        height: 1.3rem;
+        padding: 0.3rem;
+        position: relative;
+        overflow: hidden;
+        margin-top: -1rem;
+        margin: 0 auto;
+        width: 78%;
+        margin-top: -0.3rem;
+
+    }
+
+    .login {
+        margin-top: -3rem;
+    }
+
+    .lb {
+        background: #10a78e;
+        color: #fff;
+        border-radius: 2rem;
+        height: 4rem;
+        line-height: 4rem;
+        font-size: 1.6rem;
+        margin-top: 4rem;
+    }
+
+    .zy {
+
+        width: 0.6rem;
+        position: absolute;
+        bottom: 20%;
+        right: 0;
+
+    }
+
+    .by {
+        width: 0.6rem;
+        position: absolute;
+        bottom: 20%;
+        right: 0;
+    }
+
+    .div {
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .lt {
+        background: #10a78e;
+        color: #fff;
+        border-radius: 2rem;
+        font-size: 0.5rem;
+        padding-left: 2.5rem;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        padding-right: 2.5rem;
+        text-decoration: none;
+    }
+
+    .div {
+        text-align: center;
+    }
+
+    .div1 {
+        text-align: center;
+        font-size: 0.2rem;
+        margin-top: 0.7rem;
+        color: #10a78e;
+    }
+
+    .div2 {
+        font-size: 0.2rem;
+        text-align: center;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .span2 {
+        color: #10a78e;
+    }
+</style>
+
+<body>
+    <div id="app">
+        <div v-bind:class="{back:back}">
+            LOGO
+        </div>
+        <form>
+            <div v-bind:class="{login:login}">
+                <div v-bind:class="{phone:phone}">
+                    <input type="text" placeholder="请输入你的手机号" v-bind:class="{pin:pin}">
+                </div>
+                <div v-bind:class="{pass:pass}">
+                    <input type="password" value="123456789" v-bind:class="{pin:pin}" v-bind:type="myp">
+                    <img src="img/by.png" v-bind:class="{by:by}" @click="bb">
+                    <img src="img/zy.png" v-bind:class="{zy:zy}" @click="cc">
+                </div>
+            </div>
+        </form>
+        <div v-bind:class="{div:div}">
+            <a href="javascript:;" v-bind:class="{lt:lt}">登 录</a>
+        </div>
+        <div v-bind:class="{div1:div1}">
+            忘记密码？
+        </div>
+        <div v-bind:class="{div2:div2}">
+            没有账号？ <span v-bind:class="{span2:div2}">立即注册</span>
+        </div>
+    </div>
+</body>
+
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            back: true,
+            login: true,
+            phone: true,
+            pin: true,
+            pass: true,
+            lb: true,
+            by: true,
+            zy: false,
+            myp: 'password',
+            lt: true,
+            div: true,
+            div1: true,
+            div2: true,
+            span2: true,
+        },
+        methods: {
+            bb: function () {
+                this.by = false
+                this.zy = true
+                this.myp = 'text'
+            },
+            cc: function () {
+                this.by = true
+                this.zy = false
+                this.myp = 'password'
+            }
+        },
+    });
+</script>
+
+<script src="js/rem.js"></script>
+
+</html>
