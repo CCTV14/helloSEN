@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .head {
+        height: 4rem;
+        background: linear-gradient(to right, #0ab871, #0ad0a6);
+        background-color: #808080;
+        width: 100%;
+    }
+
+    .indiv {
+        padding: 0.7rem 0.2rem;
+    }
+
+    .indiv img {
+        width: 1.16rem;
+    }
+
+    .namef h2 {
+        color: #fff;
+        font-weight: normal;
+        font-size: 0.4rem;
+        height: 0rem;
+    }
+
+    .namef {
+        display: inline-block;
+        margin-left: -0.1rem;
+        height: 0.5rem;
+        line-height: 1;
+    }
+
+
+    .namef span {
+        background: #46d698;
+        color: #fff;
+        font-size: 0.2rem;
+        border-radius: 22px;
+        padding: 0.05rem 0.2rem;
+    }
+
+    .indiv_index img {
+        transform: rotate(180deg);
+        width: 0.25rem;
+        margin-left: -0.28rem;
+    }
+
+    .indiv_index span {
+        font-size: 0.25rem;
+        color: white;
+    }
+
+    .indiv_index {
+        line-height: 0.5;
+        float: right;
+    }
+
+    .num1 h2 {
+        font-weight: normal;
+        color: white;
+        font-size: 0.35rem;
+        height: 0;
+        line-height: 3.5;
+    }
+
+    .num1 {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .num1 span {
+        color: white;
+        font-size: 0.22rem;
+        text-align: center;
+    }
+
+
+    .qian {
+        float: right;
+        /* float: right; */
+        /* display: inline; */
+        /* display: inline-block; */
+        width: 33%;
+        height: 1rem;
+        margin-top: -1.5rem;
+        position: relative;
+    }
+
+    .qian button {
+        line-height: 2;
+        background: #474747;
+        border: none;
+        color: #fff;
+        border-radius: 22px;
+        padding: 0.08rem 0.21rem;
+        font-size: 0.23rem;
+    }
+
+    .qian img {
+        width: 0.4rem;
+        position: relative;
+        top: 5px;
+    }
+
+    .qian em {
+        font-style: normal;
+        color: #54ca9a;
+    }
+
+    .cont {
+        height: 12.7rem;
+    }
+
+    .add_firend {
+        position: relative;
+        border-bottom: 1px solid #f1f1f1;
+        height: 1rem;
+    }
+
+    .add_firend p {
+        font-size: 0.27rem;
+        color: #333;
+        position: absolute;
+        top: 0.5rem;
+        left: 0.9rem;
+        font-weight: normal;
+
+    }
+
+    .add_firend img {
+        width: 0.48rem;
+    }
+
+    .return2 {
+        transform: rotate(180deg);
+        float: right;
+        margin-top: 0.1rem;
+        width: 0.16rem;
+    }
+
+    .add_firend_cont {
+        padding: 0.1rem 0.2rem;
+    }
+
+    .add_firend_cont h2 {
+        line-height: 0.1;
+        height: 0.2rem;
+    }
+
+    .foot {
+        text-align: center;
+        border-top: 1px solid #f1f1f1;
+    }
+
+    .foot ul li {
+        list-style-type: none;
+        display: inline-block;
+        margin-left: 1.2rem;
+    }
+
+    .foot img {
+        width: 0.45rem;
+    }
+
+    .foot span {
+        display: block;
+        font-size: 0.25rem;
+        margin: -10px 1px 33px;
+        color: #818085;
+    }
+
+    .foot {
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 49;
+        box-shadow: 0 1px 15px #eef0f4;
+        /* padding: 0.01rem; */
+        background: white;
+        width: 100%;
+        border-top: 2px solid #d7d7d7;
+
+        height: 1rem;
+        margin-top: 1rem;
+    }
+</style>
+
+<body>
+    <div id="app">
+        <div v-bind:class="{head:head}">
+            <div v-bind:class="{indiv:indiv}">
+                <img src="img/user.png">
+                <div v-bind:class="{namef:namef}">
+                    <h2>李振亚</h2>
+                    <span>7积分</span>
+
+                </div>
+
+                <div v-bind:class="{indiv_index:indiv_index}">
+                    <span>个人主页</span>
+                    <img src="img/return.png">
+
+                </div>
+
+                <div v-bind:class="{num:num}">
+                    <div v-bind:class="{num1:num1}" style="margin-left: 0.3rem;">
+                        <h2>129</h2>
+                        <span>关注</span>
+
+                    </div>
+                    <div v-bind:class="{num1:num1}" style="margin-left: 0.45rem;">
+                        <h2>129</h2>
+                        <span>粉丝</span>
+
+                    </div>
+                    <div v-bind:class="{num1:num1}" style="margin-left: 0.45rem;">
+                        <h2>129</h2>
+                        <span>获赞与收藏</span>
+
+                    </div>
+
+                </div>
+
+                <div v-bind:class="{qian:qian}">
+                    <button>
+                        <img src="img/qian.png">
+                        签到
+                        <em>积分+3</em>
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div v-bind:class="{cont:cont}">
+            <div v-bind:class="{add_firend:add_firend}">
+                <div v-bind:class="{add_firend_cont:add_firend_cont}">
+                    <h2>
+                        <img src="img/icon-fl-001.png">
+                        <p>添加好友</p>
+                    </h2>
+                    <img src="img/return2.png" v-bind:class="{return2:return2}" style="width: 0.16rem;">
+                </div>
+
+
+
+            </div>
+            <!--  -->
+            <div v-bind:class="{add_firend:add_firend}">
+                <div v-bind:class="{add_firend_cont:add_firend_cont}">
+                    <h2>
+                        <img src="img/icon-fl-002.png">
+                        <p>成为认证会员</p>
+                    </h2>
+
+                    <img src="img/return2.png" v-bind:class="{return2:return2}" style="width: 0.16rem;">
+                    <span style="margin-right: 0.1rem;
+                    font-size: 0.27rem;
+                    float: right;
+                    margin-top: 0.06rem;color: #999;">认证后可收费聊天</span>
+                </div>
+
+
+
+            </div>
+            <!--  -->
+            <div v-bind:class="{add_firend:add_firend}">
+                <div v-bind:class="{add_firend_cont:add_firend_cont}">
+                    <h2>
+                        <img src="img/icon-fl-003.png">
+                        <p>我的钱包</p>
+                    </h2>
+
+                    <img src="img/return2.png" v-bind:class="{return2:return2}" style="width: 0.16rem;">
+                    <span style="margin-right: 0.1rem;
+                        font-size: 0.27rem;
+                        float: right;
+                        margin-top: 0.06rem;color: #999;">￥19.99</span>
+                </div>
+
+
+
+            </div>
+
+            <!--  -->
+            <div v-bind:class="{add_firend:add_firend}">
+                <div v-bind:class="{add_firend_cont:add_firend_cont}">
+                    <h2>
+                        <img src="img/icon-fl-004.png">
+                        <p>我的求职认领</p>
+                    </h2>
+                    <img src="img/return2.png" v-bind:class="{return2:return2}" style="width: 0.16rem;">
+                </div>
+
+
+
+            </div>
+            <!--  -->
+            <div v-bind:class="{add_firend:add_firend}" style="border-bottom: 9px solid #f1f1f1">
+                <div v-bind:class="{add_firend_cont:add_firend_cont}">
+                    <h2>
+                        <img src="img/icon-fl-005.png">
+                        <p>我的开聊被聊</p>
+                    </h2>
+                    <img src="img/return2.png" v-bind:class="{return2:return2}" style="width: 0.16rem;">
+                </div>
+
+
+
+            </div>
+            <!--  -->
+            <div v-bind:class="{add_firend:add_firend}">
+                <div v-bind:class="{add_firend_cont:add_firend_cont}">
+                    <h2>
+                        <img src="img/icon-fl-005.png">
+                        <p>我的关注收藏</p>
+                    </h2>
+                    <img src="img/return2.png" v-bind:class="{return2:return2}" style="width: 0.16rem;">
+                </div>
+
+
+
+            </div>
+
+            <!--  -->
+
+            <div v-bind:class="{add_firend:add_firend}">
+                <div v-bind:class="{add_firend_cont:add_firend_cont}">
+                    <h2>
+                        <img src="img/icon-fl-006.png">
+                        <p>我的问答</p>
+                    </h2>
+                    <img src="img/return2.png" v-bind:class="{return2:return2}" style="width: 0.16rem;">
+                </div>
+
+
+
+            </div>
+
+            <!--  -->
+            <div v-bind:class="{add_firend:add_firend}">
+                <div v-bind:class="{add_firend_cont:add_firend_cont}">
+                    <h2>
+                        <img src="img/icon-fl-007.png">
+                        <p>我的发布内容</p>
+                    </h2>
+                    <img src="img/return2.png" v-bind:class="{return2:return2}" style="width: 0.16rem;">
+                </div>
+
+
+
+            </div>
+
+            <!--  -->
+            <div v-bind:class="{add_firend:add_firend}" style="border-bottom: 9px solid #f1f1f1">
+                <div v-bind:class="{add_firend_cont:add_firend_cont}">
+                    <h2>
+                        <img src="img/icon-fl-008.png">
+                        <p>我的东家</p>
+                    </h2>
+                    <img src="img/return2.png" v-bind:class="{return2:return2}" style="width: 0.16rem;">
+                </div>
+            </div>
+            <!--  -->
+            <div v-bind:class="{add_firend:add_firend}">
+                <div v-bind:class="{add_firend_cont:add_firend_cont}">
+                    <h2>
+                        <img src="img/icon-fl-009.png">
+                        <p>设置与帮助</p>
+                    </h2>
+                    <img src="img/return2.png" v-bind:class="{return2:return2}" style="width: 0.16rem;">
+                </div>
+
+
+
+            </div>
+
+            <!--  -->
+            <div v-bind:class="{add_firend:add_firend}" style="border-bottom: 9px solid #f1f1f1">
+                <div v-bind:class="{add_firend_cont:add_firend_cont}">
+                    <h2>
+                        <img src="img/icon-fl-010.png">
+                        <p>首都网警</p>
+                    </h2>
+                    <img src="img/return2.png" v-bind:class="{return2:return2}" style="width: 0.16rem;">
+                </div>
+
+
+
+            </div>
+        </div>
+        <now></now>
+    </div>
+
+</body>
+
+<script>
+    Vue.component('now', {
+        template: "<footer class='foot'>"+
+            "<ul style='margin-top: -0.5rem;'>"+
+                "<li style='margin: 0;'><img src='img/house.png'><span>首页</span></li>"+
+                "<li><img src='img/llq.png'><span>发现</span></li>"+
+                "<li><img src='img/email.png'><span>消息</span></li>"+
+                "<li><img src='img/person.png'><span style='color: #363636;'>我的</span></li>"+
+                "</ul>"+
+                "</footer>"
+    })
+    new Vue({
+        el: "#app",
+        data: {
+            head: true,
+            indiv: true,
+            namef: true,
+            indiv_index: true,
+            num: true,
+            num1: true,
+            qian: true,
+            cont: true,
+            add_firend: true,
+            return2: true,
+            add_firend_cont: true,
+            foot: true
+        }
+    })
+</script>
+
+
+
+<script src="js/rem.js"></script>
+
+</html>
